@@ -1,0 +1,123 @@
+/*===================================
+General Styles
+====================================*/
+body {
+    font-family: "Lato", sans-serif;
+    background:#fff;
+}
+h1{text-transform:uppercase;}
+/*===================================
+Sidebar
+====================================*/
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+}
+.sidenav a:hover {color: #f1f1f1;}
+.sidenav a.active {color: #fff;}
+.main {
+    margin-left: 250px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*===================================
+Accordion
+====================================*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.accordion:after {
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  color: #777;
+  float: right;
+  margin-left: 5px;
+  outline: none;
+}
+.active:after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 10px 18px 30px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+/*===================================
+Faico
+====================================*/
+.faico{
+  margin:0 0 10px 0; 
+  padding:0; 
+  list-style:none;
+}
+.faico li{
+  display:inline-block; 
+  margin:8px 5px 0 0; 
+  padding:0; 
+  line-height:normal;
+}
+.faico li:last-child{margin-right:0;}
+.faico li a{
+  display:inline-block; 
+  line-height:36px; 
+  font-size:16px;
+  text-decoration: none; 
+  text-align:center;
+  color:#474747; 
+  background-color:#E9E9E9;
+  padding: 10px;
+}
+.faico li a:hover{
+  color:#FFFFFF; 
+  background-color:#000000;
+}
+
+/*===================================
+Table
+====================================*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th{ text-transform:uppercase;}
+tr:nth-child(even) {
+  background-color: #E9E9E9;
+}

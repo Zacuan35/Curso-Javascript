@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Métodos de las cadenas</title>
+</head>
+<body>
+	<h1>Métodos de las cadenas</h1>
+
+	<script>
+		let texto = " Hola Mundo ";
+		console.log(texto);
+
+		//Básicos
+		console.log(texto.toUpperCase()); // Convierte el texto a mayúsculas.
+		console.log(texto.toLowerCase()); // Convierte el texto a minúsculas.
+		//Búsqueda
+		console.log(texto.includes("Hola")); // Verifica si un texto existe dentro del string (Devuelve true o false).
+		console.log(texto.indexOf("mundo")); // Devuelve la posición de la primera coincidencia (-1 si no existe). 5
+		console.log(texto.startsWith("Hola")); // Verifica si el string inicia con cierto texto (Devuelve true o false).
+		console.log(texto.endsWith("Mundo")); // Verifica si termina con cierto texto (Devuelve true o false).
+		//Corte
+		console.log(texto.slice(0,4)); // Extrae una parte del string.
+		console.log(texto.substring(4, 10)); // Similar a slice, pero sin índices negativos.
+		//Limpieza
+		console.log(texto.trim()); //Elimina espacios al inicio y al final.
+		console.log(texto.trimStart());//Elimina espacios solo al inicio.
+		console.log(texto.trimEnd());//Elimina espacios solo al final.		
+		console.log(texto.replace("mundo", "Luis")); //Reemplaza la primera coincidencia.
+		console.log(texto.replaceAll("o", "e")); //Reemplaza todas las coincidencias.		
+		//Caracteres
+		console.log(texto.charAt(1));//Devuelve el carácter en una posición.
+		console.log(texto.at(-1));//Versión moderna (permite índices negativos).
+		//Manipulación
+		console.log(texto.repeat(5));//Repite un string.
+
+		//Conversión
+		let meses = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+		let mesesSeparados = meses.split(","); //Convierte un string en un arreglo.
+		console.log(mesesSeparados);
+		/*Para convertir una cadena, es necesario especificar un elemento de la misma
+		para que a partir de él, este este elemento se separe, en este caso es una coma (,)
+		pero tambien podemos especificar un espacio vacio " " (o llenar aqui después)*/
+		
+	</script>
+	
+</body>
+</html>

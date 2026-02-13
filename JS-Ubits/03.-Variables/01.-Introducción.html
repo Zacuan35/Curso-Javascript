@@ -13,8 +13,8 @@
 	<h3>Declarar una variable</h3>
 	<p>En JavaScript una variable se declara usando:</p>
 	<ol>
-		<li>var - Evítalo</li>
-		<li>let - valores que cambian</li>
+		<li>var (crea variable globales) - Evítalo</li>
+		<li>let (crea variables locales) - valores que cambian</li>
 		<li>const - cuando el valor no va a cambiar</li>
 	</ol>
 
@@ -37,9 +37,20 @@
 		let $resultado;
 
 		//Ejemplos inválidos:
-		let 1dato;   
-		let for;     
+		//let 1dato;   
+		//let for;     
 	</script>
+
+	<h1>Ámbito de la variable</h1>
+	<p>Las variables tienen un ámbito o alcance, lo correcto es que las variables
+	existan localmente, sólo en el bloque en el que fueron definidas.<br>
+	Sin embargo, las variables que se declaran con var son GLOBALES, las cuales
+	existen en toda la ejeción del programa.</p>
+
+	<ul>
+		<li>Var: Crea variables globales</li>
+		<li>Let: Crea variables locales</li>
+	</ul>
 
 </body>
 </html>

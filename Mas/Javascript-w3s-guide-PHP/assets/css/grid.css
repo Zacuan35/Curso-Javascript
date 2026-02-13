@@ -1,0 +1,109 @@
+/*::::::::::::::::::::::::::::::::::::
+GRID
+::::::::::::::::::::::::::::::::::::*/
+@charset "utf-8";
+
+/* Wrapper */
+.wrapper{
+    display:block;
+    width:100%;
+    margin:0;
+    padding:0;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/*La clase "hoc" es una clase genérica utilizada para centrar un elemento que contiene
+horizontalmente. Debe ser utilizado en conjunción con una segunda clase o ID*/
+.hoc{
+    max-width:978px;
+    display:block;
+    margin:0 auto;
+}
+
+/* Container */
+.container{padding:80px 0;}
+.container .demo{text-align:center;}
+.container .demo div{padding:8px 0;}
+.container .demo div:nth-child(odd){color:#FFFFFF; background:#CCCCCC;}
+.container .demo div:nth-child(even){color:#FFFFFF; background:#979797;}
+
+/* Content */
+.container .content{}
+
+/* Clear and Group */
+.clear,
+.group{display:block;}
+
+.clear::before,
+.clear::after,
+.group::before,
+.group::after{display:table; content:"";}
+
+.clear,.clear::after,
+.group,.group::after{clear:both;}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* Grid */
+.one_half,
+.one_third,
+.two_third,
+.one_quarter,
+.two_quarter,
+.three_quarter{
+    display:inline-block;
+    float:left;
+    margin:0 0 0 3.06748466257669%;
+    list-style:none;
+    }
+
+.one_half, .two_quarter{width:48.46625766871166%;}
+.one_quarter{width:22.69938650306748%;}
+.three_quarter{width:74.23312883435584%;}
+.one_third{width:31.28834355828221%;}
+.two_third{width:65.6441717791411%;}
+
+/* Clase .first */
+.first{margin-left:0; clear:left;}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* =============================================================================
+   Tablet design: Max width 900px
+   ========================================================================== */
+@media screen and (max-width:900px){
+	.hoc{max-width:90%;}
+    .container .demo div{margin-bottom:0;}
+}
+
+/* =============================================================================
+   Cell design: Minimum width 750px
+   ========================================================================== */
+@media screen and (max-width:750px){
+	.one_half,
+    .one_third,
+    .two_third,
+    .one_quarter,
+    .two_quarter,
+    .three_quarter{
+        display:block;
+        float:none;
+        width:auto;
+        margin:0 0 30px 0; padding:0;}
+    
+    .container, #footer{padding-bottom:50px;}/* not neccessary but looks better */
+}

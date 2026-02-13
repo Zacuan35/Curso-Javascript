@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Document title -->
+  <title>JS - 6.Sintáxis</title>
+  <!-- Favicon -->
+  <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+  <!-- Stylesheets -->
+  <link href="assets/css/custom-style.css" rel="stylesheet">
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+  <?php 
+  include('includes/nav.php');
+  ?>
+<!-- Main -->
+<div class="main">
+<h1>Sintaxis de JavaScript</h1><hr>
+<p>La sintaxis de JavaScript es el conjunto de reglas, cómo se construyen los programas de JavaScript:</p>
+<div style="display:inline-block; background-color:lightgrey; padding:10px 20px;">
+  <p>var x, y, z; // Declare Variables<br>
+  x = 5; y = 6; // Asignar valores<br>
+  z = x + y; // Calcular valores</p>
+</div><br><br>
+
+<!-- Accordion -->
+<!-- ==================== Panel-1 ====================-->
+<button class="accordion">Valores</button>
+<div class="panel">
+	<h2>Valores</h2>
+	<p>La sintaxis de JavaScript define dos tipos de valores:</p>
+	<ul>
+		<li>Valores fijos: se denominan <b>Literales</b></li>
+		<li>Valores variables: se denominan <b>Variables</b></li>
+	</ul><hr>
+	<!-- Literales de JavaScript -->
+	<h3>Literales de JavaScript</h3>
+	<p>Existen dos tipos de literales, los números y las cadenas.</p>
+	<ul>
+		<li>Números</li>
+		<li>Cadenas</li>
+	</ul>
+	<p>Y las dos reglas de sintáxis más importantes para estos valores fijos son:</p>
+	<table>
+	  <tr>
+	    <th>Números</th>
+	    <th>Cadenas</th>
+	  </tr>
+	  <tr>
+	  	<td>
+	  		1. Los <b>números</b> se pueden escribir con o sin decimales:</p>
+	  		<p>10.50 <br>
+	  		1001</p>
+	  		<!-- Ejemplo -->
+  			<h4>Ejemplo</h4>
+  			<p>document.getElementById("demo").innerHTML = 10.50;</p>
+  			<p id="demo-1"></p>
+  			<script>
+  				document.getElementById("demo-1").innerHTML = 10.50;
+  			</script>
+	  	</td>
+	  	<td>
+	  		<p>2. Las <b>cadenas</b> son texto, escrito entre comillas simples o dobles:</p>
+	  		<p>"Mario"<br>
+	  		'Mario'</p>	  		
+  			<!-- Ejemplo -->
+  			<h4>Ejemplo</h4>
+  			<p>document.getElementById("demo-2").innerHTML = 'Mario';</p>
+  			<p id="demo-2"></p>
+  			<script>
+  				document.getElementById("demo-2").innerHTML = 'Mario';
+  			</script>
+	  	</td>
+	  </tr>
+	</table><hr>
+	<!-- Variables de JavaScript -->
+	<h3>Variables de JavaScript</h3>
+	<p>En un lenguaje de programación, las <b>variables</b> se utilizan para <b>almacenar</b> valores de datos.<br>
+	JavaScript usa la palabra clave <code style="color:red;">var</code> para <b>declarar</b> variables.<br>
+	Se utiliza <b>un signo igual</b> para <b>asignar valores</b> a las variables.<br></p>
+	<p>En este ejemplo, x se define como una variable. Entonces, a x se le asigna el valor de 6:</p>
+	<!-- Ejercicio -->
+	<div style="display:inline-block; background-color:lightgrey; padding:10px 20px;">
+		<h4>Ejemplo</h4>
+		<p>var x;<br>
+		x = 6;<br>
+		document.getElementById("demo-3").innerHTML = x;</p>
+		<p id="demo-3"></p>
+		<script>
+			var x;
+			x = 6;
+			document.getElementById("demo-3").innerHTML = x;
+		</script>
+	</div>
+</div>
+<!-- ==================== Panel-2 ====================-->
+<button class="accordion">Operadores</button>
+<div class="panel">
+	<h2>Operadores</h2>
+	<table>
+	  <tr>
+	    <th>Operadores aritméticos</th>
+	    <th>Operadores de asignación</th>
+	  </tr>
+	  <tr>
+	  	<td>
+	  		<p>JavaScript usa <b>operadores aritméticos</b> ( <code style="color:red;">+ - * /</code>) para <b>calcular</b> valores:</p>
+	  		<!-- Ejemplo -->	  		
+  			<h4>Ejemplo</h4>
+  			<p>document.getElementById("demo-4").innerHTML = (5 + 6) * 10;</p>
+  			<p id="demo-4"></p>
+  			<script>
+  				document.getElementById("demo-4").innerHTML = (5 + 6) * 10;
+  			</script>
+	  	</td>
+	  	<td>
+	  		<p>JavaScript usa un <b>operador de asignación</b> (<code style="color:red;">=</code>) para <b>asignar</b> valores a las variables:</p>
+	  		<!-- Ejemplo -->
+  			<h4>Ejemplo</h4>
+  			<p>var x, y;<br>
+  				x = 5;<br>
+  				y = 6;<br>
+  			document.getElementById("demo-5").innerHTML = x + y;</p>
+  			<p id="demo-5"></p>
+  			<script>
+				var x, y;
+				x = 5;
+				y = 6;
+				document.getElementById("demo-5").innerHTML = x + y;
+  			</script>
+	  	</td>
+	  </tr>
+	</table>
+</div>
+<!-- ==================== Panel-3 ====================-->
+<button class="accordion">Expresiones</button>
+<div class="panel">
+	<h2>Expresiones</h2>
+	<p>Una <b>expresión</b> es una combinación de valores, variables y operadores, que se calcula en un valor.<br>
+	El cálculo se llama <b>evaluación</b>.<br>
+	Por ejemplo, 5 * 10 se evalúa como 50</p>
+	<p>Las expresiones pueden contener valores literales y variables.</p>
+	<table>
+	  <tr>
+	    <th>Valores Literales</th>
+	    <th>Valores Variables</th>
+	  </tr>
+	  <tr>
+	  	<td>
+	  		<!-- Ejemplo -->
+  			<h4>Valor con números</h4>
+  			<p>document.getElementById("demo-6").innerHTML = 5 * 10;</p>
+  			<p id="demo-6"></p>
+  			<script>
+  				document.getElementById("demo-6").innerHTML = 5 * 10;
+  			</script>
+	  	</td>
+	  	<td>
+	  		<!-- Ejemplo -->
+  			<h4>Valor con variables</h4>
+  			<p>var x;<br>
+  				x = 5;<br>	
+  			document.getElementById("demo-7").innerHTML = x * 10;</p>
+  			<p id="demo-7"></p>
+  			<script>
+  				var x;
+  				x = 5;
+  				document.getElementById("demo-7").innerHTML = x * 10;
+  			</script>
+	  	</td>
+	  </tr>
+	  <tr>
+	  	<td>	  		
+	  		<p>Por ejemplo, "Pepe" + "" + "Wuicho", se evalúa como "Pepe Wuicho":</p>
+	  		<p>"Pepe" + " " + "Wuicho"</p>
+	  		<div style="display:inline-block; background-color:lightgrey; padding:10px 20px;">
+	  			<!-- Ejemplo -->
+	  			<h4>Valor con cadenas</h4>
+	  			<p>document.getElementById("demo-8").innerHTML = "Pepe" + " "  + "Wuicho";</p>
+	  			<p id="demo-8"></p>
+	  			<script>
+	  				document.getElementById("demo-8").innerHTML = "Pepe" + " "  + "Wuicho";
+	  			</script>
+	  		</div>
+	  	</td>
+	  	<td></td>
+	  </tr>
+	</table>
+</div>
+<!-- ==================== Panel-4 ====================-->
+<button class="accordion">Palabras clave</button>
+<div class="panel">
+	<h2>Palabras clave</h2>
+	<p>Las <b>palabras clave</b> de JavaScript se utilizan para identificar acciones.<br>
+	La palabra clave <code style="color:red;">var</code> le dice al navegador que cree variables:</p>
+	<!-- Ejemplo -->
+	<div style="display:inline-block; background-color:lightgrey; padding:10px 20px;">
+		<h4>Ejemplo</h4>
+		<p>var x, y;<br>
+			x = 5 + 6;<br>
+			y = x * 10;<br>
+		document.getElementById("demo-9").innerHTML = y;</p>
+		<p id="demo-9"></p>
+		<script>
+			var x, y;
+			x = 5 + 6;
+			y = x * 10;
+			document.getElementById("demo-9").innerHTML = y;
+		</script>
+	</div>
+</div>
+<!-- ==================== Panel-5 ====================-->
+<button class="accordion">Comentarios</button>
+<div class="panel">
+	<h2>Comentarios</h2>
+	<p>No todas las declaraciones de JavaScript se "ejecutan".<br>
+		El código después de barras dobles <code style="color:red;">//</code> o entre <code style="color:red;">/*</code> y <code style="color:red;">*/</code> se trata como un <b>comentario</b>.<br>
+	Los comentarios se ignoran y no se ejecutarán:</p>
+	<!-- Ejemplo -->
+	<div style="display:inline-block; background-color:lightgrey; padding:10px 20px;">
+		<h4>Ejemplo</h4>
+		<p>var x;<br>
+			x = 5; // Seré ejecutado<br>
+			// x = 6; No seré ejecutado<br>
+		document.getElementById("demo-10").innerHTML = x;</p>
+		<p id="demo-10"></p>
+		<script>
+			var x;
+	x = 5; // Seré ejecutado
+	// x = 6; No seré ejecutado
+	document.getElementById("demo-10").innerHTML = x;
+</script>
+</div><br>
+<i>Aprenderá más sobre los comentarios en un capítulo posterior.</i>
+</div>
+<!-- ==================== Panel-6====================-->
+<button class="accordion">Identificadores</button>
+<div class="panel">
+	<h2>Identificadores</h2>
+	<p>Los <b>identificadores</b> son nombres.<br>
+		En JavaScript, los identificadores se utilizan para nombrar variables (y palabras clave, funciones y etiquetas).<br>
+		Las reglas para los nombres legales son muy parecidas en la mayoría de los lenguajes de programación.<br>
+		En JavaScript, el primer carácter debe ser una letra, un guión bajo (_) o un signo de dólar ($).<br>
+	Los caracteres siguientes pueden ser letras, dígitos, guiones bajos o signos de dólar.</p><br>
+	<i>No se permiten números como primer carácter.
+	De esta forma, JavaScript puede distinguir fácilmente los identificadores de los números.</i>
+</div>
+<!-- ==================== Panel-7 ====================-->
+<button class="accordion">JavaScript distingue entre mayúsculas y minúsculas</button>
+<div class="panel">
+	<h2>JavaScript distingue entre mayúsculas y minúsculas</h2>
+	<p>
+		Todos los identificadores de JavaScript distinguen entre <b>mayúsculas</b> y <b>minúsculas</b>. <br> 
+		Las variables <code style="color:red;">lastName</code> y <code style="color:red;">lastname</code>, son dos variables diferentes:
+	</p>
+	<p>En el siguiente ejemplo, intente cambiar lastName por lastname.</p>
+	<!-- Ejemplo -->
+	<div style="display:inline-block; background-color:lightgrey; padding:10px 20px;">
+		<h4>Ejemplo</h4>
+		<p>var lastname, lastName;<br>
+			lastName = "Moreno";<br>
+			lastname = "Villanueva";<br>
+		document.getElementById("demo-11").innerHTML = lastName;</p>
+		<p id="demo-11"></p>
+		<script>
+			var lastname, lastName;
+			lastName = "Moreno";
+			lastname = "Villanueva";
+			document.getElementById("demo-11").innerHTML = lastName;
+		</script>
+	</div>
+	<p>JavaScript no interpreta <b>VAR</b> o <b>Var</b> como la palabra clave <b>var</b>.</p>
+</div>
+<!-- ==================== Panel-8 ====================-->
+<button class="accordion">Caja JavaScript y Camel</button>
+<div class="panel">
+	<h2>Caja JavaScript y Camel</h2>
+	<p>Históricamente, los programadores han utilizado diferentes formas de unir varias palabras en un nombre de variable:</p>
+	<p><b>Guiones:</b><br>
+	first-name, last-name, master-card, inter-city.<br>
+	<i>Los guiones no están permitidos en JavaScript. Están reservados para restas.</i>
+	</p>
+	<p><b>Guion bajo :</b><br>
+	first_name, last_name, master_card, inter_city.</p>
+	<p><b>Caso de camello superior (caso de Pascal):</b><br>
+	FirstName, LastName, MasterCard, InterCity.</p>
+	<p><b>Caso de camello inferior:</b><br>
+	Los programadores de JavaScript ofrecen usar mayúsculas y minúsculas que comienzan con una letra minúscula:<br>
+	firstName, lastName, masterCard, interCity.</p>
+</div>
+<!-- ==================== Panel-9 ====================-->
+<button class="accordion">Conjunto de caracteres</button>
+<div class="panel">
+	<h2>Conjunto de caracteres</h2>
+	<p>JavaScript utiliza el conjunto de caracteres <b>Unicode</b>.<br>
+		Unicode cubre (casi) todos los caracteres, signos de puntuación y símbolos del mundo.<br>
+		Para ver más de cerca, por favor estudie nuestra <a href="https://translate.googleusercontent.com/translate_c?depth=1&hl=es&prev=search&pto=aue&rurl=translate.google.com&sl=en&sp=nmt4&u=https://www.w3schools.com/charsets/ref_html_utf8.asp&usg=ALkJrhhKpvFe6qlwB5Nx7sXmJCbGcG0-yA" target="auto">Referencia completa de Unicode</a>.</p>
+	</div>
+</div>
+<!-- Javascript-->
+<script src="assets/js/accordion.js"></script>
+</body>
+</html>
