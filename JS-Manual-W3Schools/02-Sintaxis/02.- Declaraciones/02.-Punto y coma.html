@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punto y coma ;</title>
+</head>  
+<body>
+
+<h1>Punto y coma ;</h1>
+<p>Las declaraciones de JavaScript están separadas por punto y coma.</p>
+
+<table border="1">
+  <tr>
+    <td>
+      <h3>Nota</h3>
+      <p>No es obligatorio terminar las declaraciones con punto y coma, pero sí muy recomendable.</p>
+    </td>
+  </tr>
+</table>
+
+<h3>Ejemplo</h3>
+<p id="demo_01"></p>
+
+<script>
+  let a, b, c;  // Declarar 3 variables
+  a = 5;        // Asignar el valor 5 a a
+  b = 6;        // Asignar el valor 6 a b
+  c = a + b;    // Asignar la suma de a y b a c
+  document.getElementById("demo_01").innerHTML = c;//Colocar el valor de c en un elemento html con id "demo"
+</script>
+
+
+<h2>Múltiples declaraciones en una línea.</h2>
+<p>Cuando se separan con punto y coma, se permiten múltiples declaraciones en una línea:</p>
+
+<h3>Ejemplo</h3>
+<p id="demo_02"></p>
+
+<script>
+  let d, e, f;
+  d = 5; e = 6; f = d + e;
+
+  document.getElementById("demo_02").innerHTML = f;
+</script>
+
+</body>
+</html>

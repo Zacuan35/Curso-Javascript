@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 2</title>
+</head>
+<body>
+
+	<p>2.- Programa una función que valide si una palabra o frase dada, es un palíndromo
+  (Que se lee igual de izquierda a derecha y viceversa), Ejemplo "salas" devolverá true</p>
+
+	<script>
+		//Creación de la función
+		function palindrome(texto){
+			//Filtro - Evalua el valor de la variable que pasa el usuario
+			if(typeof texto !== "string"){
+				console.log("El valor no es una cadena de texto");
+			}else if(texto.trim() === "") {
+				console.log("El valor esta vacío");
+			}else {
+				//1.- Obtener el valor que nos pase el usuario "texto"
+				//2.- Crear una variable del valor texto en minúscula
+				let minuscule = texto.toLowerCase();
+				//3.- Crear una variable del valor minúscula pero invertida
+				let invertida = minuscule.split("").reverse().join("");
+				
+				//4.-Condicional - Comparar minúscula con invertida
+				if(minuscule == invertida){
+					console.log ("La palabra " + texto + " si es un palíndromo :)");
+				}else{
+					console.log ("La palabra " + texto + " no es un palíndromo :(");
+				}		
+			}
+		}
+
+		//Llamada de la función
+		palindrome("Luis");
+		palindrome("Ana");
+
+		//Otro filtro más sencillo
+		/*
+		if (typeof texto === "string" && texto.trim()) {
+			console.log("Es un string con contenido");
+		} else {
+			console.log("No es un string válido o está vacío");
+		}
+		*/
+
+	</script>
+</body>
+</html>

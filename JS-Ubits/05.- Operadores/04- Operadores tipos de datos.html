@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Operadores tipos de datos</title>
+</head>
+<body>
+	<h1>Operadores tipos de datos</h1>
+	<p>Operadores para evaluar si el valor de una variable es de un determinado tipo de dato.</p>
+
+	<h3>typeof</h3>
+	<script>
+		console.log(typeof "Hola Mundo"); //Devuelve string
+		console.log(typeof 23.19); //Devuelve number
+		console.log(typeof true); //Devuelve boolean
+		console.log(typeof false); //Devuelve boolean
+		console.log(typeof function () {}); //Devuelve función
+		console.log(typeof {x:2 , y:1}); //Devuelve objeto
+		console.log(typeof [1, 2, 3, 4, 5]); //Devuelve objeto pero es un arreglo (lista)
+	</script>
+
+	<h3>instanceof</h3>
+	<script>
+		//Sirve para hacer una evaluación más exhaustiva
+		console.log([1, 2, 3, 4, 5] instanceof Array); //Devuelve true
+		console.log([1, 2, 3, 4, 5] instanceof String); //Devuelve false		
+	</script>
+
+</body>
+</html>

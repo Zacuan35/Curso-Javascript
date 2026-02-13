@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retornar valores</title>
+</head>
+<body>
+	<h1>Retornar valores</h1>
+	<h3>1.- Devolver o retornar un valor</h3>
+	<p>Opcionalmente una función puede devolver un valor para lo cual se usa return.<br>
+	Return sirve para devolver el valor del cuerpo de la función hacia la línea donde es invocada</p>
+
+	<script>
+		function sumar(a, b) {
+			return a + b; //Con retorno
+		}
+		console.log(sumar(2,3));//El valor de esta invocación puede verse al ser colocado dentro de un console.log
+	</script>
+
+	<script>
+		//Configurar valores por defecto a los parámetros
+		function restar(a = 0, b = 0){
+				return a + b;
+		}
+		restar(9,8);
+		let resultadoDeLaResta = restar(100, 67); //Guardado del valor de la invocación en una variable
+		console.log(resultadoDeLaResta);//Visualización de la  variable en el console.log
+	</script>
+
+	<h3>¿Cómo funciona el return?</h3>
+	<p>Cuando el código dentro de una función encuentra un return, el valor
+	sale de la función y se va a donde fué declarado y lo demás, es ignorado.</p>
+	
+	<script>
+		function comoFuncionaElReturn(){
+			console.log("Uno");
+			console.log("Dos");
+			return console.log("Bye bye, he salido de la función");
+			console.log("Tres");
+			console.log("Cuatro");
+		}
+		comoFuncionaElReturn();	
+	</script>
+
+</body>
+</html>

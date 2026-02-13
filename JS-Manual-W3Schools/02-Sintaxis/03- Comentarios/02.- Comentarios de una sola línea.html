@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comentarios de una sola línea</title>
+</head>  
+<body>
+
+<h1>Comentarios de una sola línea</h2>
+
+<ul>
+  <li>Los comentarios de una sola línea comienzan con //.</li>
+  <li>Cualquier texto entre // y el final de la línea será ignorado por JavaScript (no se ejecutará).</li>
+</ul>
+
+<h3>Ejemplo</h3>
+<p>En este ejemplo, hay un comentario de una sóla línea antes de cada línea de código.</p>
+<h4 id="myH"></h4>
+<p id="myP"></p>
+
+<script>
+// Cambiar encabezado:
+document.getElementById("myH").innerHTML = "Mi primera página";
+// Cambiar párrafo
+document.getElementById("myP").innerHTML = "Mi primer párrafo.";
+</script>
+
+<h3>Ejemplo</h3>
+<p>Este ejemplo utiliza un sólo comentario de línea al final de cada línea para explicar el código:</p>
+<p id="demo"></p>
+
+<script>
+  let x = 5;      // Declara x y dale el valor 5
+  let y = x + 2;  // Declara y, dale el valor de x + 2
+  // Escribe y muestra
+  document.getElementById("demo").innerHTML = y;
+</script>
+
+</body>
+</html>

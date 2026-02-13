@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 3</title>
+</head>
+<body>
+
+<h3>Devuelve números aleatorios decimales entre min (incluido) y max (excluido).</h3>
+<script>
+	function getRandomArbitrary(min, max) {
+		return Math.random() * (max - min) + min;
+	}
+	getRandomArbitrary(1, 101);
+</script>
+
+<h3>Devuelve números aleatorios enteros entre min (incluido) y max (excluido)</h3>
+<script>
+	function getRandomIntMin(min, max) {
+		return Math.floor(
+			Math.random() * (max - min)
+		) + min;
+	}
+	getRandomIntMin(1, 101);	
+</script>
+
+<h3>Devuelve números aleatorios enteros entre min y max (incluyendo ambos)</h3>
+<script>
+	function getRandomIntMinMax(min, max) {
+		return Math.floor(
+			Math.random() * (max - min + 1)
+		) + min;
+	}
+	getRandomIntMinMax(1, 100);	
+</script>
+
+<h3>Forma básica reducida</h3>
+<script>
+	//Función declarada
+	function numAleatorio(){
+		return Math.floor(
+			Math.random() * 100 + 1
+		);  
+	}
+	console.log(numAleatorio());	
+</script>
+
+<h3>Función expresada</h3>
+<script>
+	const numAleatorioDos = () => Math.floor(Math.random() * 100 + 1);
+	console.log(numAleatorioDos());	
+</script>
+
+</body>
+</html>

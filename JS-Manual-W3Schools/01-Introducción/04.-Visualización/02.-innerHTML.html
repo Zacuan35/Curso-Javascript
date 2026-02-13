@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML</title>
+</head>  
+<body>
+
+<h2>innerHTML</h2>
+<ul>
+  <li>Para acceder a un elemento HTML, puede utilizar el método <code>document.getElementById(id)</code>.</li>
+  <li>Utilice el atributo <code>id</code> para identificar el elemento HTML.</li>
+  <li>Luego use la propiedad <code>innerHTML</code> para cambiar el contenido HTML del elemento HTML.</li>
+</ul>
+
+<table border="1">
+  <tr>
+    <td>
+      <h3>Nota</h3>
+      <p>Cambiar la propiedad innerHTML de un elemento HTML es la forma más común de mostrar datos en HTML.</p>
+    </td>
+  </tr>
+</table>
+
+<h3>Ejemplo</h3>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "<h4>Hola Mundo</h4>";
+</script>
+
+</body>
+</html>

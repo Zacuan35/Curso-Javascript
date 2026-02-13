@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 5.-Métodos y propiedades</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>ARRAY - MÉTODOS Y PROPIEDADES</h1>
+    
+    <p>Estos son algunos de los métodos y propiedades más utilizados para las variables array:<p>
+
+    
+    <h2>Propiedad .length</h2>
+    <p>Cuenta la cantidad de valores contenidas en un arreglo. Para usarlo basta con poner el nombre del arreglo seguida de .length</p>
+    
+    <p>En el siguiente ejemplo el valor que se nos mostrará en pantalla será 3, por que es el número de valores dentro del array amigos.<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex"];<br>
+            document.write( amigos.length );
+        </code><br>
+
+    </p>
+    
+    <p>Ahora se le dará un poco mas de forma al mensaje para que el texto mostrado en pantalla sea: tienes 4 amigos <p>
+    
+    <code style="color:red">
+        var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+        document.write("Tienes" + amigos.length + "amigos");
+    </code>
+
+    
+    <h2>Agregando un nuevo valor con .length</h2>
+    
+    <p>Ejemplo<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            amigos [amigos.length] = "Fernando";<br>
+            amigos [amigos.length] = "Luis";
+        </code><br>
+    </p>
+    
+    <p>
+    1.-En la primera línea se tiene un array llamado amigos con 4 valores.<br>
+    2.-En la segunda línea se indica que se accederá a un valor del array llamado amigos, dentro de los brackets en lugar de escribir un número se pone la variable amigos seguida de la propiedad.length, esto significa que dentro de los brackets el valor existente es 4, por que la propiedad estará contando los valores del array amigos.<br>
+    Entonces como en programación se empiezan a contar desde 0, el numero de elemntos estará un numero arriba que lo contado por el navegador, es decir 4, y 4 = a "Fernando", y como no hay una posición 4 en el array Fernando se coloca hasta el final del arreglo. </p>
+    
+    <h2>Propiedad .push ("...");</h2>
+    <p>Es la propiedad correcta para agregar valores directamente al final de un arreglo sin tener que hacer lo anterior. <br> Para usarlo basta con poner el nombre del arreglo seguida de .push ("valor a agregar");</p>
+    
+    <p>Ejemplo<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            amigos.push("Luis", "Fernando", "Oscar");
+        </code><br>
+    </p>
+    
+    <h2>Propiedad .pop ( );</h2>
+    <p>Con la propiedad .pop se elimina el último valor de un array, para utilizarlo basta con poner el nombre del array seguido de .pop ();</p>    
+    <p>Ejemplo<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            amigos.pop();<br>
+            document.write(amigos[0]);<br>
+            document.write(amigos[1]);<br>
+            document.write(amigos[2]);<br>
+            document.write(amigos[3]);
+        </code>
+    </p>
+    
+    <h2>.concat ( "..." );</h2>
+    <p>.concat sirve para juntar los valores de varios arreglos, para usarlo basta con poner el nombre del array seguido de .concat (); y agregar en el interior de los paréntesis el array a sumar.</p>
+    <p>Ejemplo<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            var amigos2 = ["Luis", "Fernando", "Óscar"];<br>
+            var amigos 3 = amigos.concat(amigos2);<br>
+            document.write(amigos3);
+        </code>
+    </p>
+    
+    
+    <h2>Método .join ( );</h2>
+    <p>Este método permite dividir los valores de un array con lo que nosotros le asignemos como un espacio, letra, número etc. <br> Para utilizarlo basta con poner el nombre del array seguido de .join ("espacio, carácter, letra o número a asignar");</p>
+    
+    <p>Ejemplo<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            amigos.join(" , ");
+        </code>
+    </p>
+    
+    <p>Para verlo escrito en pantalla:<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            docuemnt.write( amigos.join(" , ") );
+        </code>
+    </p>
+    
+    <p>Una forma más correcta de escribir lo anterior:<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            var amigosconseparacion = amigos.join( , );<br>
+            document.write( amigoscon separacion );
+        </code>
+    </p>
+    
+    
+    <h2>.reverse ( );</h2>
+    <p>.reverse ordena los elementos de un array, para utilizarlo basta con poner el nombre del array seguido de .reverse (); </p>
+    <p>Ejemplo<br>
+        <code style="color:red">
+            var amigos = ["Carlos", "César", "Alex", "Manuel"];<br>
+            var amigosordenados = amigos.reverse();<br>
+            document.write(amigosordenados);
+        </code>
+    </p>
+
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+
+    </script>
+</body>
+
+</html>

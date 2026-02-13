@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 20.-Eventos del DOM</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+<h1>Eventos del DOM</h1>
+
+<p>Los eventos son cosas que le suceden a los elementos HTML, y lo puede hacer el navegador o el usuario.<br>
+En este capítulo ejecutaremos código cuando el usuario haga cierta acción en el sitio web como presionar un botón, pasar el mouse sobre cierta área, cambiar un input, etc.</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                <h3>Función autoinvocada.</h3>
+                <p>En algunos capítulos no se ha estado utilizando la función autoinvocada, no se había hecho para poder utilizar la consola y poder mostrar algunas variables y su valor, lo recomentable es usarlo para proteger la variable.</p>
+
+                <code style="color:red;">
+                    (function(){<br><br>
+                    }())
+                </code>   
+            </td>
+        </tr>
+    </table>
+
+<h2>Modelo de eventos</h2>
+<p>Hay tres tipos de modelos de eventos, es por ello que hay muchas incompatibilidades.</p>
+
+<ul>
+    <li>Modelo de eventos básico.</li>
+    <li>Modelo de eventos estándar.</li>
+    <li>Modelo de eventos de internet explorer: Modelo de eventos espécifico para este navegador.</li>
+</ul>
+
+<p>En este capítulo vamos a estar viendo lo que es el modelo de eventos estándar ya que es el más nuevo y usado, y es el que tiene soporte en todos los navegadores modernos.</p>
+
+<hr>
+
+<h1>Evento tipo click</h1>
+<p>El evento se agregar al presionar un botón</p>
+
+<ul>
+    <li>Crearemos una variable llamada botón</li>
+    <li>La variable boton es igual al elemento button.</li>
+    <li>A la variable boton se le asigna el método .addEventListener("type",listener); y recibe dos parámetros.
+        <ul>
+            <li>1.-Tipo de evento: tipo clic es decir; cuando el usuario dé un click en el botón.</li>
+            <li>2.-Lo que se va a ejecutar: puede ser una función con nombre o una función anónima.</li>
+        </ul>
+    </li>
+</ul>
+
+<button id="boton">Botón</button>
+<input type="text" id="input" name=""><br><br>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var boton = document.getElementById('boton');<br>
+    &nbsp; boton.addEventListener("click",function);<br>
+    }())
+</code>
+
+<p>Los eventos pueden ser instrucciones agregadas a una función, podemos agregar funciones anónima o con algún nombre.</p>
+
+<h3>Agregando función anónima</h3>
+<p>Vamos a agregrar una función anónima y a ejecutar el código dentro.</p>
+
+<ul>
+    <li>En las instruciones ponemos un console.log (...); y dentro un texto de prueba.</li>
+    <li>Actualizamos, presionamos y observamos en la consola que nos aparece el mensaje.</li>
+</ul>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var boton = document.getElementById('boton');<br>
+    &nbsp; boton.addEventListener("click",function(){<br>
+    &nbsp; &nbsp; console.log('Funciono! :D');<br>
+    &nbsp; });<br>
+    }())
+</code>
+
+<h3>Agregando una función con nombre</h3>
+
+<p>Aunque hay veces en las que vamos a querer agregar funciones anónimas no es lo ideal, ya que basta con ponerle el nombre de una función, en el siguiente ejemplo cuando el usuario presione el boton activará el click, el cual va a ejecutar el alert de saludo.<br>
+Esto lo podemos hacer con cualquiera de los elementos que nosotros tengamos en el caso del evento click.</p>
+
+<ul>
+    <li><strong>Creando la función</strong></li>
+    <li>Se guarda una función dentro de la variable llamada saludo.<br>
+    "Puede decirse que el nombre de la función es saludo".</li>
+    <li>Dentro de function ponemos un alert con el texto saludo.</li>
+    <li><strong>Dando de alta el evento</strong></li>
+    <li>La variable boton es igual al elemento html button.</li>
+    <li>Al elemento html se le asigna el método .addEventListener("type",listener); y recibe dos parámetros.
+        <ul>
+            <li>1.-Tipo de evento: tipo clic.</li>
+            <li>2.-Lo que se va a ejecutar: se va a ejecutar la función saludo.<br>
+                "Cuando se pone el nombre no lleva paréntesis".
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var saludo = function(){<br>
+    &nbsp; &nbsp; alert('Saludo');<br>
+    &nbsp; };<br>
+    &nbsp; var boton = document.getElementById('boton');<br>
+    &nbsp; boton.addEventListener("click", saludo);<br>
+    }())
+</code>
+
+<h3>Agregando más de una función</h3>
+
+<p>Podemos agregar más de una función o cuantos eventos necesitemos sin ningún problema, para ello:</p>
+
+<ul>
+    <li>Crearemos la variable llamada saludo2.</li>
+    <li>Agregaremos un nuevo evento al elemento HTML button.</li>
+    <li>Dentro de los paréntesis llamará a la función saludo2.</li>
+    <li>Actualizamos, presionamos el botón y aparece el texto saludo, volvemos a presionar y aparece saludo2.</li>
+</ul>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var saludo = function(){<br>
+    &nbsp; &nbsp; alert('Saludo');<br>
+    &nbsp; };<br>
+    &nbsp; var saludo2 = function(){<br>
+    &nbsp; &nbsp; alert('Saludo2');<br>
+    &nbsp; };<br>
+    &nbsp; var boton = document.getElementById('boton');<br>
+    &nbsp; boton.addEventListener("click", saludo);<br>
+    &nbsp; boton.addEventListener("click", saludo2);<br>
+    }())
+</code>
+
+<hr>
+
+<h2>Evento tipo focus</h2>
+
+<p>Estamos utilizando el evento click pero hay muchos, hay librerias de eventos con su descripción divididas por categorías como; los eventos del mouse, del teclado, de frame/objeto, formularios etc.
+<br>
+El que más se utiliza es onclick, en los eventos de formulario hay uno muy interesante, por ejemplo onfocusque es cuando entramos en el input de un formulario.</p>
+
+<ul>
+    <li>Crearemos una función y la guardaremos dentro de la variable saludo.</li>
+    <li>Dentro de la función aparecerá el texto focus.</li>
+    <li>Crearemos una variable llamada input con el que accederemos al elemento HTML input.</li>
+    <li>Al elemento input se le agrega un evento focus.</li>
+    <li>Lo que se va a ejecutar al activarse el evento será la función saludo.</li>
+    <li>Si lo vemos en el inspector aparece el mensaje focus!.</li>
+    <li>A la derecha de la consola aparece el número de veces en que se varga un evento si volvemos a presionar el botón.</li>
+</ul>
+
+<code style="color:red;">
+    (function(){<br>
+        &nbsp; var saludo = function(){<br>
+        &nbsp; &nbsp; console.log('focus!');<br>
+        &nbsp; };<br>
+        &nbsp; var input = document.getElementById('input');<br>
+        &nbsp; input.addEventListener("focus", saludo);<br>
+    }())
+</code>
+
+<hr>
+
+<h2>Evento tipo blur</h2>
+
+<p>Blur es lo contrario de focus ya que se va a ejecutar cuando el usuario sale del input de un formulario.</p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var saludo = function(){<br>
+    &nbsp; &nbsp; console.log('focus!');<br>
+    &nbsp; };<br>
+    &nbsp; var input = document.getElementById('input');<br>
+    &nbsp; input.addEventListener("blur", saludo);<br>
+    }())
+</code>
+
+<hr>
+
+<h2>Evento tipo change</h2>
+
+<p>Si hacemos un cambio en el input y salimos se ejecuta el evento: Un ejemplo sería el de un formulario de registro para darse de alta en el que al dar un clic afuera del input se ejecuta un script de éxito o fracaso.<br>
+<i>"El evento change se ejecuta cada que detecta un cambio en la entrada del input".</i></p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var saludo = function(){<br>
+    &nbsp; &nbsp;console.log('focus!');<br>
+    &nbsp; };<br>
+    &nbsp; var input = document.getElementById('input');<br>
+    &nbsp; input.addEventListener("change", saludo);<br>
+    }())
+</code>
+
+<hr>
+
+<h1>Remover eventos</h1>
+<p>Podemos remover el evento saludo haciendo un script que ejecute el evento pero sólo en cierta situación.</p>
+
+<ul>
+    <li>Para ello accedemos a botón seguido de .removeEvenListener</li>
+    <li>Dentro del paréntesis hay dos parámetros:
+        <ul>
+            <li>1.-Que tipo de evento queremos eliminar, en este caso de tipo click.</li>
+            <li>2.-La función que queremos eliminar, en este caso saludo2.</li>
+        </ul>
+    </li>
+</ul>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var saludo = function(){<br>
+    &nbsp; &nbsp; console.log('saludo!');<br>
+    &nbsp; };<br>
+    &nbsp; var saludo2 = function(){<br>
+    &nbsp; &nbsp; console.log('saludo2!');<br>
+    &nbsp; };<br>
+    &nbsp; var boton = document.getElementById('boton');<br>
+    &nbsp; boton.addEventListener("click", saludo);<br>
+    &nbsp; boton.addEventListener("click", saludo2);<br>
+    &nbsp; boton.removeEventListener("click", saludo2);<br>
+    }())
+</code>
+
+<hr>
+
+<h1>Método .type</h1>
+<p>Es utilizado para conocer el tipo de evento que esta ejecutando una acción.<br>
+Con esto también se pueden hacer condicionales entre otro tipo de cosas.
+</p>
+
+<ul>
+    <li>Dentro de los paréntesis de la función le vamos a pasar el parámetro de la letra e.</li>
+    <li>En el texto de console.log ponemos un texto concatenado al parámetro e seguido de .type</li>
+    <li>Al presionar el botón en la consola aparecerá: "Este evento es de tipo : click"</li>
+</ul>
+
+<code style="color:red;">
+&nbsp; (function(){<br>
+&nbsp; &nbsp; var saludo = function(e){<br>
+&nbsp; &nbsp; console.log('este evento es de tipo:' + e.type);<br>
+&nbsp; };<br>
+&nbsp; var boton = document.getElementById('boton');<br>
+&nbsp; boton.addEventListener("click", saludo);<br>
+&nbsp; }())
+</code>
+
+<hr>
+
+<h1>Método .target</h1>
+<p>Permite conocer el objetivo al que le estamos haciendo el evento, seguido de e ponemos .target<br>
+Con esto también se pueden hacer condicionales, se puede decir, si el evento lo estas aplicando a un botón quiero que suceda tal cosa por ejemplo.
+</p>
+
+<ul>
+    <li>Actualizamos la página, presionamos el botón y ahora el texto dice.</li>
+    <li>Este evento es de tipo: [object HTMLButtonElement]<br>
+    (Dice que el evento se esta aplicando a un botón HTML).
+    </li>
+</ul>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var saludo = function(e){<br>
+    &nbsp; &nbsp; console.log('este evento es de tipo:' + e.target);<br>
+    &nbsp; };<br>
+    &nbsp; var boton = document.getElementById('boton');<br>
+    &nbsp; boton.addEventListener("click", saludo);<br>
+    }())
+</code>
+
+<hr>
+
+<h2>Preveniendo el comportamiento por default de los elementos</h2>
+
+<ul>
+    <li>Vamos a agregar un elemento a que va a redireccionar a la liga especificada cuando demos un clic.</li>
+    <li>Pero podemos prevenir que suceda eso y en su lugar muestre un mensaje en la consola "oh yeah"</li>
+    <li>Accedemos al parámetro e seguido de .preventDefault();</li>
+</ul>
+
+<a id="boton" href="http://www.falconmasters.com">FalconMasters</a>
+<input type="text" id="input" name=""><br><br>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var saludo = function(e){<br>
+    &nbsp; &nbsp; console.log('este evento es de tipo:' + e.target);<br>
+    &nbsp; };<br>
+    &nbsp; var boton = document.getElementById('boton');<br>
+    &nbsp; boton.addEventListener("click", saludo);<br>
+    }())
+</code>
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

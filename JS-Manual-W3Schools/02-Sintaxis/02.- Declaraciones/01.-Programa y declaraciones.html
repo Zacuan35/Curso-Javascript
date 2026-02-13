@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa y declaraciones</title>
+</head>  
+<body>
+
+<h1>Programa y declaraciones</h1>
+<ul>
+  <li>Un programa de Javascript es una lista de "instrucciones" que son "ejecutadas" por una computadora (navegador web).</li>
+  <li>Las instrucciones se ejecutan, una por una, en el mismo orden en que están escritas.</li>
+  <li>Las instrucciones de programación se llaman declaraciones .</li>
+  <li>Las declaraciones se componen de valores, operadores, expresiones, palabras clave y comentarios.</li>
+</ul>
+
+<h3>Ejemplo</h3>
+<p>Aqui ha varias declaraciones, en donde se declaran variables, se asignan valores a las variables, 
+se realizan operaciones con los valores de las variables, y por último, se coloca el valor de la 
+variable z dentro de un elemento HTML con id="demo":</p>
+<p id="demo_01"></p>
+<script>
+  let x, y, z;  // Declaración 1
+  x = 5;        // Declaración 2
+  y = 6;        // Declaración 3
+  z = x + y;    // Declaración 4
+
+  document.getElementById("demo_01").innerHTML = "El valor de z es " + z;  
+</script>
+
+</body>
+</html>

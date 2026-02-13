@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>06- Ejercicio - Reloj - 1erEjemplo</title>
+</head>
+<body>
+	<h3>Primer ejemplo</h3>
+	<script>
+		function reloj() {
+			const ahora = new Date();
+			let horas = ahora.getHours();
+			let minutos = ahora.getMinutes();
+			let segundos = ahora.getSeconds();
+			let periodo = "AM";
+
+			if (horas >= 12) {
+				periodo = "PM";
+			}
+
+			// Convertir a formato 12h
+			horas = horas % 12;
+			horas = horas === 0 ? 12 : horas;
+
+			// Añadir ceros a la izquierda
+			horas = String(horas).padStart(2, "0");
+			minutos = String(minutos).padStart(2, "0");
+			segundos = String(segundos).padStart(2, "0");
+
+			document.getElementById("reloj").textContent =
+				`${horas}:${minutos}:${segundos} ${periodo}`;
+		}
+
+		setInterval(reloj, 1000);
+		reloj(); // se ejecuta de inmediato		
+	</script>
+</body>
+</html>

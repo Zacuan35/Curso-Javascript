@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Comparar fechas</title>
+</head>
+<body>
+
+	<h3>Comparar fechas</h3>
+	<script>
+		/*Crear un objeto Date*/
+		const fecha = new Date();
+
+		/*Las fechas se pueden comparar porque internamente son números:*/
+		const a = new Date("2024-01-01");
+		const b = new Date("2024-02-01");
+
+		a < b; // true
+
+		//O calcular diferencias:
+		const diff = b - a; // milisegundos		
+	</script>
+
+</body>
+</html>

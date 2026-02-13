@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 22.-Validando formularios</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+<h1>Formularios-Validando formulario sencillo</h1>
+
+<p>Validaremos un formulario sencillo para comprobar que el usuario haya rellenado cada uno de los campos.<br>
+Queremos que al presionar el botón se ejecute el script, el cual va a validar el campo texto para que no este vacío y tenga al menos tenga un dígito, que el usuario haya seleccionado alguno de los radio buttons y que haya aceptado los términos y condiciones.</p>
+
+<h1>Creando el script</h1>
+<p>Empezamos con una función autoinvocada.</p>
+
+<table border="1">
+    <tr style="background-color:#000; color:white;">
+        <td>
+            <h2 style="margin-bottom: -10px;">Accediendo a los nodos y guardándolas en variables</h2>
+            <p>Se crearán tres variables para acceder al primer formulario, a los inputs y al botón de envíar.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="margin-bottom:-10px;">1.-Creando la variable formulario</h3>
+            <p>Creamos la variable formulario en donde almacenaremos el primer formulario del DOM.<br>
+            El método document.getElementsByName localiza a todos los formularios del DOM, y con el número dentro de los corchetes se accede sólo al primero.</p>
+
+            <h3 style="margin-bottom:-10px;">2.-Creando la variable elementos</h3>
+            <p>Con esta variable se accede a los inputs del formulario.<br>
+            El objeto .elements seguido de la variable formulario accede del formulario y se guarda dentro de la variable elementos.</p>
+
+            <h3 style="margin-bottom:-10px;">3.-Creando la variable boton</h3>
+            <p>Con .getElementById se accede al botón del formulario y se guarda dentro de la variable boton.<br>
+            "También podemos acceder al botón con getElementByName"</p>
+        </td>
+    </tr>
+</table><br>
+   
+<table border="1">
+    <tr style="background-color:#000; color:white;">
+        <td>
+            <h2 style="margin-bottom: -10px;">Creando las funciones y guardándolas en variables</h2>
+            <p>Se crearán tres funciones para cumplir tareas específicas</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="margin-bottom:-10px;">Creando la variable validarNombre</h3>
+            <p>La función validar nombre es igual a una función que tendrá como instrucciones una condicional.<br>
+            Accederemos a el valor dentro del input con el atributo name="nombre" del primer formulario de la siguiente forma:<br>    
+            Abrimos una declaración condicional. <br>
+            Dentro de los paréntesis accederemos a la variable formulario.<br>
+            Seguídamente accedemos al atributo name con .nombre<br>
+            Por último accedemos al valor name con .value<br>
+            Dicho valor queremos comprobar que no sea igual a cero.<br>
+            Después de un espacio ponemos == 0 <br>
+            Si el valor del input nombre es igual a cero se ejecutarán las siguientes instrucciones:<br>
+            Aparecerá un alert con el texto "Completa el campo nombre"</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="margin-bottom:-10px;">Creando la variable validarRadio</h3>
+            <p>.checked se encarga de revisar si un checkbox o radiobutton esta marcado o no.<br>
+            Se crea una función que se guardará en la variable validarRadio<br> 
+            En las instrucciones se agrega un condicional y dentro de los paréntesis se lee lo siguiente:<br>
+            Si el .checked del primer input llamado sexo del formulario es verdadero, es decir si esta marcado, o si el .checked del segundo input llamado sexo del formulario es verdadero no se ejecutará nada.<br>
+            Pero si no está marcado ninguno de los dos se ejecutará un alert con el texto indicado.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="margin-bottom:-10px;">Creando la variable validarCheckbox</h3>
+            <p>La función esta guardada dentro de la variable validarCheckbox, como instrucciones ponemos una condicional.<br>
+            Dentro de los paréntesis se lee lo siguiente:<br>
+            Si el .cheked del input con el nombre terminos dentro del formulario es igual a false se ejecutará un alaert con el texto indicado. </p>
+        </td>
+    </tr>
+</table><br>
+
+<table border="1">
+    <tr style="background-color:#000; color:white;">
+        <td>
+            <h2 style="margin-bottom: -10px;">La función validar ejecutará tres funciones</h2>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>La función validar servirá para ejecutar una seríe de funciones con objetivos específicos para ello se crea una función que se guardará dentro de la variable validar.<br>
+            Como instrucciones que se ejecutarán pondremos tres funciones mas.<br><br>
+            validarNombre ( ); validará que el input texto cumpla con la condicional asignada.<br>
+            validarRadio ( ); validará que el input radio buttons cumpla con la condicional asignada. <br>
+            validarCheckbox ( ); validará que el input checkbox cumpla con la condicional asignada. <br><br>
+            "La función validar podría validar todos los elementos de una vez, pero las funciones sólo deben dedicarse a una sola cosa, ejecutar una sola acción, es por eso que se crearon tres funciones."<br>
+            <strong><i>Podemos hacer código que automáticamente detecte cuandos inputs tenemos y los compruebe dependiendo de su tipo pero es un poco más complejo.</i></strong>
+            </p>
+        </td>
+    </tr>
+</table><br>
+  
+
+<table border="1">
+    <tr style="background-color:#000; color:white;">
+        <td>
+            <h2>Agregando el evento validar al formulario</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>El evento se agrega al formulario a trávez del input submit, y este enviará el contenido.<br>
+            Llamamos a la variable formulario seguido de .addEventListener y recibe dos parametros:<br>
+            1.-Tipo de evento que ocurrirá: submit.<br>
+            2.-Función que se ejecutará cuando el evento ocurra: función validar.<br>
+            El usuario al presionar el botón activará el evento submit y ejecutará la función validar.</p>
+        </td>
+    </tr>
+</table><br>
+
+
+<table border="1">
+    <tr>
+        <td>
+            <h2>Objeto e</h2><hr>
+            <p>A pesar de que el usuario no haya completado todos lo campos, los datos si se envían y se observa como la página se "recarga", y en la url aparecen códigos extras propios del código get.<br>
+            Para ello se utiliza e.preventDefault para prevenir el comportamiento del evento submit, pero para poder usarlo tenemos que pasar el argumento "e" a las funciones de los inputs y mandarlo llamar dentro de las instrucciones.<br>
+            El argumento "e" también lo colocamos en las funciones que manda llamar la variable validar.<br>
+            Si volvemos recargar sin completar todos los campos y presionamos enviar, ya no se enviarán los datos, y si llenamos los campos si se enviarán y la url cambiará.</p>
+        </td>
+    </tr>
+</table><br>
+
+<h2 style="margin-bottom: -10px;">Comprobando el script</h2>
+<p>Borramos los datos extras después de .html, actualizamos y presionamos enviar.
+Si tenemos todos los datos completamos y damos clic al botón los datos se envían.</p>
+    
+    
+<code style="color:red;">
+    (function(){<br><br>
+    
+    <span style="color:black;">
+    &nbsp; /////////////////////////////////////////////////////<br>
+    &nbsp; //Accediéndo a los nodos y guardándolas en variables <br>
+    &nbsp; /////////////////////////////////////////////////////<br><br>        
+    </span>
+
+    &nbsp; var formulario = document.getElementsByName('formulario')[0],<br>
+    &nbsp; elementos = formulario.elements,<br>
+    &nbsp; boton = document.getElementById('btn');<br><br>
+    
+    <span style="color:black;">
+    &nbsp; /////////////////////////////////////////////////////<br>
+    &nbsp; //Creando las funciones y guardándolas en variables <br>
+    &nbsp; /////////////////////////////////////////////////////<br><br>        
+    </span>
+
+    &nbsp; var validarNombre = function(e){<br>
+    &nbsp; &nbsp; if(formulario.nombre.value == 0){<br>
+    &nbsp; &nbsp; &nbsp; alert("Completa el campo nombre");<br>
+    &nbsp; &nbsp; &nbsp; e.preventDefault();<br>
+    &nbsp; &nbsp; }<br>
+    &nbsp; };<br><br>
+
+    &nbsp; var validarRadio = function(e){<br>
+    &nbsp; &nbsp; if(formulario.sexo[0].checked == true || formulario.sexo[1].checked == true ){<br>
+    &nbsp; &nbsp; }else{<br>
+    &nbsp; &nbsp; &nbsp; alert("Completa el campo sexo");<br>
+    &nbsp; &nbsp; &nbsp; e.preventDefault();<br>
+    &nbsp; &nbsp; }<br>
+    &nbsp; };<br><br>
+
+    &nbsp; var validarCheckbox = function(e){<br>
+    &nbsp; &nbsp; if (formulario.terminos.checked == false){}<br>
+    &nbsp; &nbsp; alert("Acepta los términos");<br>
+    &nbsp; &nbsp; e.preventDefault();<br>
+    &nbsp; };<br><br>
+
+    <span style="color:black;">
+    &nbsp; /////////////////////////////////////////////<br>
+    &nbsp; //La función validar ejecutará tres funciones <br>
+    &nbsp; /////////////////////////////////////////////<br><br>        
+    </span>
+
+    &nbsp; var validar = function(e){<br>
+    &nbsp; &nbsp; validarNombre(e);<br>
+    &nbsp; &nbsp; validarRadio(e);<br> 
+    &nbsp; &nbsp; validarCheckbox(e);<br>
+    &nbsp; };<br><br>    
+
+    <span style="color:black;">
+    &nbsp; ///////////////////////////////////////////<br>
+    &nbsp; //Agregando el evento validar al formulario <br>
+    &nbsp; ///////////////////////////////////////////<br><br>        
+    </span>
+
+    &nbsp; formulario.addEventListener("submit",validar);<br><br>
+    
+    }())
+</code>      
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script></script>
+    
+</body>
+
+</html>

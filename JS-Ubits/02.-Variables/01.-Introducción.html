@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Introducción</title>
+</head>
+<body>
+
+	<h1>Variable</h1>
+	<p>La variable es un espacio de memoria donde almacenamos información.</p>
+
+	<h3>Declarar una variable</h3>
+	<p>En JavaScript una variable se declara usando:</p>
+	<ol>
+		<li>var - Evítalo</li>
+		<li>let - valores que cambian</li>
+		<li>const - cuando el valor no va a cambiar</li>
+	</ol>
+
+	<script>
+		let nombreVariable = valor; //Declaración de la variable con let
+	</script>
+
+	<h3>Reglas para nombres de variables</h3>
+	<ul>
+		<li>Deben empezar con letra, _ o $</li>
+		<li>No pueden empezar con número</li>
+		<li>No pueden usar palabras reservadas (if, for, function, etc.)</li>
+		<li>Son sensibles a mayúsculas (edad ≠ Edad)</li>
+	</ul>
+
+	<script>
+		//Ejemplos válidos:
+		let total;
+		let _precio;
+		let $resultado;
+
+		//Ejemplos inválidos:
+		let 1dato;   
+		let for;     
+	</script>
+
+</body>
+</html>

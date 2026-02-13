@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>08- Ejercicio</title>
+</head>
+<body>
+	<h3>Programa un reloj digital en formato AM / PM</h3>
+
+	<ol>
+		<li>Pseudocódigo</li>
+		<li>Obtener los datos de fecha y hora del sistema.</li>
+		<li>Obtener la hora, los minutos y los segundos</li>
+		<li>Agregar AM y PM*/</li>
+	</ol>
+
+	<script>
+		function reloj(){
+			//Obtener los datos de fecha y hora del sistema.
+			const fecha = new Date();
+			//Obtener la hora, los minutos y los segundos
+			let hora = fecha.getHours();
+			let minutos = fecha.getMinutes();
+			let segundos = fecha.getSeconds();
+
+			//Crear y establecer el formato
+			let meridiano = "AM";  
+			if(hora >= 12 ){
+				meridiano = "PM"
+			}
+
+			// Convertir a formato 12h
+			hora = hora % 12;
+			hora = hora === 0 ? 12 : hora;
+			// Añadir ceros a la izquierda
+
+			document.getElementById("reloj").textContent = `${hora} : ${minutos} : ${segundos} : ${meridiano}`;
+		}
+
+		setInterval(reloj, 1000);
+		reloj();	
+	</script>
+
+	<!--
+		HORAS
+		24hrs - 12hrs
+
+		00am - 12am
+		01am - 1am
+		02am - 2am
+		03am - 3am
+		04am - 4am
+		05am - 5am
+		06am - 6am
+		07am - 7am
+		08am - 8am
+		09am - 9am
+		10am - 10am
+		11am - 11am
+
+		12pm - 12pm
+		13pm - 1pm
+		14pm - 2pm
+		15pm - 3pm
+		16pm - 4pm
+		17pm - 5pm
+		18pm - 6pm
+		19pm - 7pm
+		20pm - 8pm
+		21pm - 9pm
+		22pm - 10pm
+		23pm - 11pm
+	-->
+
+	<!--
+	RESIDUO
+	El residuo de 0 entre 12 es 0
+
+		El residuo de 1 entre 12 es 1
+		El residuo de 2 entre 12 es 2
+		El residuo de 3 entre 12 es 3
+		El residuo de 4 entre 12 es 4
+		El residuo de 5 entre 12 es 5
+		El residuo de 6 entre 12 es 6
+		El residuo de 7 entre 12 es 7
+		El residuo de 8 entre 12 es 8
+		El residuo de 9 entre 12 es 9
+		El residuo de 10 entre 12 es 10
+		El residuo de 11 entre 12 es 11
+
+	El residuo de 12 entre 12 es 0
+
+		El residuo de 13 entre 12 es 1
+		El residuo de 14 entre 12 es 2
+		El residuo de 15 entre 12 es 3
+		El residuo de 16 entre 12 es 4
+		El residuo de 17 entre 12 es 5
+		El residuo de 18 entre 12 es 6
+		El residuo de 19 entre 12 es 7
+		El residuo de 20 entre 12 es 8
+		El residuo de 21 entre 12 es 9
+		El residuo de 22 entre 12 es 10
+		El residuo de 23 entre 12 es 11
+
+	El residuo de 24 entre 12 es 0	
+	-->
+
+</body>
+</html>

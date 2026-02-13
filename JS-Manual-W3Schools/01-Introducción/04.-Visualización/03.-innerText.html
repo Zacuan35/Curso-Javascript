@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerText</title>
+</head>  
+<body>
+
+<h1>innerText</h1>
+
+<ul>
+  <li>Para acceder a un elemento HTML, utilice el método <code>document.getElementById(id)</code>.</li>
+  <li>Luego use la propiedad <code>innerText</code> para cambiar el texto interno del elemento HTML</li>
+</ul>
+
+<h3>Ejemplo</h3>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerText = "Hola Mundo";
+</script>
+
+<table border="1">
+  <tr>
+    <td>
+      <h3>Nota</h3>
+      <p>Utilice innerHTML cuando desee cambiar un elemento HTML.</p>
+      <p>Utilice innerText cuando sólo desee cambiar el texto simple.</p>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

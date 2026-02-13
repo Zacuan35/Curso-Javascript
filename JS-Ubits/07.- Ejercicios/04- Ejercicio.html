@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 4</title>
+</head>
+<body>
+
+<script>
+	const numeros = [1,2,3,4,5,6,7,8,9,0];
+</script>
+
+<h3>Ejemplo 01 - If sueltos</h3>
+<script>
+	function parImpar01(arreglo) {
+
+		// Validación de tipo
+		/*Si pasa esto, ejecuta este bloque, si no pasa… no hagas nada y sigue.*/
+		if (!(arreglo instanceof Array)) {
+			console.error("El valor introducido no es un arreglo");
+			return;
+		}
+
+		// Validación de arreglo vacío
+		if (arreglo.length === 0) {
+			console.error("El arreglo está vacío");
+			return;
+		}
+
+		// Valida y manda mensaje de elementos no numéricos
+		arreglo.forEach((el) => {
+			if (typeof el !== "number") {
+				console.error(`El elemento ${el} no es un número`);
+			}
+		});
+
+		// Filtrar solo números
+		let numeros = arreglo.filter(el => typeof el === "number");
+
+		return {
+			original: arreglo,
+			pares: numeros.filter(num => num % 2 === 0),
+			impares: numeros.filter(num => num % 2 !== 0)
+		};
+	}
+	parImpar01(numeros);
+</script>
+
+<h3>Ejemplo 02 - If Else</h3>
+<script>
+	function parImpar02(arreglo) {
+
+		// Validación de tipo de dato y de array vacío
+		if (!(arreglo instanceof Array)) {
+			console.error("El valor introducido no es un arreglo");
+			return;
+		} else if (arreglo.length === 0) {
+			console.error("El arreglo está vacío");
+			return;
+		}
+
+		// Aquí ya es seguro trabajar
+		arreglo.forEach(el => {
+			if (typeof el !== "number") {
+				console.error(`El elemento ${el} no es un número`);
+			}
+		});
+
+		let numeros = arreglo.filter(el => typeof el === "number");
+
+		return {
+			pares: numeros.filter(n => n % 2 === 0),
+			impares: numeros.filter(n => n % 2 !== 0)
+		};
+	}
+
+	parImpar02(numeros);	
+</script>
+
+<h3>Ejemplo 03 - If else</h3>
+<script>
+	function parImpar03(arreglo) {
+
+		if (!(arreglo instanceof Array)) {
+			console.error("No es un arreglo");
+
+		} else if (arreglo.length === 0) {
+			console.error("El arreglo está vacío");
+
+		} else {
+			arreglo.forEach(el => {
+				if (typeof el !== "number") {
+					console.error(`El elemento ${el} no es un número`);
+				}
+			});
+
+			let numeros = arreglo.filter(el => typeof el === "number");
+
+			return {
+				original: arreglo,
+				pares: numeros.filter(n => n % 2 === 0),
+				impares: numeros.filter(n => n % 2 !== 0)
+			};
+		}
+	}
+
+	parImpar03(numeros);	
+</script>
+
+<h3>Ejemplo 04 - Con for each</h3>
+<script>
+	function separarParesImpares(arr) {
+		let resultado = {
+			pares: [],
+			impares: []
+		};
+
+		for (let i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 === 0) {
+				resultado.pares.push(arr[i]);
+			} else {
+				resultado.impares.push(arr[i]);
+			}
+		}
+		
+		return resultado;
+	}
+
+	separarParesImpares(numeros);	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 3.-Tipos de datos</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>TIPOS DE DATOS / VARIABLES</h1>
+    
+    <p>Podemos almacenar diferentes tipos de información en las variables dependiento de lo que necesitemos y son las siguientes:</p>
+    
+    <code>
+        <u>
+            <li>1.-Numérico</li>
+            <li>2.-String - Cadena de texto</li>
+            <li>3.-Array - Arreglo</li>
+            <li>4.-Object - Objeto</li>
+            <li>5.-Boolean - Boleano</li>
+            <li>6.-Undefined - Indefinido</li>
+            <li>7.-Null - Nulo</li>
+            <li>8.-NaN - Error</li>
+        </u>
+    </code>
+    
+    <p>Esto nos sirve para saber que es lo que podemos almacenar en una variable y poder decidir con que vamos a trabajar por que muchas veces pensamos que un problema tiene una solución pero realmente tiene otra que es mucho más fácil, los tipos de datos son importantes por que te permiten saber que puedes almacenar para después trabajar con esos valores </p>
+    
+    <h2>1.-Numérico</h2>
+    <p>Existen dos tipos de datos numéricos, los entire (entero) y los float (decimal), para los números existen funciones y se pueden hacer muchas cosas como operaciones. En javascript no se tiene que especificar exactamente que tipo de valor se esta trabajando, en otros lenguajes de programación si es necesario.</p>
+    
+    <p>1.1 Entire:<br>
+        <code style="color:red">
+            var edad = 19;
+        </code>
+    </p>
+    
+    <p>1.2 Float:<br>
+        <code style="color:red">
+            var edad = 19.123;
+        </code>
+    </p>
+    
+    <h2>2.String - Cadena de texto</h2>
+    <p>Una cadena de texto puede ser un valor de tipo texto o números, aunque este último será reconocido como un valor numérico por los navegadores, las cadenas de texto van dentro de comillas "..."; <br> 
+    Con las cadenas de texto se pueden hacer varias cosas como extraer un carácter, cortar la cadena de texto y muchas más.    
+    </p>
+    
+    <p> Ejemplo de la cadena de texto:<br>
+        <code style="color:red">
+            var nombre = "Carlos";<br>
+            var numero = "12";  
+        </code>
+    </p>
+    
+    <p> Una cadena de texto se puede concatenar: <br>
+        <code style="color:red">
+            var nombre = "Carlos";<br>
+            var apellido = "Esparza";<br>
+            document.write(nombre + " " + apellido);
+        </code>
+    </p>
+    
+    <p>Comillas entre comillas. <br>
+    No se puede poner comillas dentro de comillas, para ello existen dos opciones:</p>
+    
+    <p> 1ra opción:<br>
+        Reemplazarlas por comillas simples:<br>
+        <code style="color:red">
+            var texto = 'Los mejores videos son de "FalconMasters"';
+        </code>
+    </p>
+    
+    <p> 2da opción:<br>
+        Ponerles una diagonal con comillas inglesas (Aunque tambien funcionan con comillas simples.)<br>
+        <code style="color:red">
+            var texto = "Los mejores videos son de \"FalconMasters\" ";<br>
+            document.write(texto);
+        </code>
+    </p>
+
+    
+    <h2>3.-Array - Arreglo</h2>
+    <p>Un arreglo es una variable que almacena un grupo de valores, los arreglos se declaran dentro de  brackets [...]; y se puede acceder a ellos poniendo el nombre del arreglo seguido de unos brackets y en su interior el número del elemento al cual queremos acceder, sin embargo en programación los arreglos empiezan desde cero.</p>
+    
+    <code style="color:red">
+        var amigos = ["Carlos", "Alejandro", "César",];<br>
+        document.write(amigos[0]);
+    </code>
+    
+    <p>Los arreglos nos permiten tener múltiples valores y no necesariamente tienen que ser del mismo tipo.</p>
+    
+    <code style="color:red">
+        var amigos = ["Carlos", "Alejandro", "César", 19, true];<br>
+        document.write(amigos[0]);
+    </code>
+    
+    <h2>4.-Object - Objeto</h2>
+    <p>Los valores dentro de los objetos se declaran dentro de llaves {...}; es similar a los arreglos ya que también almacenan grupos de valores con la diferencia de que nos permiten llevar un orden. </p>
+    
+    <code style="color:red">
+        var objeto  = {<br>
+        color: "Black",<br>
+        size:12<br>
+        }
+    </code>
+    
+    <h2>5.-Boolean - Boleanos</h2>
+    <p>Únicamente almacenan dos valores; true y false, y nos sirven tambien para hacer comparaciones.</p>
+    
+    <code style="color:red">
+        var boleano = true;<br>
+        var boleano = false;
+    </code>
+    
+    <h2>6.-Undefined - Indefinido</h2>
+    
+    <p>Son variables a las que no se les ha definido algún valor, por ello se encuentran en estado indefinido, en el ejemplo, si el código se ejecutara aparecería undefined.</p>
+    
+    <code style="color:red">
+        var falconmasters;<br>
+        document.write(falconmasters);
+    </code>
+    
+    <p>Desde la consola se puede acceder a las variables.</p>
+    
+    <h2>7.-Null - Nulo</h2>
+    <p>Sirve para resetear o modificar el valor de una variable a nulo, a cero.</p>
+    
+    <code style="color:red">
+        var numero2 = 10;<br>
+        var numero2 = null;
+    </code>
+    
+    <h2>8.-NaN - Error</h2>
+    
+    <p>NaN aparece cuando se quiere realizar una acción u operación ilógica, en el ejemplo se intenta multiplicar un texto.</p>
+    
+    <code style="color:red">
+        var texto2 = "¿Hola cómo estas?";<br>
+        document.write(texto * 2);
+    </code>
+    
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+
+    </script>
+</body>
+
+</html>

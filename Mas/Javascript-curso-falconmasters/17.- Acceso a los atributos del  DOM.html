@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="3">﻿
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 17.-Acceso a los atributos del DOM</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin-right: 10px;
+            background-color:#dddddd;
+            border: 1px solid #aaaaaa;
+        }
+
+        .azul{
+            background-color:#0074d9;
+            border: 1px solid #000;
+        }
+
+        .rojo{
+            background-color:#ff4136;
+            border: 1px solid #000;
+        }
+
+    </style>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    <h1>Accediendo a los atributos del DOM</h1>
+
+    <p>En este capítulo vamos a estar trabajando los atributos de los elementos dentro del DOM, para modificarlos, agregar nuevos etc.<br>
+    Empezaremos con estos dos Divs.</p>
+
+    <section id="contenedor">
+            <div class=""></div>
+            <div class=""></div>
+    </section>
+
+    <br><hr>
+
+    <h3>Creando el elemento</h3>
+    <ul>
+        <li>Se crea una variable llamada elemento y es igual a un document, con ello se está entrando al contenido de la página web, que es el árbol de DOM.</li>
+        <li>Seguido se escribe el método createElement(...);</li>
+        <li>Dentro de los paréntesis se escibe el elemento a crear.</li>
+    </ul>
+
+
+    <h3>Accediento al elemento padre</h3>
+
+    <ul>
+        <li>Se crea la variable llamada padre
+         que igual al #contenedor.</li>
+         <li>La variable padre es igual a un document</li>
+         <li>Seguido de document se escribe el método .getElementById(...); con el #contenedor.</li>
+    </ul>
+
+<h3>Estableciendo un punto de referencia</h3>
+<ul>
+    <li>Creamos la variable referencia que va a ser igual al primer elemento "li"</li>
+</ul>
+
+<h3>Posicionando el nodo al principio .insertBefore (...);</h3>
+
+    <ul>
+        <li>Llamaremos a la variable padre seguida de .insertBefore(...);</li>
+        <li>Dentro de los paréntesis se agrega el elemento creado y la referencia.</li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <td>
+                <strong>
+                    <i>Otra forma de insertar el elemento creado es con body.appenChild(...); pero lo coloca hasta el final fuera del contenedor <br>
+                    var elemento = document.createElement("div");<br>
+                    document.body.appendChild(elemento);</i>
+                </strong>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <code style="color:red;">
+        var elemento = document.createElement("div");<br>
+        var padre = document.getElementById("contenedor");<br>
+        var referencia = document.getElementByTagName("div")[0];<br>
+        padre.insertBefore(elemento, referencia);
+    </code><br><br>
+
+    <hr>
+
+    <h1>Cambiando los atributos del DOM</h1>
+    <p>Existen las siguientes maneras de acceder a los atributos:</p>
+    <ul>
+        <li><strong>.setAttribute (attributename, attributevalue);</strong></li>
+        <li><strong>.className=""</strong> Se utiliza para acceder a un selector de atributo css.</li>
+        <li><strong>.id</strong>Se utiliza para acceder a un selector de atributo de id.</li>
+        <li>Acceder directamente al atributo de un elemento html</li>
+    </ul>
+
+
+    <h2>.setAttribute (attributename, attributevalue);</h2>
+    <ul>
+        <li>Se utiliza para agregar o cambiar valores de atributos html como lo son href, src, alt, style etx.<br>
+        <i>Si una etiqueta no tiene un atributo declarado este método sirve para insertarlo, pero si ya tiene uno sirve para reemplazarlo.</i>
+        </li>
+        <li>Se utiliza para agregar atributos de clase o id.</li>
+    </ul>
+
+    <p><strong>Agregando un atributo tipo class</strong></p>
+    <ul>
+        <li>En un script o en la consola llamamos a la variable elemento seguido de .setAttribute (...);</li>
+        <li>Dentro de los paréntesis recibe dos parámetros:
+            <ul>
+                <li>1.-El nombre del atributo que se va a agregar: atributo de clase.</li>
+                <li>2.-El nombre del valor que se va a agregar: azul.</li>
+            </ul>
+        </li>
+        <li>
+        <code style="color:red;">
+            elemento.setAttribute("class","azul"); + enter
+        </code>
+        </li>
+    </ul>
+
+    <p><strong>Agregando un atributo tipo id</strong></p>
+        <ul>
+        <li>En un script o en la consola llamamos a la variable elemento seguido de .setAttribute (...);</li>
+        <li>Dentro de los paréntesis agregamos el atributo id con su valor</li>
+        <li><code style="color:red;">
+        elemento.setAttibute("id", "nuevaID") + enter
+    </code></li>
+    </ul>
+
+    <p>El método respeta los espacios y se pueden agregar dos id  o class.<br>
+    <code style="color:red;">
+        elemento.setAttibute("id", "nuevaID otraID") + enter
+    </code>
+    </p>
+
+    <hr>
+
+    <h2>Accediento por medio de un selector de atributo</h2>
+
+    <p><strong>.id</strong></p>
+    <p>En la consola o en el script escribimos lo siguiente:<br>
+    Y si lo revisamos en el inspector ya se cambió el Id por tercerID.<br>
+    <code style="color:red;">
+        elemento.id = "tercerID" + enter
+    </code>
+    </p>
+
+    <p><strong>.className=""</strong></p>
+    <p>
+    En la consola o en el script escribimos lo siguiente:<br>
+    <code style="color:red;">
+        elemento.className = "Rojo" + enter
+    </code>
+    </p>
+
+    <hr>
+
+    <h2>Accediento directamente al atributo de un elemento HTML</h2>
+    <p>Se a creado una etiqueta de link con el siguiente selector #enlace.</p>
+
+        <a href="http://www.falconmasters.com" id="enlace">FalconMasters</a>
+
+    <p>Desde la consola se accede directamente al atributo de href de una etiqueta de enlace para cambiar su valor.</p>
+
+    <ol>
+        <li><strong>Accediendo al documento:</strong> Se llama al script o directamente en la consola al documento "document"</li>
+        <li><strong>Accesando a la etiqueta:</strong> Se hace mediante el selector Id que se encuentra en la etiqueta .getElementById (enlace) + enter</li>
+        <li><strong>Accesando al atributo:</strong> Con .href + enter se accede directamente al atributo.</li>
+        <li><strong>Cambiando el enlace:</strong> Dentro de las comillas de href se cambia el enlace.</li>
+    </ol>
+
+    <code style="color:red;">
+        document.getElementById("enlace").href = "http://ww.google.com" + enter
+    </code>
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

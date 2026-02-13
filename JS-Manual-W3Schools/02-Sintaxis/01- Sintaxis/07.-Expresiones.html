@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expresiones</title>
+</head>  
+<body>  
+  <h1>Expresiones</h1>
+  <p>Una expresión es una combinación de variables, valores y operadores, que se calcula como un valor.</p>
+
+  <h3>Ejemplo</h3>
+  <p>(5 + 6) * 10 evalúa a 110:</p>
+  <p id="demo_01"></p>
+  <script>
+    document.getElementById("demo_01").innerHTML = (5 + 6) * 10;
+  </script>
+
+  <h3>Ejemplo</h3>
+  <p>Las expresiones también pueden contener variables:</p>
+  <p id="demo_02"></p>
+  <script>
+    let x;
+    x = 5;
+    document.getElementById("demo_02").innerHTML = x * 10;
+  </script>
+
+  <h3>Ejemplo</h3>
+  <p>"John" + " " + "Doe", se evalúa como "John Doe":</p>
+  <p id="demo_03"></p>
+  <script>
+    document.getElementById("demo_03").innerHTML = "John" + " "  + "Doe";
+  </script>
+
+</body>
+</html>

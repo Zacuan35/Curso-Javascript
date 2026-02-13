@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 7.-Ciclo for</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>BUCLE FOR</h1>
+    
+    <p>Que pasa si por ejemplo queremos mostrar números en pantalla del uno al diez, clases atras se hubiera hecho lo siguiente:</p>
+    
+    <code style="color:red">
+        &nbsp; document.write("1");<br>
+        &nbsp; document.write("2");<br>
+        &nbsp; document.write("3");<br>
+        &nbsp; document.write("4");<br>
+        &nbsp; document.write("5");<br>
+        &nbsp; document.write("6");<br>
+        &nbsp; document.write("7");<br>
+        &nbsp; document.write("8");<br>
+        &nbsp; document.write("9");<br>
+        &nbsp; document.write("10");
+    </code>
+    
+    
+    <p>Pero que ocurre si se tienen cien números, esta tarea se haría ineficiente, el modo de trabajar sería incorrecto, por que hay formas mucho más fáciles y esto nos permiten hacer los ciclos. <br> Los ciclos nos permiten repetir una estructura como document.write ("valor x"); y que en cada ejecución del ciclo, es decir que en cada repetición dicho valor sea el que cambie. <br>
+    En el ejemplo de los números, la primera ejecución sería uno y la última sería cien.</p>
+    
+    <p>Los bucles son sentencias de interacción que ofrecen una manera rápida de hacer algo repetidamente.</p>
+    <p>Hay muchas clases diferentes de bucles, pero todos ellos hacen en esencia lo mismo: repetir una acción un numero de veces. Los diferentes bucles ofrecen también diferentes formas de determinar sus puntos de inicio y final. Hay varias situaciones que son mas fácilmente resueltas por un tipo de bucle que por otros.</p>
+
+    <p>Un bucle for se repite hasta que la condición especificada sea evaluafa como false, y se utiliza cuando cuanto se conoce el número de veces que se ejecutará un código, pero no siempre será asi.</p>
+    
+    <h2>Sintáxis</h2>
+    
+    <p>Se escribe for seguido de paréntesis y llaves:</p>
+    
+    <p>
+        <code style="color:red">
+            for( ) {<br>
+            &nbsp; //Instrucciones<br>
+            }
+        </code>
+    </p>
+
+    <p>Paréntesis: Dentro de los paréntesis van tres indicadores de la variable.<br>
+    <strong>1.-Expresión inicial</strong><br>
+    <strong>2.-Condición</strong><br>
+    <strong>3.-Expresión de incremento</strong><br><br>
+    Llaves: Dentro de las llaves irán las instrucciones que se ejecutarán si los indicadores del bucle se cumplen.</p>
+    
+    <p>
+        <code style="color:red">
+            for( 1.-Expresión inicial; 2.-condición; 3.-Expresión incremento) {<br>
+            &nbsp; //Instrucciones<br>
+            }
+        </code>
+    </p>
+    
+    
+    <h2>1.-Expresión inicial.</h2>
+    <p>
+    1.- Determina un punto de inicio que casi siempre va a ser 0, para ello basta con poner el nombre de la variable seguida de un signo igual.<br>
+    En este ejemplo la variable se llamará "i", ya que es como se le va a encontrar la mayoría de las veces, pero puede nombrarse de otra manera. La variable puede iniciar con la palabra reservada var, pero puede ir sin ella, no hay ningún problema.</p>
+    <i>la expresión inicial permite una expresión con cualquier grado de complejidad, pudiendo contener funciones que nos permiten reutilizar código.</i>
+    
+    <p>Ejemplo:<br>
+        <code style="color:red">
+            for( i=0; ){<br>
+            &nbsp; //Instrucciones<br>
+            }
+        </code><br>
+    El valor de la variable "i" será de "0" desde la primera ejecición.
+    </p>
+    
+    <h2>2.- Condición.</h2>
+    <p>El valor de la variable se repetirá "HASTA QUE" la condición sea evaluada como verdadera.<br>
+    En el ejemplo mientras que la variable i sea menor o igual a diez, el valor se repetirá.</p>
+    
+    <p>
+        <code style="color:red">
+            for( i=0; i&#60;&#61;10; ){<br>
+            &nbsp; // Se ejecuta 9 veces, del rango 0 al 9.<br>
+            }
+        </code>
+    </p>    
+    
+    <h2>3.- Expresión de incremento.</h2>
+    
+    <p> Especifica la acción que ocurrirá por cada ciclo  ejecución, lo que la mayoría del tiempo se va a a encontrar es que la variable va a incrementar (i++) o o decrecer (i--).
+    </p>
+    
+    <p>
+         <code style="color:red">
+            for( i=0; i&#60;&#61;10; i++ ){<br>
+            &nbsp; //Instrucciones<br>
+            }
+        </code><br>
+        <i>En cada ejecución del ciclo la variable "i" incrementará en una unidad.</i>
+    </p>    
+        
+    <p>Ya por último se ponen las instrucciones contenidas en las llaves.</p>
+    
+    <p>
+        <code style="color:red">
+            for( i=0; i&#60;&#61;10; i++ ){<br>
+            &nbsp; document.write( "Ou yeah!" + "&#60;br&#62;");<br>
+            }
+        </code>
+    </p>    
+        
+    <h2>Analizando las instrucciones de las llaves</h2>
+    
+    <p>Como se puede observar el texto Ou yeah! se repitio once veces, por que empezamos a contar desde el 0, y del cero al 10 hay once números, para corregirlo podemos cambiar el 0 por 1.</p>
+    
+    <p>
+        <code style="color:red">
+            for( i=1; i&#60;&#61;10; i++ ){<br>
+            &nbsp; document.write( "Ou yeah!" + "&#60;br&#62;");<br>
+            }
+        </code>
+    </p> 
+    
+        <h2>Ejecuntando la unidad "i"</h2>
+    <p>En el document.write la unidad "i" empieza de 0 y a partir de ahí comoeinza a correr el valor.</p>
+    
+    <p>
+        <code style="color:red">
+            for( i=0; i&#60;&#61;10; i++ ){<br>
+            &nbsp; document.write( i + "&#60;br&#62;");<br>
+            }
+        </code>
+    </p>  
+    
+    <p>Ejemplo adicional, agregando variable que equivale a un número.</p>
+    
+    <p>
+        <code style="color:red">
+            var numeroDeUsuarios = 50;<br><br>
+        
+            for( i=0; i&#60;&#61;numeroDeUsuarios; i++ ){<br>
+            &nbsp; document.write( i + "&#60;br&#62;");
+            }
+        </code>
+    </p> 
+    
+    
+    <p><strong><i>"i++ es igual a poner i = i + 1"</i></strong></p>
+    
+    <h2>Utilizando .length</h2>
+    <p>Lo que aparece en el código es lo siguiente:<br>
+        1.-Hay un arreglo llamado días que tiene 7 valores de tipo texto.<br>
+        2.-Sin embargo suponiendo que desconocemos el dato del número de valores utilizamos la propiedad .leng, la cual nos va arrojar el número de valores que son 7.<br>
+        3.-Utilizando el ciclo for se establece que la variable i comenzará desde 0, es decir desde el primer valor (Lunes), "hasta que" sea menor o igual a dias.length (7), y que en cada ciclo este se sumará un valor i.<br>
+        Si todo lo anterior resulta como verdadero se ejecutará lo siguiente:<br>
+        Se escibirá en pantalla, la unidad i del arreglo días, como i es igual a 0, lo que extraerá de días será el valor "Lúnes", dato que esta concatenado a un salto de línea. <br>        
+    </p>
+    
+    <p>
+        <code style="color:red">
+            var dias = [ "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];<br><br>
+            
+            dias.length = 7<br>
+            
+            for( i=0; i&#60;&#61;dias.length; i++ ){<br>
+            &nbsp; document.write( dias[i] + "&#60;br&#62;");<br>
+            }
+        </code>
+    </p> 
+    
+    <p>En el ejemplo anterior; se extrae la unidad "i" de dias, como la unidad "i" empieza de 0 extrae el Lúnes y con ese texto empieza el cilo.</p>
+    
+    <h2>Arreglando undefined</h2>
+    <p>Debido a que en programación se inicia desde el 0, el valor de 7 de .length hace que tengamos un valor final inexistente, por lo cual se le restará un número para que el ciclo se repita hasta que sea igual o menor a 6. </p>
+    <p>
+        <code style="color:red">
+            var dias = [ "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];<br><br>
+            
+            dias.length = 7<br>
+            
+            for( i=0; i&#60;&#61;dias.length - 1; i++ ){<br>
+            &nbsp; document.write( dias[i] + "&#60;br&#62;");<br>
+            }
+        </code><br><br>
+    Para saber el número de valores del arreglo días utilizamos .length
+    </p>
+
+    <i>Al parecer i es considerado por javascript como una unidad, como un valor que por default significa uno aunque no este declarado en ninguna variable.</i>
+    
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+
+    </script>
+</body>
+
+</html>

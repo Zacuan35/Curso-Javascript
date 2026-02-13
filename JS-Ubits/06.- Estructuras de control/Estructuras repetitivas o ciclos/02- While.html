@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>While</title>
+</head>
+<body>
+	<h1>While</h1>
+	<ul>
+		<li>Inicialización de la variable: Se define fuera del while</li>
+		<li>Condición: mientras contador sea mayor o igual a 0 imprime de la variable contador</li>
+		<li>Incremento o decremento: va dentro del cuerpo del while</li>
+	</ul>
+
+	<script>
+		let contador = 100;
+
+		console.log("Antes del while"); //Inicialización de la variable
+		while(contador >= 0 /*Condición*/ ){
+				console.log(contador); //Acción que se realizará
+				contador--;//Incremento o decremento
+		}
+		console.log("Después del while");		
+	</script>
+	
+</body>
+</html>

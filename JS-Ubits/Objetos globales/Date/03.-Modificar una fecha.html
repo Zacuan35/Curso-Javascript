@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modificar una fecha</title>
+</head>
+<body>
+
+	<h3>Modificar una fecha</h3>
+	<script>
+		/*Crear un objeto Date*/
+		const fecha = new Date(1990, 2, 24);
+
+		//Modificar una fecha
+		fecha.setFullYear(2030);
+		fecha.setMonth(5);   // junio
+		fecha.setDate(20);
+
+		//JavaScript ajusta automáticamente si te pasas
+		const fechaError = new Date(2024, 0, 40); // → 9 de febrero de 2024
+	</script>
+
+</body>
+</html>

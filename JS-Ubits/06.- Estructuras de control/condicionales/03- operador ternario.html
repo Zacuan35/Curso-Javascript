@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Operador ternario</title>
+</head>
+<body>
+	<h1>Operador ternario</h1>	
+	<p>Es una simplifación de if-else, sólo funciona cuando las condicionales sólo
+	tienen una línea de código, se llama operador ternario por que tiene tres partes:</p>
+
+	<ul>
+		<li>La condición que se evalua. </li>
+		<li>La parte verdadera (if). </li>
+		<li>La parte falsa (else)</li>		
+	</ul>
+
+	<p>variable = (condición a evaluar) ? verdadera : falsa;</p>
+
+	<script>
+		//Variable
+		let edad = 18;
+
+		//Ejemplo if-else
+		if (edad <= 17){
+				console.log("Menor de edad");
+		} else {
+				console.log("Mayor de edad");
+		}
+
+		//Ejemplo operador ternario
+		/*En el siguiente ejemplo guardamos la condición del operador ternario en una variable*/
+		let ternario = edad <= 17 ? "Menor de edad" : "Mayor de edad";
+		console.log(ternario);		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Cambia los valores de los atributos HTML</title>
+</head>
+<body>
+
+  <h1>JavaScript puede cambiar los valores de los atributos HTML</h1>
+  <h2>Cambiar el valor del atributo src.</h2>
+  <p>En este ejemplo, JavaScript cambia el valor del atributo src (fuente) de una etiqueta &lt;img&gt;:</p>
+
+  <!-- Encender la luz -->
+  <button onclick="document.getElementById('myImage').src='assets/img/pic_bulbon.gif'">Encender la luz</button>
+  <img id="myImage" src="assets/img/pic_bulboff.gif" style="width:100px">
+  <!-- Añagar la luz -->
+  <button onclick="document.getElementById('myImage').src='assets/img/pic_bulboff.gif'">Apagar la luz</button>
+
+</body>
+</html>

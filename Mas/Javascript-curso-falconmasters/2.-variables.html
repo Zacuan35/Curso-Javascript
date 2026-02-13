@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 2.-Variables</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>VARIABLES</h1>
+    
+    <p>Las variables permiten almacenar valores y recurrir a ellas cuantas veces queramos.<br>
+    A su vez los valores se muestran de manera temporal y son utilizados para visualizarse en pantalla, hacer cálculos u otro tip de tareas.<br>
+    Los valores de texto se agregan entre comillas.<br>
+    Existen varios tipos de variables y de datos.<br> 
+    Las variables inician con la palabra var, seguidas de un nombre al que se le asigna un valor, aunque si no llevaran la palabra var e iniciaran con el nombre, los navegadores tambien lo entenderían. En las variables podemos agregar números</p>
+    
+    <p>Ejemplo:<br>
+        <code style="color:red">
+            var Nombredelavariable = "Valordelavariable";<br>
+            alert(Nombredelavariable);
+        </code>
+    </p>
+    
+    <p>En la primera línea del código tenemos una variable con el nombre "Nombredelavariable", la cual almacena un valor que es un texto.<br> 
+    En la segunda línea de código hay una función de alerta con la variable "Nombredelavariable", lo que significa que se va a mostrar el valor que tenga esa variable.</p>
+    
+    <h2>Poniendo dos variables diferentes en una sola.</h2>
+    <p>Se puede poner dos variables en una sola, para ello basta con separar con una coma las variables y cerrar con ;</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                <code style="color:red">
+                    var nombrevar1 = "Valor1",<br>
+                    nombrevar2 = "Valor2";
+                </code>
+            </td>
+            <td>
+                <code style="color:red">
+                    var nombre = "Carlos",<br>
+                    edad =19;
+                </code>
+            </td>
+        </tr>
+    </table>
+    
+    <h2>Función prompt</h2>
+    
+    <p>Una función también es un valor, la mayoría del tiempo siempre va a ser un dato o un valor que se puede almacenar, es por eso que en javascript las funciones tambien muchas veces se van almacenar en una variable. <br> La función promp muestra un cuadro con un campo para ingresar datos.</p>
+    
+    <p>Ejemplo:<br>
+        <code style="color:red">
+            var nombre;<br>
+            nombre = prompt("Ingresa tu nombre");<br>
+            alert(nombre);
+        </code>
+    </p>
+    
+    <h2>document.write</h2>
+    <p>Este método sirve para mostrar datos en pantalla, escribiendo en el documento .html el valor que tenga contenido dentro.</p>
+    
+    <p>Ejemplo:<br>
+        <code style="color:red">
+            var nombre;<br>
+            nombre = prompt("Ingresa tu nombre");<br>
+            document.write(nombre);
+        </code>
+    </p>
+    
+    <p>En el ejemplo la primera línea sirve para declarar la variable que se llama "nombre".<br>
+        La segunda línea indica que la variable nombre es igual al el valor dentro de la función prompt.<br>
+        Por último en la tercera línea la función document.write esribirá en el documento .html el valor de la variable nombre.</p>
+    
+    <h2>console.log</h2>
+    <p>El valor contenido dentro de console.log se verá reflejado únicamente en la consola.</p>
+    
+    <p>Ejemplo:<br>
+        <code style="color:red">
+            var nombre<br>
+            nombre = prompt("Ingresa tu nombre");<br>
+            console.log(nombre);
+        </code>
+    </p>
+    
+    <h2>Variables concatenadas</h2>
+    <p>Dentro de las variables se pueden concatenar valores, en el siguiente ejemplo se tienen dos variables que se llaman nombre y edad, como valores tienen funciones de promp, por último la línea de document.write concatena los valores de las dos variables y las muestra en pantalla. </p>
+    
+    <p>Ejemplo: <br>
+        <code style="color:red">
+            var nombre;<br>
+            nombre = prompt("Ingresa tu nombre");<br>
+            edad = prompt("Ingresa la edad");<br>
+            document.write(nombre + " " + edad);    
+        </code>
+    </p>
+    
+    <h2>Operaciones dentro de las variables</h2>
+    <p>Dentro de las variables se pueden hacer operaciones como las siguientes:</p>
+    
+    <p>
+        Ejemplo:<br>
+        <code style="color:red">
+            nombre = "Carlos";<br>
+            edad = 19 + 1;<br>
+            document.write(nombre + " " + edad);<br><br>
+            
+            nombre = "Carlos";<br>
+            edad = 19 * 2;<br>
+            document.write(nombre + " " + edad);<br>
+        </code>
+    </p>    
+    
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+        var nombre = "José Moreno A.";
+        alert(nombre);
+    </script>
+</body>
+
+</html>

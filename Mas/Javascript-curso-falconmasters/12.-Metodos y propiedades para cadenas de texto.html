@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="3">﻿
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 12.-Métodos y propiedades para cadenas de texto</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>Métodos y propiedades para cadenas de texto</h1>
+
+    <h2>Propiedad .length;</h2>
+    <p>.length al igual que en los arreglos, funciona para saber cuantos carácteres componen una cadena de texto.
+    <br>
+    En el siguiente ejercicio el script muestra el número 13 en pantalla.<br>
+    <strong><i>Los espacios también cuentan como un carácter</i></strong>.
+    </p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.length;<br>
+        document.write(nuevotexto);<br>
+    </code>
+
+    <h2>Propiedad .substring (...);</h2>
+    <p>Substring nos permite cortar una cadena de texto, por ejemplo si le ponemos el número 3 y actualizamos, nos corta la cadena de texto desde la posición 3 y hasta el final.
+    </p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.substring(3);<br>
+        document.write(nuevotexto);
+    </code>
+
+
+    <h2>Propiedad .substr (...);</h2>
+    <p>Con .substr podemos pasar dos parámetros, el primero sería el índice de inicio, y el segundo el número de carácteres a extraer.<br>
+    En el ejemplo se indica como inicio de corte la posición 0, y corta 6 carácteres.  
+    </p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.substr(0, 6);<br>
+        document.write(nuevotexto);
+    </code>
+
+    <h2>Propiedad .indexOf("...");</h2>
+    <p>indexOf nos devuelve la posición de una letra en específico.<br>
+    En el ejemplo la propiedad nos dirá en que posición se encuentra la letra "a".</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.indexOf("a");<br>
+        document.write(nuevotexto);
+    </code>
+
+    <p>indexOf es sensible a minúsculas y mayúsculas, por lo cual no le representa confusión a la hora de buscar la letra "a", pero que pasa si escribimos que busque la letra "o", como en este caso hay dos minúsculas devolvera como resultado sólo la posición de la primera letra o que encuentre, que será 4.</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.indexOf("o");<br>
+        document.write(nuevotexto);
+    </code>
+
+    <p>Nosotros podemos indicarle desde donde queremos que empiece a buscar, esto lo podemos hacer pasando un segundo parámetro.<br>
+    En el ejercicio se indica que desde la posición 5 empezará a buscar las letras "o" y nos da como resultado 12.</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.indexOf("o", 5);<br>
+        document.write(nuevotexto);
+    </code>
+
+    <p>Si no le queremos poner el número por que muchas veces lo desconoceremos, podemos hacer lo siguiente:</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var texto2 = texto.indexOf("o") + 1;<br>
+        var nuevoTexto = texto.indexOf("o", texto2);<br>
+        document.write(nuevotexto);
+    </code>
+
+    <h2>Propiedad lastIndexOf</h2>
+    <p>Hace algo similar sólo que empieza a buscar desde atrás hacia adelante.<br>
+    En el ejercicio al buscar la letra "o" nos devuelve como resultado el número 12. </p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.lastIndexOf("o");<br>
+        document.write(nuevotexto);
+    </code>
+
+    <h2>Propiedad .replace (...);</h2>
+    <p>.replace nos permite reemplazar una cadena de texto por otra.<br>
+    Este método recibe dos parámetros, el primero es la variable a modificar, y el segundo el texto a reemplazar.
+    <br>
+    En el ejemplo queremos cambiar el texto de la variable "texto" por FalconMasters.</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.replace(texto, "FalconMasters");<br>
+        document.write(nuevotexto);
+    </code>
+
+    <p>Incluso podemos pasar otra cadena de texto con el texto que quieramos.<br>
+    En el ejemplo hemos sustituido la palabra Carlos por falconMasters</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.replace("Carlos", "FalconMasters");<br>
+        document.write(nuevotexto);
+    </code>
+
+    <p>También podemos reemplazar letras por signos.</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.replace("a", "-");<br>
+        document.write(nuevotexto);
+    </code>
+
+    <h2>toUpperCase ();</h2>
+    <p>Nos permite convertir nuestro texto a mayúsculas.</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.toUpperCase();<br>
+        document.write(nuevotexto);
+    </code>
+
+    <h2>toLowerCase();</h2>
+    <p>Nos permite convertir nuestro texto a minúsculas.</p>
+
+    <code style="color:red;">
+        var texto = "Carlos Arturo";<br>
+        var nuevoTexto = texto.toLowerCase();<br>
+        document.write(nuevotexto);
+    </code>
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

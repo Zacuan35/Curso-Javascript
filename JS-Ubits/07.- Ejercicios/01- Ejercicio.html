@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+
+	<h1>1.- Crear una función que obtenga el factorial de un número</h1>
+	<ul>
+		<li>!5 = 5 x 4 x 3 x 2 x 1 = 120</li>
+		<li>!3 = 3 x 2 x 1 = 6</li>
+	</ul>
+
+	<script>
+		//Creación de la función
+		function factorial(numero){
+			if( typeof numero == "number" ) {
+				//console.log("Es un número")
+				let resultado = 1;
+				for (let contador = numero ; contador >= 1 ; contador --){
+					resultado = resultado * contador;
+				} 
+				console.log( `el factorial de ${numero} es ${resultado}` );
+				//console.log( "El factorial de " + numero + " es " + resultado );        
+			} else {
+				console.error("El valor introducido no es un número")
+			}
+		}
+
+		//Ejecución
+		factorial(5);	
+	</script>
+	
+</body>
+</html>

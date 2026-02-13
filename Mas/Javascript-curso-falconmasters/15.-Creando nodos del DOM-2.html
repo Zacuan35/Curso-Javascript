@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="3">﻿
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 15.-Agregando nodos al DOM</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+
+    <h1>Agregando nodos al DOM</h1>
+
+    <p>En este capítulo aprenderemos a posicionar los nodos en donde lo necesitemos, crearemos un elemento y le indicaremos que posición tomar dentro de otro elemento, como al inicio, en el medio o al final.</p>
+
+    <ol id="lista">
+        <li>Lorem impsum dolor sit amen.</li>
+        <li>Lorem impsum dolor sit amen.</li>
+    </ol>
+
+    <h3>1.- Creando el elemento</h3>
+
+    <p>Vamos a crear una variable llamada elemento que va a ser igual a document seguido de createElement, dentro de los paréntesis escribimos el tipo de elemento a crear y será un "li", por que lo queremos poner en una lista.</p>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li");
+    </code>
+
+    <h3>2.-Creando el contenido</h3>
+
+    <p>Lo siguiente es hacer el nodo de texto, para ello se creará otra variable con el nombre contenido que será igual a document, seguido de .createTextNode("..."); y dentro de los paréntesis escribimos "Nuevo texto"</p>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");
+    </code>
+
+    <h3>3.-Añadiendo el contenido al elemento</h3>
+
+    <p>Accedemos a la variable elemento y le agregamos contenido con el método appendChild(...);</p>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");<br><br>
+
+        elemento.appendChild(contenido);
+    </code>
+
+    <h3>4.-Agregando el elemento al documento</h3>
+    <p>Para agregar el nodo al documento necesitamos un elemento padre en donde alojarlo, y se puede hacer de dos maneras, mediante un id que lo vimos en el capítulo anterior, o por medio de una etiqueta:</p>
+
+    <ul style="list-style: none;">
+        <li>4.1.-Mediante un Id: directamente</li>
+        <li>4.2.-Mediante una etiqueta: elemento hijo</li>
+    </ul>
+ 
+    <h4>4.1.-Accediento al elemento padre mediante un ID.</h4>
+
+    <ul>
+        <li>Se crea una variable llamada padre y va a ser igual a document seguido de .getElementById(IdName);</li>
+        <li>Dentro de los paréntesis de .getElementById("...") se escribe el id a donde queremos apuntar.</li>
+        <li>Se manda llamar la variable padre seguido de .appendChild y dentro de los paréntesis se agrega el nodo.</li>
+    </ul>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");<br>
+        elemento.appendChild(contenido);<br><br>
+
+        <hr>
+        //Accediento al elemento padre<br><br>
+
+        var padre = document.getElementById("lista");<br>
+        padre.appendChild(elemento);
+    </code>
+
+    <h4>4.2.-Accediento al elemento padre mediante una etiqueta</h4>
+    <p>Se puede acceder al elemento padre mediante los elementos hijos de la siguiente manera:</p>
+    <ul>
+        <li>Se crea una variable llamada padre y va a ser igual a document seguido de .getElementsByTagName("...");</li>
+        <li>Dentro de los paréntesis se escriben los elementos a los que queremos acceder, en este caso a todos los elementos que tengan li del documento.</li>
+        <li>Dentro de los brackets a manera de arreglo, se escribe la posición del elemento a acceder, en el ejemplo con 0 se esta accediendo al primer elemento.</li>
+        <li>La propiedad llamada .parentNode devuelve el elemento padre, en este caso el elemento "ol".</li>
+        <li>Con .appenChild(...); al elemento padre se le agrega un elemento li, y lo colocará hasta el final de la lista.</li>
+    </ul>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");<br>
+        elemento.appendChild(contenido);<br><br>
+
+        <hr>
+        //Accediento al elemento padre<br><br>
+        
+        var padre = document.getElementsByTagName("li")[0].parentNode;<br>
+        padre.appendChild(elemento);
+    </code><br><br>
+
+    <table border="1">
+        <tr>
+            <td>
+                <strong><i>Para comprobar el elemento padre recargamos la página, abrimos la consola y escribimo la variable padre + enter, nos indica que la etiqueta de apertura "ol" es el elemento padre</i></strong>
+            </td>
+        </tr>
+    </table>
+
+    <h4>4.2.1.-Agregar el elemento al inicio de la lista (Estableciendo un punto de referencia).</h4>
+
+    <ul>
+        <li>Se creará una variable llamada primerElemento con lo cual estamos accediendo al primer elemento "li".</li>
+        <li>Seguido del elemento padre se agrega el método insertBefore(...); su función es tomar un elemento y ponerlo hasta el inicio dentro de ese padre.</li>
+        <li>Dentro de los paréntesis se escriben dos parámetros, el primero es el nodo a agregar llamado elemento y el segundo es el nodo de referencia que es el primer elemento.</li>
+    </ul>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");<br>
+        elemento.appendChild(contenido);<br><br>
+
+        <hr>
+        //Accediento al elemento padre<br><br>
+
+        var padre = document.getElementsByTagName("li")[0].parentNode;<br>
+
+        <hr>
+
+        primerElemento = document.getElementsByTagName("li")[0];<br>
+        padre.insertBefore(elemento, primerElemento);
+    </code>
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

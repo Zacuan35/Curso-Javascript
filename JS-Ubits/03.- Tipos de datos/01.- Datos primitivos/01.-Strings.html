@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Strings</title>
+</head>
+<body>
+	<h1>STRING - Cadenas de caractéres</h1>
+	<p>Los objetos en JS pueden tener:</p>
+	<ul>
+		<li>Métodos: son funciones dentro de un objeto y que nos sirve para algo en particular</li>
+		<li>Propiedades: son variables dentro de un objeto y que nos sirve para algo en particular</li>
+	</ul>
+
+	<h3>Métodos de las cadenas</h3>
+	<script>
+		console.log(cadena.toLowerCase());
+		console.log(cadena.toUpperCase());
+		console.log(cadena.includes("adios"));
+		console.log(cadena.includes("soy"));
+	</script>
+
+	<h3>Propiedad de las cadenas</h3>
+	<script>
+		console.log(cadena.length);
+	</script>
+
+	<p>En las siguientes ligas puedes encontrar información sobre más métodos y propiedades de los strings</p>
+	<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String">Objetos globales</a>
+	<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Objetos globales</a>
+
+	<p>Separar en un arreglo una cadena de texto poniendo un carácter en un separador</p>
+	<script>
+		let meses = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+		console.log(meses);
+		let mesesSeparados = meses.split(",");
+		console.log(mesesSeparados);
+	</script>
+
+</body>
+</html>

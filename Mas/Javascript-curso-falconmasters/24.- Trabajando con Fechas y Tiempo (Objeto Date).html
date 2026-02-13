@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 24.-Trabajando con Fechas y Tiempo (Objeto Date)</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+<h1>Trabajando con Fechas y Tiempo (Objeto Date)</h1>
+<h2>Métodos del tiempo en javascript</h2>
+
+<p>En este capítulo vamos a estar trabajando con fechas, vamos a estar aprendiendo como manejarlas, como extraer de ellas el día, las horas, los minutos, los segundos de uan fecha en concreto que podemos obtener, esto podría servir para hacer relojes digitales, contadores etc.  </p>
+
+<h3>Obteniendo la fecha new Date();</h3>
+<p>Lo primero que hay que hacer es obtener la fecha actual de la computadora del usuario que este visitando el sitio web.<br>
+Para ello vamos a crear la variable fecha y va a ser igual a un nuevo objeto, para ello vamos a utilizar la palabra reservada new y vamos a ponerle Date ( );<br>
+De esta forma estamos creando una nueva fecha, si dejamos los paréntesis en blanco estamos obteniendo la fecha actual del sistema. </p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var fecha = new Date();<br>
+    }())
+</code>
+
+<h3>Probando la fecha actual del sistema</h3>
+<p>Ponemos un document.write y dentro de los paréntesis ponemos la variable fecha.<br>
+En pantalla veremos la fecha, el día, el mes, el año y la hora, y si actualizamos de nuevo el sitio, los datos de la hora cambiarán.<br>
+La fecha puede ir de la mano con los timers, por ejemplo un intérvalo de tiempo que ejecute la fecha cada cierto tiempo para que los segundos y los minutos cambien.</p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var fecha = new Date();<br>
+    &nbsp; document.write(fecha);<br>
+    }())
+</code>
+
+<h3>Extrayendo la hora</h3>
+<p>Accedemos a fecha y con el método .getHours extraemos la horas de la fecha.<br>
+Para mostrarla en pantalla la podremos dentro de un console.log<br>
+Guardamos y actualizamos, en la consola sólo aparece el número de las horas.
+</p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var fecha = new Date();<br>
+    &nbsp; document.write(fecha);<br>
+    &nbsp; console.log(fecha.getHours());<br>
+    }())
+</code>
+
+<p><strong>Cambiando 24hrs por 12hrs</strong><br>
+Nos aparece en la consola el reloj en 24 horas, nosotros podemos cambiarlo directamente poniéndo - 12 después de los paréntesis de .getHours, por que simplemente le restamos 12 horas para convertir el reloj de 24 a 12 horas y nos quedaría otro número en la consola.</p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var fecha = new Date();<br>
+    &nbsp; document.write(fecha);<br>
+    &nbsp; console.log(fecha.getHours() - 12);<br>
+    }())
+</code>
+
+<h3>Extrayendo los minutos y los segundos</h3>
+<p>Para extraer minutos y segundos tenemos los métodos .getMinutes y .getSeconds, lo podemos hacer hasta con milesímas de segundos, a los métodos que creamos le eliminamos lo de - 12.<br> 
+Actualizamos y aparece la hora, los minutos y los segundos en el momento en que se ejecutó el script.</p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var fecha = new Date();<br>
+    &nbsp; document.write(fecha);<br><br>
+
+    &nbsp; console.log(fecha.getHours() - 12);<br>
+    &nbsp; console.log(fecha.getMinutes());<br>
+    &nbsp; console.log(fecha.getSeconds());<br>
+
+    }())
+</code>
+
+<h3>Extrayendo el día de la semana, día del mes, el mes y el año.</h3>
+<p>Podemos obtener el día de la semana, el día del mes, el mes y el año con los siguientes métodos:<br>
+.getDay: para traer el día de la semana.<br>
+.getdate: extraer el día del mes por ejemplo si es 1ro o 26<br>
+.getMonth: sirve para traer el mes.<br>
+.getFullYear: sirve para traer el año.<br>
+Guardamos y actualizamos y nos aparecen los valores requeridos.
+ </p>
+
+<code style="color:red;">
+    (function(){<br>
+    &nbsp; var fecha = new Date();<br>
+    &nbsp; document.write(fecha);<br><br>
+
+    &nbsp; console.log(fecha.getHours() - 12);<br>
+    &nbsp; console.log(fecha.getMinutes());<br>
+    &nbsp; console.log(fecha.getSeconds());<br><br>
+
+    &nbsp; console.log(fecha.getDay());<br>
+    &nbsp; console.log(fecha.getDate());<br>
+    &nbsp; console.log(fecha.getMonth());<br>
+    &nbsp; console.log(fecha.getFullYear());<br><br>
+
+    }())
+</code><br><br>
+
+    <table border="1">
+        <tr>
+            <td>
+                <p>Las fechas como los días de la semana, el día del mes, los meses etc. al igual que los números empiezan a contarse desde el 0, Domingo 0, Lúnes 1ro y así sucesívamente.</p>
+            </td>
+        </tr>
+    </table>
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script></script>
+    
+</body>
+
+</html>

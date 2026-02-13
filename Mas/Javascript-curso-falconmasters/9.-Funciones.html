@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 9.-Funciones</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>FUNCIONES</h1>
+    
+    <p>Las funciones sirven para definir instrucciones o tareas que queremos repetir las veces que sea necesario.</p>
+    
+    <h2>Sintáxis</h2>
+    <p>En esencial una función es lo siguiente, primero se escribe la palabra function, seguida del nombre de la función, entre paréntesis se escriben los parámetros que la definirán, y entre llaves podemos agregar instrucciones como sucede con los ciclos.<br>
+    Por último para poder ejecutar la función hay que mandarla llamar, y esto se hace escribiendo fuera de las llaves el nombre de la función seguida de paréntesis y punto y coma.
+    </p>
+    
+    <p>
+        <code style="color:red">
+            function nombreFuncion (...){<br>
+            &nbsp; // Instrucciones<br>
+            }<br>
+            nombreFuncion();
+        </code>
+
+    </p>
+
+    <h2>Ejemplo</h2>
+
+    <p>En el siguiente ejemplo cuando el usuario inice sesión le enviaremos un saludo.<br>
+        Si a una función no se le manda llamar no se ejecutará.</p>
+    
+    <p>
+        <code style="color:red">
+            function saludo (...){<br>
+            &nbsp; document.write ("Hola buen día tengas");<br>
+            }
+        </code>
+    </p>
+
+    <h2>Agregando parámetros</h2>
+    <p>Los parámetros son como variables que se envian a la función para que las trabaje.</p>
+    
+    <p>
+        <code style="color:red">
+            function saludo(nombre){<br>
+            &nbsp; document.write ("Hola" + nombre);<br>
+            }<br>
+            saludo("Arturo");
+        </code>
+    </p>
+    
+    <p>Se puede tener cuantos parámetros o argumentos se necesiten, y pueden ser cadenas de texto, números, valores boleanos etc.</p>
+    
+    <p>
+        <code style="color:red">
+        function saludo(nombre, edad, fecha){<br>
+        &nbsp; document.write ("Hola" + nombre);<br>
+        }<br>
+        
+        saludo("Arturo");
+        </code>
+    </p>
+    
+    <h2>Variables locales y globales</h2>
+    <p>Las variables locales son aquellas a las que no se pueden acceder fuera de la función, sólo estan definidas para el uso dentro de la función. </p>
+    
+    <h2>Ejemplo calculadora</h2>
+    
+    <p>Una suma se puede hacer de muchas maneras pero en este ejercicio se hace los siguiente:<br>
+    1.- Dentro de los parámetros se reciven dos parámetros, el número uno y el número dos.<br>
+    2.- La variable numero1 será igual al parámetro numero1.<br>
+    3.- La variable numero2 será igual al parámetro2.<br>
+    4.- Dentro de los paréntesis de document.write se hace la operación de suma.<br>
+    5.- Por último se llama a la función llamada suma, escribiendo los parámetros de la operación, que en este ejemplo es de 30.<br><br>
+    <strong><i>"Muchas veces a las funciones no se les pasa parámetros por que sólo van a ejecutar código, es decir no necesitan tener dentro de los paréntesis valores, pero en este ejercicio si lo necesita."</i></strong></p>
+    
+    <p>
+        <code style="color:red">
+            function suma(numero1, numero2){<br>
+            &nbsp; var numero1 = numero1;<br>
+            &nbsp; var numero2 = numero2;<br>
+            &nbsp; document.write ("numero1" + numero2);<br>
+        }<br>
+        suma("10,20");
+        </code><br>
+    </p>
+    
+    <h2>Return</h2>
+    <p>Las funciones se tienen que ver como valores, ya que la mayoría del tiempo tienen que devolver valores. <br>
+    Hay que procurar no poner document.write dentro de una función, ya que las funciones tienen que retornar valores, y esto se hace con return.
+    <br> Return es una sentencia que nos permite regresar los valores de los parámetros iniciales de la función para volver a utilizarlo, la mayoría del tiempo se le encontrará dentro de la función.</p>
+    
+    <p>
+        <code style="color:red">
+            function suma(numero1, numero2){<br>
+            &nbsp; var numero1 = numero1;<br>
+            &nbsp; var numero2 = numero2;<br>
+            &nbsp; return numero1 + numero2;<br>
+        }<br>
+        
+        suma("10,20");  
+        </code>
+    </p>
+
+    <p>Por último se le manda llamar. <br>
+    Se escribe un document.write y se agrega la función dentro. <br>
+    Esa función tiene que verse como un valor equivalente, y es equivalente a la suma de 10 + 20.</p>
+    
+    <p>
+        <code style="color:red">
+        function suma(numero1, numero2){<br>
+        &nbsp; var numero1 = numero1;<br>
+        &nbsp; var numero2 = numero2;<br>
+        &nbsp; return numero1 + numero2;<br>
+        }<br>
+        
+        document.write(suma(10,20));
+        </code>
+    </p>
+    
+    <h2>Funciones asignadas en una variable.</h2>
+    <p>Muchas veces una función representa un valor, por ello; se puede tener dentro de una variable y es lo más recomentable.<br>
+    En el ejemplo si ejecutamos suma que es la función con los valores 40,50 nos regresa el resultado.<br><br>
+    <i>"Se puede omitir el texto suma que sigue a función y es válido."</i> </p>
+    
+    <p>
+        <code style="color:red">
+            var suma = function (numero1, numero2){<br>
+            &nbsp; var numero1 = numero1;<br>
+            &nbsp; var numero2 = numero2;<br>
+            &nbsp; return numero1 + numero2;<br>
+            }<br>
+            document.write( suma(40,50) );
+        </code>
+
+    </p>
+    
+    <h2>Utilizando if</h2>
+    <p>En cuanto se ejecuta un return, se rompe con la ejecución de la función, por ello para retornar cierto valor suelen utilizarse elementos if</p>
+    
+    <p>¿Y que pasa si necesitaramos otra suma?, lo que se hace es volver a llamar la función para pasarle valores distintos como 10 y 70.<br>
+    De esta manera tendríamos dos sumas diferentes y se estaría reutilizando el código de la función.</p>
+    
+    <p>Normalmente una función se dedica a realizar una tarea y no varias, es por eso que se pueden tener varias funciones, y llamar funciones dentro de otras funciones</p>
+    
+    <h2>Función que calcula el número mayor</h2>
+    
+    <p>El objetivo de la función es que comparará dos valores de la expresión que manda llamar, y devolverá ese valor para mostrarlo en pantalla.<br>
+    1.- Se crea una función llamada número máximo y va a recibir dos valores, valor1 y valor2.<br>
+    2.- Se le va a llamar con numeroMaximo y se le va a pasar como valor el diez y el 20.<br> 
+    3.- Lo siguiente va a ser compararlos haciendo uso de un condicional y return.<br>
+    4.- Si el valor1 es mayor que el valor2 se ejecutará return con el valor1;<br>
+    y si no, se ejecutará return con el valor 2.</p>
+    
+    <code style="color:red">
+    function numeroMaximo(valor1, valor2){<br>
+    &nbsp; if (valor1 &#62; valor2){<br>
+    &nbsp; return valor1;<br>
+    }else{<br>
+    &nbsp; return valor2;<br>
+    }<br>
+    }<br>
+    numeroMaximo(10,20);
+    </code>
+    
+    <h2>Omitiendo else y sus llaves</h2>
+    <p>Una cosa con la que te puedes encontrar es que ya no se pone else ni sus llaves, sino inmediatamente el contenido entre las llaves, ya que si el valo1 es mayor a valor2, se regresa el valor1 y el resto del código ya no se ejecutará, pero si valo1 no es mayor a valor2, entonces no se va a ejecutar la primera sentencia y va a regresar lo que es valor2, por último, valorMaximo regresaría el valor más grande.</p>
+    
+    <code style="color:red">
+    function numeroMaximo(valor1, valor2){<br>
+    &nbsp; if (valor1 &#62; valor2){<br>
+    &nbsp; return valor1;<br>
+    } return valor2;<br>
+    }<br>
+    numeroMaximo(10,20);
+    </code>
+
+    
+    <p>Se podría mostrar en pantalla, pero comentando el "código llamada" se accederá a la consola escribiendo la función.
+    Se llamará a las funciones escribiendo el número máximo, y si accedemos con número máximo y le damos enter nos dice que es una función (escribe numeroMaximo en la consola), y si le pasamo los dos parametros de numeroMaximo(1,5) y le damos un enter, nos devolverá el número 5, ahora cambiando el orden escribe lo siguiente: numeroMaximo(5,30) </p>
+    
+    <code style="color:red">
+    function numeroMaximo(valor1, valor2){<br>
+    &nbsp; if (valor1 &#62; valor2){<br>
+    &nbsp; return valor1;<br>
+    } return valor2;<br>
+    }<br>
+    <!-- numeroMaximo(10,20); -->
+    </code>
+
+    <h2>Para mostrarlo</h2>
+    <p>Vamos a asignar numeroMaximo a una función, esta sería una función anónima sino fuera por el hecho de que le estamos asignando una variable. </p>
+    <p>Hay algunas funciones que te piden parámetros distintos, por ejemplo; una tiene que ser una cadena de texto y la segunda una función anónima o callback, que sería pasarle una función como parámetro que ejecute algo. </p>
+    
+    <code style="color:red">
+    function numeroMaximo(valor1, valor2){<br>
+    &nbsp; if (valor1 &#62; valor2){<br>
+    &nbsp; return valor1;<br>
+    } return valor2;<br>
+    }<br>
+    document.write ("El número máximo es:"  + numeroMaximo(1,7));
+    </code>
+    
+    <p>Podriamos utilizar otras cosas como agregar los dos valores y pasarlos por un array y ese arreglo devolverlo con un return.</p>
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tipos de datos</title>
+</head>
+<body>
+	<h1>Tipos de datos</h1>
+	<p>Existen diferentes tipos de datos que una variable
+	puede almacenar, en JS se subclasifican en dos tipos.</p>
+
+	<h3>Primitivos</h3>
+	<p>Se accede directamente al valor de la variable</p>
+	<ul>
+		<li>String - Cadenas de texto</li>
+		<li>Numbers - Números</li>
+		<li>Booleans - True o false</li>
+	</ul>
+
+	<h3>Complejos</h3>
+	<p>Se accede a la referencia del valor, a los índices o coordenadas del valor,<br>
+	corchete [] para arreglos, y notación de punto . para los arreglos.</p>
+  <ul>
+		<li>Functions - Funciones</li>
+		<li>Arrays - Arreglos</li>
+		<li>Objects - Objetos</li>
+	</ul>             
+
+	<h3>DATOS PRIMITIVOS</h3>
+	<p>Se accede directamente al valor de la variable</p>
+	<script>
+		//01.- String - Cadenas de texto o de carácteres/
+		let fullName = "Jonathan Mircha";
+		console.log(fullName);
+
+		//02.- Numbers - Números
+		let age = 36;
+		console.log(age);
+
+		//03.- Booleans - True o false
+		let iAmAProgrammer = false;
+		console.log(iAmAProgrammer);
+
+		let iAmAMan = true;
+		console.log(iAmAMan);		
+	</script>
+
+
+	<h3>DATOS COMPLEJOS</h3>
+	<p>Se accede a la referencia del valor</p>
+
+	<h3>Funciones</h3>
+	<p>Las funciones primero se declaran y después se llaman</p>
+
+	<script>
+		//1.- Declararción de la función
+		function saludar() {
+			console.log("Hola estamos aprendiendo los fundamentos de JS");
+			//alert(Hola soy una alerta);
+		}
+		//2.- Llamada de la función
+		saludar();
+	</script>
+
+	<h3>Arreglos - Listas de datos</h3>
+	<ul>
+		<li>La lista puede contener diferentes tipos de valores</li>
+		<li>La lista tienen posiciones llamadas índices, estas comienzan con el número 0.</li>
+		<li>Estas posiciones nos sirven como referencia para acceder al valor.</li>
+		<li>El último elemento de una lista de arreglos no lleva coma</li>
+	</ul>
+	<script>
+		let colores = ["Blanco", "Negro", "Azul", "Naranja"];
+		console.log(colores);
+		console.log(colores[2]);
+		console.log(colores[3]);
+
+		let diferentesValores = [
+			"Jhon", 
+			36, 
+			true, 
+			false, 
+			["Programador", "Correr", "Enseñar"]
+		];
+		console.log(diferentesValores);
+		consolore.log(diferentesValores[4][2]);
+	</script>
+
+	<h3>Objeto</h3>
+	<p>Es una colección de propiedades y valores</p>
+	<script>				
+		let persona = {
+			nombre: "Jhon",
+			edad:36,
+			email:"dg_zacuan@hotmail.com",
+			soyProgramador:false,
+			pasatiempos:["Programar","Correr", "Enseñar"]
+		};
+
+		console.log(persona);
+		//Notación de punto
+		console.log(persona.email);
+		console.log(persona.nombre);
+		console.log(persona.pasatiempos[0]);		
+	</script>
+    
+</body>
+</html>

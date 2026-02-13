@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 11.-Scope de Javascript</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>Scope de Javascript</h1>
+
+    <!-- <p> El scope de javascript es lo que determina la accesibilidad de nuestro código es decir, desde donde podemos acceder a nuestras variables, porque hay dos tipos de scope el scope global y el local.</p> -->
+
+    <p>El scope es el alcance de una variable, puede ser de dos tipos, global y local.<br>
+    Una variable cuyo scope es global se puede acceder desde cualquier parte del código, una local solo desde la función que la contiene.</p>
+
+    <hr>
+
+    <h1>Variables globales</h1>
+    <p>Son variables a las que podemos acceder a ellas desde cualquier parte del código.</p>
+    
+    <code style="color:red">
+        var variableGlobal = "Esta es global";<br>
+        alert(variableGlobal);
+    </code>
+    
+    <h3>Accediendo desde funciones</h3>
+    <p>Las variables globales puede ser accedidas desde dentro de una función.<br>
+    Dentro de la función "miFuncion" podemos acceder a la variable global que se encuentra fuera de ella mediante el alert (...);</p>
+    
+    <code style="color:red">
+        var variableGlobal = "Esta es global";<br><br>
+        
+        var miFuncion = function(){<br>
+        &nbsp; alert(variableGlobal);<br>
+        }<br><br>
+        
+        miFuncion();
+    </code>
+    
+    <h3>Modificando la variable global</h3>
+    <p>Acceder a una variable significa que podemos acceder a su valor, y podemos mostrarlo, cambiarlo, modificarlo etc.<br>
+    Esto es importante por que si solamente trabajas con variables globales junto con plugins externos, puedes tener problemas de que se sobrescriban variables con nombres similares, es importante tener este scope.</p>
+    
+    <code style="color:red">
+        var variableGlobal = "Esta es global";<br><br>
+        
+        var miFuncion = function(){<br>
+        &nbsp; alert(variableGlobal);<br>
+        &nbsp; variableGlobal = "Esta es global modificada";<br>
+        &nbsp; alert(variableGlobal);<br>
+        }<br><br>
+        
+        miFuncion();
+    </code>
+    
+    <h3>Poniendo el alert fuera</h3>
+    
+    <code style="color:red">
+        var variableGlobal = "Esta es global";<br><br>
+        
+        var miFuncion = function(){<br>
+        &nbsp; alert(variableGlobal);<br>
+        &nbsp; variableGlobal = "Esta es global modificada";<br>
+        }<br><br>
+        
+        miFuncion();<br>
+        alert(variableGlobal);<br>
+    </code><br>
+    
+    <hr>
+
+    <h1>Variables locales</h1>
+    <p>Son variables creadas dentro de una función y sólo pueden ser accedidas desde su interior, desde una función anidada, es decir de una función que este dentro de otra función.</p>
+
+    <p>El ejemplo de la siguiente función se explica de la siguiente manera:<br>
+    1.- Tenemos una variable llamada miFuncion. <br>
+    2.- Dentro de la variable miFuncion se crea una variable llamada variablelocal.<br>
+    3.- La variableLocal es igual al texto "Esta es local".<br>
+    4.- Se mandará mostrará la variable en la pantalla mediante un alert con el nombre de la variable dentro.<br>
+    5.- mandamos llamar la función con miFuncion (...); la cual ejecutará la variable miFuncion. 
+    </p>
+    
+    <code style="color:red">
+        var miFuncion = function(){<br>
+        &nbsp; var variableLocal = "Esta es local";<br>
+        &nbsp; alert(variableLocal);<br>
+        }<br>
+        miFuncion(); 
+    </code>
+    
+    <h3>Poniendo el alert fuera</h3>
+    
+    <p>Si queremos utilizar el alert fuera de la función no pasa nada, incluso en la consola marca error y dice que la variable local no esta definida.<br>
+    Las variables que estén dentro de una función sólo van a servir para lo que este dentro de ella.</p>
+    
+    <code style="color:red">        
+        var miFuncion = function(){<br>
+        &nbsp; var variableLocal = "Esta es local";<br>
+        }<br>
+        miFuncion();<br>
+        alert(variableLocal);<br>
+    </code>
+    
+    
+    <h3>Convirtiendo una variable global a local</h3>
+    <p>Si le quitamos la pabra reservada var, esta variable se convertirá automáticamente en una variable global, y podemos acceder a ella desde cualquier parte del código.</p>
+    
+    <code style="color:red">        
+        var miFuncion = function(){<br>
+        &nbsp; variableLocal = "Esta es local";<br>
+        }<br>
+        miFuncion();<br>
+        alert(variableLocal);<br>
+    </code><br>
+    
+    <strong>
+    <i>Si se esta trabajando variables globales lo recomentable es ponerla fuera de una función</i>
+    </strong>
+    
+    
+    <h3>Anidando funciones</h3>
+    <p>Podemos agregar funciones locales, es decir, podemos anidar una función dentro de otra.<br>
+    El scope de javascript se basa en niveles </p>
+    
+    <code style="color:red">        
+        var miFuncion = function(){<br>
+        &nbsp; var variableLocal = "Esta es local";<br><br>
+        
+        &nbsp; var FuncionLocal = function(){<br>
+        &nbsp; &nbsp; var variableLocal = "Esta es variable local, dentro de funcion local";<br>
+        &nbsp; &nbsp; alert(variableLocal);<br>
+        &nbsp; }<br>
+        
+        &nbsp; funcionLocal();<br>
+        }<br><br>
+
+        miFuncion(); 
+    </code>
+    
+    
+    <p>Que pasa si comentamos la variable local de la función, el alert va a buscar dentro de la función una variable local y no la va a encontrar, y va a pasar al siguiente nivel del scope el cual es el elemento padre "var mifuncion = function(){}" y como hay si la va a encontrar va a mostrar el texto de la variablelocal "Esta es local".</p>
+    
+    <code style="color:red">        
+        var miFuncion = function(){<br>
+        &nbsp; var variableLocal = "Esta es local";<br><br>
+        
+        &nbsp; var FuncionLocal = function(){<br>
+            <!-- var variableLocal = "Esta es variable local, dentro de funcion local"; -->
+        &nbsp; &nbsp; alert(variableLocal);<br>
+        &nbsp; }<br>
+        
+        &nbsp; funcionLocal();<br>
+        }<br><br>
+
+        miFuncion();
+    </code>
+    
+    <p>Asi funciona el scope de javascript, desde dentro de una función podemos ver y buscar las variables hacia afuera, pero desde afuera no podemos acceder a los elementos que estén dentro. Los niveles empiezan desde dentro.
+    <br>
+    En caso de que no la vuelva a encontrar va a pasar al siguiente nivel que es el global, la va a buscar en todo el código por que en este caso ya no tenemos funciones dentro de otra.
+    </p>
+    
+    
+    <p>En el siguiente ejemplo 
+    la consola nos marca que la variable local no esta definida, la función no puede acceder al contenido que este dentro de una función anidada.<br>
+    Y esta función la esta protegiendo para que nada que este afuera pueda acceder a la variable que este adentro.</p> 
+    
+    <code style="color:red">        
+        var miFuncion = function(){<br>
+        &nbsp; alert(variableLocal);<br><br>
+        
+        &nbsp; var FuncionLocal = function(){<br>
+        &nbsp; &nbsp; var variableLocal = "Esta es variable local, dentro de funcion local";<br>
+        &nbsp; }<br>
+        
+        &nbsp; funcionLocal();<br>
+        }<br><br>
+
+        miFuncion();
+    </code>
+    
+    <h3>¿Cómo proteger nuestro código?</h3>
+    <p>Se puede proteger el código con una función autoinvocada, para que el código del exterior no pueda acceder al código que este adentro, esto se hace de la siguiente manera:</p>
+    
+    <code style="color:red">  
+        (function(){<br>
+        }())<br>
+    </code>
+
+    <p>Lo recomentable es siempre encerrar el código dentro de esto:</p>
+    
+    <code style="color:red">  
+        (function(){<br>
+        &nbsp; var variableGlobal = "Esta es global";<br><br>
+        &nbsp; var miFuncion = function(){<br>
+        &nbsp; &nbsp; alert(variablelocal);<br><br>
+        
+        &nbsp; &nbsp; var FuncionLocal = function(){<br>
+        &nbsp; &nbsp; &nbsp; var variableLocal = "esta es una variable local dentro de función local":<br>
+        &nbsp; &nbsp; }<br><br>
+        
+        &nbsp; &nbsp; FuncionLocal(){};<br>
+        &nbsp; }<br><br>
+        
+        &nbsp; miFuncion();<br>
+        }())
+    </code>
+
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Cambia el contenido HTML</title>
+</head>
+<body>
+
+  <h1>JavaScript puede cambiar el contenido HTML</h1>
+  <p>Uno de los muchos métodos HTML de JavaScript es getElementById().</p>
+  <p>El siguiente ejemplo "encuentra" un elemento HTML (con id="demo") y cambia el contenido del elemento (innerHTML) a "Gato":</p>
+
+  <h3>Cambiar el contenido HTML.</h3>
+  <p id="demo_01">Perro</p>
+  <button type="button" onclick='document.getElementById("demo_01").innerHTML = "Gato"'>Haz clic</button>
+
+  <h3>JS acepta comillas dobles y simples:</h3>
+  <p id="demo_02">Perro</p>
+  <button type="button" onclick="document.getElementById('demo_02').innerHTML = 'Gato'">Haz clic</button>
+
+</body>
+</html>

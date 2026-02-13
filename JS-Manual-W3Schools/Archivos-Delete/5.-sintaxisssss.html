@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 5.-Sintáxis</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1 style="font-size:50px;">Sintaxis de JavaScript</h1>
+
+    <p>La sintaxis de JavaScript es el conjunto de reglas, cómo se construyen los programas de JavaScript:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x, y; &nbsp; // Cómo declarar variables<br>
+                x = 5; y = 6; &nbsp; // Cómo asignar valores<br>
+                z = x + y; &nbsp; // Cómo calcular valores<br>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Valores de JavaScript</h2>
+    <p>La sintaxis de JavaScript define dos tipos de valores:</p>
+    <ul>
+        <li><strong>Literales:</strong> son valores fijos.</li>
+        <li><strong>Variables:</strong> son valores variables.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Literales de JavaScript</h2>
+    <p>Son valores fijos y pueden ser números o cadenas de texto,<br>
+    las reglas más importantes para escribir valores fijos son:</p>
+
+    <h3>Números</h3>
+    <p>Los <strong>números</strong> se escriben con o sin decimales:</p>
+    <table border="1">
+        <tr>
+            <td>
+                10.50<br>
+                1001   
+            </td>
+            <td>
+                <p>El número se puede escribir con o sin decimales.</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = 10.50;<br>
+                &#60;/script&#62; 
+            </td>
+        </tr>
+    </table>
+
+    <h3>Cadenas</h3>
+
+    <p>Las <strong>cadenas</strong> son texto, se pueden escribir con comillas dobles o simples:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                "John Doe"<br>
+                'John Doe'<br>
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = 'John Doe';<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Variables de JavaScript </h2>
+    <p>
+        En un lenguaje de programación, las <strong>variables</strong> se usan para <strong>almacenar</strong> valores de datos.<br>
+        JavaScript usa la palabra clave <strong>var</strong> para <strong>declarar</strong> variables.<br>
+        Un <strong>signo igual</strong> se usa para <strong>asignar valores</strong> a las variables.<br>
+        En este ejemplo, x se define como una variable. Entonces, a x se le asigna (dado) el valor 6:
+    </p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x;<br>
+                x = 6;
+            </td>
+            <td>
+                <p>En este ejemplo, x se define como una variable.<br>
+                Entonces, a x se le asigna el valor de 6:</p>
+
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x;<br>
+                &nbsp; &nbsp; x = 6;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;    
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Operadores de JavaScript</h2>
+    <p>JavaScript usa <strong>operadores aritméticos</strong> (+ - * /) para <strong>calcular</strong>  valores (como el álgebra):</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                (5 + 6) * 10
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = (5 + 6) * 10;<br>
+                &#60;/script&#62;                
+            </td>
+        </tr>
+    </table>
+
+    <p>JavaScript usa un <strong>operador de asignación</strong> (=) para <strong>asignar</strong> valores a las variables:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x, y;<br>
+                x = 5;<br>
+                y = 6;<br>             
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x, y;<br>
+                &nbsp; &nbsp; x = 5;<br>
+                &nbsp; &nbsp; y = 6;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = x + y;<br>
+                &#60;/script&#62;                
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Expresiones de JavaScript</h2>
+
+    <p>Una expresión es una combinación de valores, variables y operadores, que calcula un valor.<br>
+    El cálculo se llama evaluación<br>
+    Por ejemplo, 5 * 10 se evalúa a 50:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                5 * 10           
+            </td>
+            <td>
+                <p>Las expresiones "evaluan" calculan a los valores.</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = 5 * 10;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>Las expresiones también pueden contener valores variables:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                x * 10       
+            </td>
+            <td>
+                <p>Las expresiones calculan a los valores.</p>
+
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x;<br>
+                &nbsp; &nbsp; x = 5;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = x * 10;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>Los valores pueden ser de varios tipos, como números y cadenas.<br>
+    Por ejemplo, "John" + " " + "Doe", evalúa a "John Doe":</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                "John" + " " + "Doe" 
+            </td>
+            <td>
+                <p>Las expresiones calculan a los valores.</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = "John" + " "  + "Doe";<br>
+                &#60;/script&#62;                
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Palabras clave JavaScript</h2>
+    <p>Las <strong>palabras clave</strong> de JavaScript se utilizan para identificar las acciones que se realizarán.<br>
+    La palabra clave <strong>var</strong> le dice al navegador que cree variables:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x, y;<br>
+                x = 5 + 6;<br>
+                y = x * 10;<br>
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x, y;<br>
+                &nbsp; &nbsp; x = 5 + 6;<br>
+                &nbsp; &nbsp; y = x * 10;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = y;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Comentarios de JavaScript</h2>
+
+    <p>No todas las declaraciones de JavaScript se "ejecutan".<br>
+    El código después de barras dobles // o entre / * y * / se trata como un comentario.<br>
+    Los comentarios se ignoran y no se ejecutarán:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x = 5;   // Seré ejecutado<br>
+                // var x = 6;   No seré ejecutado<br>
+            </td>
+                <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x;<br>
+                &nbsp; &nbsp; x = 5; // Seré ejecutado<br>
+                &nbsp; &nbsp; // x = 6; No seré ejecutado<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;<br>
+            </td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Aprenderá más sobre los comentarios en un capítulo posterior.
+    </p>
+
+    <hr>
+
+    <h2>Identificadores de JavaScript</h2>
+
+    <p>Los identificadores son nombres.<br>
+    En JavaScript, los identificadores se utilizan para nombrar variables (y palabras clave, funciones y etiquetas).<br>
+    Las reglas para los nombres legales son muy similares en la mayoría de los lenguajes de programación.<br>
+    En JavaScript, el primer carácter debe ser una letra, un guión bajo (_) o un signo de dólar ($).<br>
+    Los carácteres subsiguientes pueden ser letras, dígitos, guiones bajos o signos de dólar.</p>
+
+     <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+     Los números no están permitidos como el primer carácter.<br>
+     De esta forma, JavaScript puede distinguir fácilmente los identificadores de los números.</p>
+
+    <h2>JavaScript distingue mayúsculas y minúsculas</h2>
+
+    <p>Todos los identificadores de JavaScript <strong>distinguen mayúsculas de minúsculas</strong> .<br>
+    Las variables <strong>lastName</strong> y <strong>lastname</strong>, son dos variables diferentes.</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var lastname, lastName;<br>
+                lastName = "Doe";<br>
+                lastname = "Peterson";<br>
+            </td>
+            <td>
+                <h3>Pruebe cambiar lastName a lastname.</h3>
+                <p id="demo"></p>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var lastname, lastName;<br>
+                &nbsp; &nbsp; lastName = "Doe";<br>
+                &nbsp; &nbsp; lastname = "Peterson";<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = lastName;<br>
+                &#60;/script&#62;<br>
+            </td>
+        </tr>
+    </table>
+
+    <p>JavaScript no interpreta <strong>VAR</strong> o <strong>Var</strong> como la palabra clave <strong>var</strong>.</p>
+
+    <h2>JavaScript y Camel Case</h2>
+
+    <p>Históricamente, los programadores han utilizado diferentes formas de unir múltiples palabras en un nombre de variable:<br><br>
+    <strong>Guiones:</strong><br>
+    first-name, last-name, master-card, inter-city</p>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+    Los guiones no están permitidos en JavaScript. Están reservados para sustracciones.</p>
+
+    <p><strong>Guion bajo:</strong><br>
+    first_name, last_name, master_card, inter_city.<br><br>
+
+    <strong>Upper Camel Case (Pascal Case):</strong><br>
+    FirstName, LastName, MasterCard, InterCity.<br>
+    </p>
+
+    <img src="assets/img/pic_camelcase.jpg">
+
+    <p><strong>Lower Camel Case:</strong><br>
+    Los programadores de JavaScript tienden a usar camel case que comienza con una letra minúscula:<br>
+    firstName, lastName, masterCard, interCity.</p>
+
+    <h2>Conjunto de carácteres de JavaScript</h2>
+    <p>JavaScript usa el conjunto de carácteres <strong>Unicode</strong>.<br>
+    Unicode cubre (casi) todos los carácteres, signos de puntuación y símbolos del mundo.<br>
+    Para una mirada más cercana, estudia nuestra referencia completa Unicode.</p>
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script></script>
+
+</body>
+
+</html>

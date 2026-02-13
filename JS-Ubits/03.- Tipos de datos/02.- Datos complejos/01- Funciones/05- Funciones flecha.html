@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones flecha</title>
+</head>
+<body>
+	<h1>Arrow Function - Funciones flecha</h1>
+  <p>Es una formato más amigable de escribir una función expresada</p>
+  <a href="https://jonmircha.com/ecmascript#funciones-flecha">Funciones flecha</a>
+
+  <script>
+    const saludar = () => {
+      console.log("Hola, soy una función flecha");
+      console.log("Una nueva característica que vino a JS desde la versión ES6 o ES2015");
+    };
+    saludar();
+  </script>
+
+  <h3>Retornando un valor y usando parámetros</h3>
+  <script>    
+    const sumar = (a, b) => {
+      return a + b;
+    };
+    sumar();
+  </script>
+
+  <h3>Asignando valores a los pa´rametros</h3>
+  <script>
+    const restar = (a = 0, b = 0) => {
+      console.log("Número a", a);
+      console.log("Número b", b);
+      return a - b;
+    };
+    console.log(restar(12, 3));    
+  </script>
+
+  <h3>Retorno implícito de un arrow function</h3>
+  <p>Esta técnica se aplica cuando una función flecha sólo tiene una línea de código que retorna el valor,
+  en el ejemplo anterior esto no se podría hacer por que en el cuerpo del código hay más código aparte de la línea del return</p>
+
+  <script>
+    const multiply = (a = 0, b = 0) => a * b;
+    console.log(multiply(6, 5));
+
+    //Convertir método forEach a arrow function
+    let colores = ["Rojo", "Verde", "Azul"];
+    colores.forEach(
+      (el) => console.log("<li>", el, "</li>")
+    );    
+  </script>
+
+</body>
+</html>

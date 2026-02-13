@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 6.-Condicionales</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>CONDICIONALES if - else</h1>
+    
+    <p>Si una condición especificada es evaluada como verdadera ejecutará una acción. Si la condición es evaluada como falsa, otra sentencia puede ser ejecutada.<p>
+    
+    <h2>Sintáxis</h2>
+    <p>Las condiciones comienzan con un if seguido de paréntesis y llaves <strong>if (...){...};</strong> dentro de los paréntesis va escrita la condición que va a ser lo que queremos comprobar, y dentro de las llaves van escritas las instrucciones que se ejecutarán si la condición se cumple, y si no tenemos <strong>else (...){...};</strong> en el que van escritas otras instrucciones.
+    </p>
+    
+    <p>
+        <code style="color:red">
+            if ( condición){<br>
+            &nbsp; // instrucciones<br>
+            } else {<br>
+            &nbsp; // instrucciones<br>
+            }
+        </code>
+    </p>
+    
+    <hr>
+    
+    <h2>Utilizando operadores</h2>
+    <p>Los operadores de comparación sirven para definir de una manera más dinámica las condiciones y son las siguientes: </p>
+
+    <table border="1">
+        <tr bgcolor="#000">
+            <td colspan="2"><font color ="#ffffff">OPERADORES DE COMPARACIÓN</font></td>
+        </tr>
+        <tr>
+            <td>&#60;</td>
+            <td>Menor que</td>
+        </tr>
+        <tr>
+            <td>&#62;</td>
+            <td>Mayor que</td>
+        </tr>
+        <tr>
+            <td>&#62;&#61;</td>
+            <td>Mayor o igual</td>
+        </tr>
+        <tr>
+            <td>&#60;&#61;</td>
+            <td>Menor o igual</td>
+        </tr>
+        <tr>
+            <td>&#61;&#61;</td>
+            <td>Igual</td>
+        </tr>
+        <tr>
+            <td>&#33;&#61;</td>
+            <td>Distinto de</td>
+        </tr>
+    </table><br><hr>
+    
+    <p>En el siguiente ejemplo si nombre es igual a Carlos, se ejecutará la acción contenida dentro de las llaves.</p>
+    
+    <code style="color:red">
+        var nombre = "Carlos";<br><br>
+        
+        if( nombre == "Carlos" ){<br>
+        &nbsp; document.write("Bienvenido" + nombre);<br>
+        }
+    </code>
+    
+    <hr> 
+    
+    <h2>Else</h2>
+    <p>Else puede traducirse como "sino", y sirve para poner una condición adicional en caso de que no se cumplan ni la primera ni la segunda.</p>
+    
+    <code style="color:red">
+        var nombre = "Carlos";<br><br>
+        
+        if( nombre == "Carlos" ){<br>
+        &nbsp; document.write("Bienvenido" + nombre) <br>
+        } else {<br>
+        &nbsp; document.write("Bienvenido anónimo");<br>
+        }
+    </code>
+    
+    <p>En el siguiente ejemplo la primera condición no se cumple por lo que se ejecuta la contenida en else:</p>
+    
+        <code style="color:red">
+            var nombre = "Carlos",<br>
+            edad = 15;<br><br>
+            
+            if (edad == 18) {<br>
+            &nbsp; document.write("Bienvenido, tienes 18 años");<br>
+            } else {<br>
+            &nbsp; document.write("No tienes 18 años");<br>
+            }
+        </code>
+    
+    <hr>
+    
+    <h2>Else if</h2>
+    <p>Else if es una expeción y sirve para poner otra condición en caso de que no se cumpla la primera.</p>
+    
+    <code style="color:red">
+        var nombre = "Arturo",<br>
+        edad = 15;<br><br>
+        
+        if( nombre == "Carlos" ){<br>
+        &nbsp; document.write("Bienvenido" + nombre)<br> 
+        } else if ( nombre == "Arturo" ) {<br>
+        &nbsp; document.write("Bienvenido" + nombre)
+        } <br>
+    </code>
+    
+    <p>El else del final es por si todo lo demás no se ejecutó</p>
+    
+        <code style="color:red">
+            var nombre = "Carlos",<br>
+            edad = 15;<br><br>
+            
+            if (edad == 18) {<br>
+            &nbsp; document.write ("Bienvenido, tienes 18 años");<br>
+            } else if (nombre == "Arturo") {<br>
+            &nbsp; document.write ("Bienvenido" + nombre);<br>
+            } else {<br>
+            &nbsp; document.write ("No tienes 18 años")<br>
+            }
+        </code>
+    <hr>
+    <h2>Más ejemplos de else</h2>
+    
+    <p>Ejemplo en el que no se ejecutaría la condicional:</p>
+    <code style="color:red">
+        var nombre = "Arturo",<br>
+        edad =18;<br><br>
+        
+        if ( edad > 18 ){<br>
+        &nbsp; document.write("Bienvenido, eres mayor de edad");<br>
+        } else {<br>
+        &nbsp; document.write ("No eres mayor de edad");<br>
+        }
+    </code>
+
+    <p>Ejemplo en el que si se ejecutaría la condicional</p>
+    
+    <code style="color:red">
+        var nombre = "Arturo",<br>
+        edad =18;<br><br>
+        
+        if ( edad >= 18 ){<br>
+        &nbsp; document.write("Bienvenido, eres mayor de edad");<br>
+        } else {<br>
+        &nbsp; document.write ("No eres mayor de edad");<br>
+        }
+    </code><br>
+    
+    <hr>
+    
+    <table border="1">
+        <tr bgcolor="#000">
+            <td colspan="2"><font color ="#ffffff">OPERADORES LÓGICOS</font></td>
+        </tr>
+        <tr>
+            <td>And &#38; &#38;</td>
+            <td>Significa "y" y podemos agregar cuantas necesitemos.</td>
+        </tr>
+        <tr>
+            <td>Or ||</td>
+            <td>Permite indicar que se puede cumplir cualquiera de las condiciones de la condicional.</td>
+        </tr>
+
+    </table>
+    
+    <hr>
+    
+    <h2> Operado lógico "And" </h2>
+    <p>Con el operador lógico "And" dos condiciones son evaluadas por el navegador, si ambas se cumplen se ejecuta la acción.</p>
+    
+    <code style="color:red">
+        var nombre = "Arturo",<br>
+        edad =18;<br><br>
+        
+        if ( edad >= 18 && nombre == "Carlos"){<br>
+        &nbsp; document.write("Bienvenido, eres mayor de edad");<br>
+        } else {<br>
+        &nbsp; document.write ("No estas permitido");<br>
+        }
+    </code>
+    
+    <hr>
+    
+    <h2>Operador lógico Org ||</h2>
+    
+    <p>El operador Org es similar a And, por que también dos o mas condiciones son evaluadas, pero a diferencia de And, si alguna de las condiciones resulta verdadera se ejecutará la acción.</p>
+    
+    <table border="1">
+        <tr>
+            <td>
+                <code style="color:red">
+                    var nombre = "Arturo",<br>
+                    edad =18;<br><br>
+                    if ( edad >= 18 || nombre == "Carlos"){<br>
+                    &nbsp; document.write("Bienvenido, eres mayor de edad");<br>
+                    } else {<br>
+                    &nbsp; document.write ("No estas permitido");<br>
+                    }
+                </code>
+            </td>
+            <td>
+                <code style="color:red">
+                    var nombre = "Arturo",<br>
+                    edad =18;<br><br>
+                    
+                    if ( edad >= 18 || nombre == "Carlos"){<br>
+                    &nbsp; document.write("true");<br>
+                    } else {<br>
+                    &nbsp; document.write ("false");<br>
+                    }
+                </code>
+            </td>
+        </tr>
+    </table>
+    
+    <hr>
+    
+    <h2>Funciones dentro de condiciones</h2>
+    <p>Las funciones que se encuentran de esta forma retornan valores:</p>
+    
+    <code style="color:red">
+        if( funcion ){<br>
+        }
+    </code>
+    
+    <p>Para que una condición se ejecute tiene que tener como valor true o false</p>
+    
+    <code style="color:red">
+        if( true ){<br>
+        &nbsp; document.write("OK");<br>
+        }
+    </code>
+    
+    <hr>
+    
+    <h2>Condicionales para saber si una variable tiene asignado un valor.</h2>
+    <p>Lo mismo pasa con las variables, aqui lo que el navegador evaluará será si hay algún valor asignado a la variable "nombre", si es asi se ejecutará la acción.
+    Muchas veces se van a crear condicionales para preguntar si hay un valor que ha sido agregado o no a una variable.</p>
+    
+    <code style="color:red">
+        var nombre = "Arturo",<br>
+        edad =18;<br><br>
+                
+        if( nombre ){<br>
+            document.write("OK");<br>
+        }
+    </code>
+    
+    <hr>
+    
+    <h2>Tres signos de igual</h2>
+    
+    <p>Tres signos de igual, se utiliza para comprobar que tengan el mismo valor y sean del mismo tipo, en el ejemplo tienen el mismo valor "18", pero son de diferente tipo, ya que mientras un valor es de tipo entero, el otro es de tipo texto.</p>
+    
+    <code style="color:red">
+        var nombre = "Arturo",<br>
+        edad =18;<br>
+                
+        if( edad === "18" ){<br>
+            document.write("OK");<br>
+        } else {<br>
+            document.write("false");<br>            
+        }
+    </code>
+    
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+
+    </script>
+</body>
+
+</html>

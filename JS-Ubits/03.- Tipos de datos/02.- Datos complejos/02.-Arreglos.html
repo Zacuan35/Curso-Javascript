@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arreglos</title>
+</head>
+<body>
+	<h1>Arrays - Arreglos</h1>
+	<ul>
+		<li>Un arreglo es una lista que va agregando los elementos a los que pertenece en índices o posiciones</li>
+		<li>Las posiciones comienzan en 0</li>
+		<li>Los arreglos pueden contener cadenas, números etc.</li>
+	</ul>
+
+	<p>Array Javascript MDN - Documentación de métodos que traen internamente los arrays</p>
+	<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Métodos de los arrays</a>
+
+	<h3>Arreglos</h3>
+	<script>
+		//Declaración del arreglo
+		let colores = ["Rojo", "Verde", "Azul", "Amarillo"];
+		console.log(colores);
+
+		//Acceder al índice deseado
+		console.log(colores[3]);
+	</script>
+
+	<h3>Métodos de los arreglos</h3>
+	<script>
+		//Devuelve el número de ídices
+		console.log(colores.length);
+
+		//Edita los elemento de la lista
+		colores.push("Morado");//Agrega un elemento al final de la lista
+		colores.unshift("Rosa");//Agrega un elmento al inicio de la lista
+		colores.pop();//Elimina el último elemento de la lista
+
+		console.log(colores);
+	</script>
+
+	<h3>Método forEach</h3>
+	<p>Si se necesita hacer por cada elemento una acción repetitiva<br>
+	forEach recive una función, la cual recive un parámetro que representa el elemento,
+	por cada elemento que tenga mi arreglo quiero que escribas lo siguiente</p>
+
+	<script>
+		colores.forEach(
+			function(el){
+				console.log("<li>", el, "</li>");
+			}
+		);
+	</script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Convertir a texto (formato)</title>
+</head>
+<body>
+
+	<h3>Convertir a texto (formato)</h3>
+	<script>
+		/*Crear un objeto Date*/
+		const fecha = new Date();
+
+		//Convertir a texto formato
+		fecha.toString();        // formato completo
+		fecha.toDateString();    // solo fecha
+		fecha.toTimeString();    // solo hora
+		fecha.toISOString();     // formato estándar (muy usado en APIs)
+
+
+		fecha.toLocaleDateString(); // según idioma/país
+		//Ejemplo con idioma:
+		fecha.toLocaleDateString("es-ES", {
+			weekday: "long",
+			year: "numeric",
+			month: "long",
+			day: "numeric"
+		});
+		//Resultado:
+		//lunes, 15 de enero de 2024		
+	</script>
+
+</body>
+</html>

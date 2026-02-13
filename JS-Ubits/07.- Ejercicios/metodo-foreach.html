@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Método-foreach</title>
+</head>
+<body>
+<h1>Método forEach</h1>
+<h3>Ejemplo 01</h3>
+<script>
+	colores.forEach(
+    function(el){
+      console.log("<li>", el, "</li>");
+    }
+	);
+</script>
+
+<h3>Ejemplo 02</h3>
+<script>
+	arreglo.forEach((el) => {
+		if (typeof el !== "number") {
+			console.error(`El elemento ${el} no es un número`);
+		}
+	});	
+</script>
+
+<h3>Arreglo</h3>
+<script>
+	let animales = ["conejo", "pato", "vaca", "pollo", "abeja"];
+</script>
+
+<h3>Estructura básica</h3>
+<script>
+	animales.forEach(function(el){
+		console.log("<li>", el, "</li>");
+	});	
+</script>
+
+<h3>Con flecha</h3>
+<script>
+	animales.forEach(
+		(el) => {
+			console.log("<a>", el, "</a>");
+		}
+	);	
+</script>
+
+<h3>Con dos parámetros</h3>
+<script>
+	let frutas = ["Manzana", "Plátano", "Fresa"];
+	frutas.forEach((fruta, index) => {
+		console.log(index + ": " + fruta);
+	});	
+</script>
+
+<h3>Ejemplo sumar todos los números</h3>
+<script>
+	let numeros = [10,20,30];
+	let suma = 0;
+
+	numeros.forEach((num) => {
+		suma += num;
+	});
+
+	console.log(suma);	
+</script>
+
+<h3>Mostrar solo las edades mayores o iguales a 18.</h3>
+<script>
+	let edades = [15, 22, 30, 12, 18];
+	edades.forEach((age) => {
+		if(age >= 18){
+			console.log(age + " Es mayor de edad");
+		}
+	});	
+</script>
+
+<script>
+	let arreglo = [1,2,3,4,5,6,7,8,"9", true]
+	arreglo.forEach((el) => {
+		if(typeof el !== "number" ){
+			console.log("El elemento " + el + " no es un número")
+		}
+	});
+
+	numbers = arreglo.filter((el) => typeof el === "number");
+	console.log(numbers);	
+</script>
+
+</body>
+</html>

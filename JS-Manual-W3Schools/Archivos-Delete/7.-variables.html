@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 7.-Variables</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1 style="font-size:50px;">Variables de JavaScript</h1>
+    <p>Las variables de JavaScript son contenedores para almacenar valores de datos.<br>
+    En este ejemplo, x, y y z son variables:</p>
+
+    <table border="1">
+        <tr>
+            <td>        
+                var x = 5;<br>
+                var y = 6;<br>
+                var z = x + y;
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x = 5;<br>
+                &nbsp; &nbsp; var y = 6;<br>
+                &nbsp; &nbsp; var z = x + y;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML =<br>
+                &nbsp; &nbsp; "El valor de z es: " + z;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>Del ejemplo anterior, puedes esperar:</p>
+    <ul>
+        <li>x almacena el valor 5</li>
+        <li>y almacena el valor 6</li>
+        <li>z almacena el valor 11</li>
+    </ul>
+
+    <hr>
+
+    <h2>Mucho como el álgebra</h2>
+    <p>En este ejemplo, precio1, precio2 y total son variables:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var precio1 = 5;<br>
+                var precio2 = 6;<br>
+                var total = precio1 + precio2;
+            </td>
+            <td>
+                <h4>JavaScript Variables</h4>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+                
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var precio1 = 5;<br>
+                &nbsp; &nbsp; var precio2 = 6;<br>
+                &nbsp; &nbsp; var total = precio1 + precio2;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML =<br>
+                &nbsp; &nbsp; "El total es: " + total;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>En la programación, al igual que en álgebra, utilizamos variables (como precio1) para mantener los valores.<br>
+    En la programación, al igual que en álgebra, utilizamos variables en expresiones (total = precio1 + precio2).<br>
+    Del ejemplo anterior, puedes calcular el total para ser 11.<br>
+    </p>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Las variables de JavaScript son contenedores para almacenar valores de datos.
+    </p>
+
+    <hr>
+
+    <h2>Identificadores de JavaScript</h2>
+    <p>Todas las <strong>variables</strong> JavaScript deben <strong>identificarse</strong> con <strong>nombres únicos</strong>.<br>
+    Estos nombres únicos se llaman <strong>identificadores</strong>.<br>
+    Los identificadores pueden ser nombres cortos (como x y y) o nombres más descriptivos (edad, suma, totalVolumen).<br>
+    Las reglas generales para construir nombres para variables (identificadores únicos) son:</p>
+    <ul>
+        <li>Los nombres pueden contener letras, dígitos, guiones bajos y signos de dólar.</li>
+        <li>Los nombres deben comenzar con una letra</li>
+        <li>Los nombres también pueden comenzar con $ y _ (pero no lo usaremos en este tutorial)</li>
+        <li>Los nombres son sensibles a las mayúsculas y minúsculas (y y Y son variables diferentes)</li>
+        <li>Las palabras reservadas (como palabras clave de JavaScript) no se pueden usar como nombres</li>
+    </ul>
+    
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Los identificadores de JavaScript distinguen entre mayúsculas y minúsculas.
+    </p>    
+
+    <hr>
+
+    <h2>El operador de asignación</h2>
+    <p>En JavaScript, el signo igual (=) es un operador de "asignación", no un operador "igual a".<br>
+    Esto es diferente de álgebra. Lo siguiente no tiene sentido en álgebra:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                x = x + 5
+            </td>
+        </tr>
+    </table>
+
+    <p>En JavaScript, sin embargo, tiene perfecto sentido: asignar el valor de x + 5 a x.<br>
+    (Calcula el valor de x + 5 y coloca el resultado en x. El valor de x se incrementa en 5)</p>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+    El operador "igual a" se escribe como == en JavaScript.
+    </p>    
+
+    <hr>
+
+    <h2>Tipos de datos de JavaScript</h2>
+
+    <p>Las variables de JavaScript pueden contener números como 100 y valores de texto como "John Doe".<br>
+    En la programación, los valores de texto se llaman cadenas de texto.<br>
+    JavaScript puede manejar muchos tipos de datos, pero por ahora, solo piense en números y cadenas.<br>
+    Las cadenas están escritas dentro de comillas dobles o simples. Los números se escriben sin comillas.<br>
+    Si coloca un número entre comillas, se tratará como una cadena de texto.</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var pi = 3.14;<br>
+                var person = "John Doe";<br>
+                var answer = 'Yes I am!';
+            </td>
+            <td>
+                <h4>Variables de JavaScript</h4>
+                <p>Las cadenas están escritas con comillas.<br>
+                Los números se escriben sin comillas.</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var pi = 3.14;<br>
+                &nbsp; &nbsp; var person = "John Doe";<br>
+                &nbsp; &nbsp; var answer = 'Yes I am!';<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML =<br>
+                &nbsp; &nbsp; pi + "&#60;br&#62;" + person + "&#60;br&#62;" + answer;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Declarando (Creando) Variables de JavaScript</h2>
+    <p>Crear una variable en JavaScript se llama "declarar" una variable.<br>
+    Usted declara una variable de JavaScript con la palabra clave <strong>var</strong>:</p>
+    <table border="1">
+        <tr>
+            <td>
+                var carName;
+            </td>
+        </tr>
+    </table>
+
+    <p>Después de la declaración, la variable no tiene valor. (Técnicamente tiene el valor de <strong>indefinido</strong>)<br>
+    Para <strong>asignar</strong> un valor a la variable, use el signo igual:</p>
+    
+    <table border="1">
+        <tr>
+            <td>
+                carName = "Volvo";
+            </td>
+        </tr>
+    </table>
+
+    <p>También puede asignar un valor a la variable cuando la declare:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var carName = "Volvo";
+            </td>
+        </tr>
+    </table>
+
+    <p>En el siguiente ejemplo, creamos una variable llamada carName y le asignamos el valor "Volvo".<br>
+    Luego "enviamos" el valor dentro de un párrafo HTML con id = "demo":</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var carName = "Volvo";<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = carName;<br> 
+                &#60;/script&#62;
+            </td>
+            <td>
+                <h4>Variables de JavaScript</h4>
+                <p>Cree una variable, asígnele un valor y muéstrela:</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; var carName = "Volvo";<br>
+                &nbsp; document.getElementById("demo").innerHTML = carName;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Es una buena práctica de programación declarar todas las variables al comienzo de una secuencia de comandos.
+    </p>
+
+    <hr>
+
+    <h2>Una declaración, muchas variables</h2>
+    <p>Puede declarar muchas variables en una declaración.<br>
+    Comience la instrucción con <strong>var</strong> y separe las variables por <strong>comas</strong>:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var person = "John Doe", carName = "Volvo", price = 200;
+            </td>
+            <td>
+                <p>Una declaración puede abarcar una sóla línea.</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var person = "John Doe", carName = "Volvo", price = 200;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = carName;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>Una declaración puede abarcar múltiples líneas:</p>
+    
+    <table border="1">
+        <tr>
+            <td>
+                var person = "John Doe",<br>
+                carName = "Volvo",<br>
+                price = 200;
+            </td>
+            <td>
+                <p>Una declaración puede abracar múltiples líneas.</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; var person = "John Doe",<br>
+                &nbsp; carName = "Volvo",<br>
+                &nbsp; price = 200;<br>
+                &nbsp; document.getElementById("demo").innerHTML = carName;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Valor = indefinido</h2>
+    <p>En los programas de computadora, las variables a menudo se declaran sin un valor. El valor puede ser algo que debe calcularse, o algo que se proporcionará más tarde, como la entrada del usuario.<br>
+    Una variable declarada sin un valor tendrá el valor <strong>indefinido</strong>.<br>
+    La variable carName tendrá el valor indefinido después de la ejecución de esta declaración:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var carName;
+            </td>
+            <td>
+                <p>Una variable declarada sin un valor tendrá el valor indefinido.</p>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; var carName;<br>
+                &nbsp; document.getElementById("demo").innerHTML = carName;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Re-declarando variables de JavaScript</h2>
+    <p>Si vuelve a declarar una variable de JavaScript, no perderá su valor.<br>    
+    La variable carName todavía tendrá el valor "Volvo" después de la ejecución de estas declaraciones:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var carName = "Volvo";<br>
+                var carName;
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; var carName = "Volvo";<br>
+                &nbsp; var carName;<br>
+                &nbsp; document.getElementById("demo").innerHTML = carName;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Aritmética de JavaScript</h2>
+    <p>Al igual que con el álgebra, puede hacer aritmética con variables de JavaScript, usando operadores como = y +:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x = 5 + 2 + 3;
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; var x = 5 + 2 + 3;<br>
+                &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>También puede agregar cadenas, pero las cadenas se concatenarán:</p>
+
+    <table border="1">
+        <tr>
+            <td>        
+                var x = "John" + " " + "Doe";
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; var x = "John" + " " + "Doe";<br>
+                &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>También prueba esto:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x = "5" + 2 + 3;
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; x = "5" + 2 + 3;<br>
+                &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+    Si coloca un número entre comillas, el resto de los números se tratarán como cadenas y se concatenarán.
+    </p>
+
+    <p>Ahora prueba esto:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                var x = 2 + 3 + "5";
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x = 2 + 3 + "5"<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script></script>
+
+</body>
+
+</html>

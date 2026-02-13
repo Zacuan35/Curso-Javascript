@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 10.-Ejercicio con funciones y formularios</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>Ejercicio con funciones y formularios</h1>
+    
+    <p>En este capítilo estaremos viendo una pequeña calculadora para que te des una idea de como poder trabajar con funciones, y también introducir un poquito lo que son los formularios.<br>
+    Se realizará un formulario con dos input para agregar datos, y que al darle click al botón sumar nos aparezca el resultado.
+    </p>
+
+    <h2>1.-Creando el formulario html</h2>
+    <p>Se va a agregar dos input de tipo texto con indicadores "id" los cuales se llamarán numero1 y numero2.<br>
+    Después vamos a agregar otro input de tipo "button", va a tener un "value" que diga sumar.
+    </p>
+    
+    <form action="">
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+        <input type="button" value="sumar" onclick="alert( suma(10,50) );">
+    </form>
+
+    <h2>2.- Creando la función que sume los números</h2>
+    <p>Esto se realiza dentro del script de la siguiente manera:</p>
+    
+    <p>
+        2.1.-Una variable llamada suma que es igual a una función, esta función recibe dos parámetros, numero1 y numero2.<br>
+        2.2.-Dentro se crean dos variables llamadas numero1 y numero2 que será igual a los id llamados numero1 y dos.<br>
+        2.3.-Los id numero1 y numero2 se va a contener dentro de "parseFloat", la cual es una propiedad que nos ayuda a convertir un dato de tipo "cadena de texto" a número decimal, sin él la operación no se realizaría.<br>
+        <strong><i>La función parseFloat recibe como parámetro el document.getElementById y lo tranforma en decimales, también podría funcionar con la función parseInt pero este solamente transforma enteros y no toma en cuenta decimales.<br>
+        Hay otras formas de hacerlo para que aparezcan sólo dos decimales.</i>
+        </strong><br>
+        2.4.-Dentro de parseFloat a modo de parámetro sucede lo siguiente:<br>
+        Se obtiene un elemento del documento .html y se extraé su valor, lo anterior se desglosa de la siguiente manera:<br>
+        Del documento .html ".document" se busca ".getElementById" el elemento que tenga el Id "numero1 y numero2" y se extraé su valor ".value".<br>
+        2.5.-Se crea una variable llamada resultado que es igual a la suma de numero1 + numero2.<br>
+        2.6.-Por último con "return resultado" se regresa la variable llamada resultado.
+    
+    </p>
+    
+    <code style="color:red">
+        var suma = function(numero1, numero2){<br>
+        &nbsp; var numero1 = parseFloat(document.getElementById("numero1").value);<br>
+        &nbsp; var numero2 = parseFloat(document.getElementById("numero2").value);<br><br>
+            
+        &nbsp; var resultado = numero1 + numero2;<br>
+        &nbsp; return resultado;<br>
+        }        
+    </code>
+    
+    <h2>3.-Agregando un evento</h2>
+    
+    <p>Para que aparezca el resultado de la operación al darle click al botón, se tiene que agregar un evento.</p>
+    <p>3.1.- Dentro del input del botón se agrega el atributo "onclick"<br>
+       3.2.- Como valor de "onclick" se coloca un "alert ( )", ya que se quiere mostrar algo en pantalla.<br>
+       3.3.- Dentro del valor "alert ( )" se pone suma y sus parámetros.<br>
+    </p>
+    <p>Los puntos anteriores se resumen en lo siguiente;<br>
+    Al darle click (onclick) al input (button), va a ejecutar un (alert) que tenga el resultado de la función llamada suma.<br><br>
+    <strong><i>La forma correcta de agregarlo es dentro de un archivo externo .js, pero para efectos del ejercicio se agregará dentro del código .html</i></strong></p>
+    
+    <form action="">
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+        <input type="button" value="sumar" onclick="alert( suma() );">
+    </form>
+
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

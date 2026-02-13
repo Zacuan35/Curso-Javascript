@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 21.-Formularios-Propiedades y métodos</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+<h1>Formularios-Propiedades y métodos</h1>
+
+<p>En este capítulo veremos algunas propiedades y métodos que podemos utilizaren los formularios.</p>
+
+<p>En el siguiente capítulo validaremos un formulario sencillo para comprobar que el usuario haya rellenado cada uno de los campos.</p>
+
+<hr>
+
+<h1>Creando el formulario</h1>
+<ul>
+    <li><strong>Creando el formulario</strong></li>
+    <li>El form tiene un action que se utiliza para enviar los datos, normalmente dentro de las comillas van scripts como "recibe.php" o algún archivo similar, este archivo va a ser el encargado de recibir los datos, procesarlos y hacer algo con ellos como subirlos a una base de datos por ejemplo.</li>
+    <li>Después se encuentra el atributo name para ponerle un identificador al formulario.</li>
+    <li>El método get junto con post son utilizados para enviar datos por el sitio web.</li>
+    <li><strong>Resto de inputs</strong></li>
+    <li>type="text" especifica el input para entrada de texto</li>
+    <li>El maxlenght="30" nos permite decirle que el usuario sólo va a poder escribir 30 carácteres.</li>
+    <li>Después tenemos los input de radio buton</li>
+    <li>Tenemos un input de checkbox</li>
+    <li>Por último tenemos un botón con el type "submit" el cúal nos va a permitir que cuando el usuario presione el botón se envíe el formulario, hay una diferencia muy grande entre submit y simplemente ponerle button, los dos son un botón pero submit te va a enviar los datos específicamente.</li>
+</ul>
+
+<table border="1">
+    <tr>
+        <td>
+            <h3>Required</h3>
+            Require se implementó con HTML5 y sirve para validar formularios pero no todos los navegadores lo soportan y los usuarios pueden saltarselas, si le ponemos required a los input del formulario sin rellenar todos los campos nos saldrán advertencias para hacerlo.<br>
+            Dependiendo del tipo de input va a aparecer una validación u otra, por ejemplo;<br>
+            En los de correo va a validar que sea legítimo.<br>
+            En este ejercicio no la utilizaremos por que trabajaremos la validación con Javascript.
+        </td>
+    </tr>
+</table><br>
+
+<form action="" name="formulario" method="get">
+    <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre">
+    <br>
+    <input type="radio" name="sexo" id="hombre" value="hombre"> Hombre
+    <input type="radio" name="sexo" id="mujer" value="mujer"> Mujer
+    <br>
+    <input type="checkbox" name="terminos" id="terminos"> Términos y condiciones
+    <br>
+    <input type="submit" name="btn" id="btn" value="Enviar">
+</form>
+
+<hr>
+
+<h1>Maneras de acceder a form</h1>
+<p>En estas explicaciones accederemos desde la consola.</p>
+
+<h3>Primera forma</h3>
+
+<ul>
+    <li><strong>Accediendo a los formularios</strong><br>
+    Escribimos en la consola: document.forms + enter<br>
+    Aparecerá lo siguiente <code style="color:red;">HTMLCollection [&#60;form&#62;]</code><br>
+    El código es una colleción HTML, significa que si tenemos mas de un formulario podemos acceder a sus elementos como en un array.
+    </li>
+    <li><strong>Accediendo al primer formulario</strong><br>
+    Escribimos document.forms[0] + enter, aparece lo siguiente:<br>
+    <code style="color:red;">&#60;form method="get" name="formulario" action=""&#62;</code>
+    </li>
+    <li><strong>Accediendo a los inputs</strong><br>
+    Después accedemos a los elementos con el atributo elements<br>
+    document.forms[0].elements + enter, nos arrojara lo siguiente:<br>
+    <code style="color:red;">HTMLFormCollection{0: &#60;input#nombre&#62;, 1: &#60;input#hombre&#62;, 2: &#60;input#mujer&#62;, 3:&#60;input#terminos&#62;}</code>    
+    </li>
+    <li><strong>Accediendo a los atributos</strong><br>
+    Podemos acceder al primer atributo que sería type="text" escribiendo:<br>
+    document.forms[0].elements[0]+ enter<br>
+    <code style="color:red;">&#60;input type="text" required="" placeholder="Nombre:" maxlength="30" id="nombre" name="nombre"&#62;</code>
+    </li>
+</ul>
+
+<h3>Segunda forma</h3>
+<p>En esta forma se utiliza el atributo name, esta es una forma más fácil de acceder, por que de la otra forma no sabemos si los elementos cambian de posición o el formulario también cambia.</p>
+
+<ul>
+    <li>La etiqueta form tiene el atributo name de formulario, por ello podriamos acceder mas directo a él escribiendo <br>
+    document.formulario + enter, lo que nos arrojará como resultado:<br>
+    <code style="color:red;">&#60;form method="get" name="formulario" action=""&#62;</code>
+    </li>
+    <li>De igual forma podemos acceder a los elementos hijos escribiendo.
+    document.formulario.nombre + enter y obtendriamos:</li>
+    <li><code style="color:red;">&#60;input type="text" required="" placeholder="Nombre:" maxlength="30" id="nombre" name="nombre"&#62;</code></li>
+    <li>Y estamos accediendo a lo que es el input de tipo texto pero que tiene el name de nombre.
+  </li>
+</ul>
+
+<hr>
+
+<h1>Propiedades de los formularios</h1>
+
+<h3>Propiedad name</h3>
+<p>Nos sirve para conocer el atributo name y acceder directamente a ese elemento, hay dos maneras de escribirlo.<br>
+document.formulario.nombre o document.formulario.name<br>
+<strong>Accediendo al input con name=nombre</strong><br>
+document.formulario.nombre+enter<br>
+<code style="color:red;">&#60;input type="text" required="" placeholder="Nombre:" maxlength="30" id="nombre" name="nombre"&#62;</code><br>
+<strong>Conociendo el valor del atributo type</strong><br>
+Ya que accedimos escribimos document.formulario.nombre.type+enter <br>
+Y como puedes ver nos dice que es de tipo texto.<br>
+Esto nos permite hacer muchas cosas con las validaciones, ya que podemos hacer condicionales como recorrer los elementos y a los que sean de tipo texto especificarles cierta situación. 
+</p>
+
+<h3>Propiedad value</h3>
+<p>Podemos conocer el valor del input de texto si tiene un dato ingresado, si escribimos algo de texto en el input de texto aparecerá el valor del contenido al momento de ejecutar la instrucción, por que si después cambiamos el texto tendríamos que volver a ejecutar la instrucción para ver el nuevo valor.
+<br>
+document.formulario.nombre.value + enter
+</p>
+
+<h3>Propiedad focus</h3>
+<p>Focus sirve para que en el input de texto, el cursor se encuentre por default en el campo de texto y asi facilitar el agregado de un valor.<br>
+document.formulario.nombre.focus()</p>
+
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

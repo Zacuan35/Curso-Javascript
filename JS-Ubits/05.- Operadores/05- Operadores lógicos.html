@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Operadores lógicos</title>
+</head>
+<body>
+	<h1>Operadores lógicos</h1>
+
+	<h3>&& - AND (Y)</h3>
+	<p>Todas las condiciones deben cumplirse</p>
+	<script>
+		//&& - AND (Y)
+		console.log(9 > 8 && 9 < 18 && 3 === 3); //true
+		console.log(9 > 8 && 9 < 18 && 4 === 3); //false
+	</script>
+
+	<h3>|| - OR (O)</h3>
+	<p>Al menos una de las condiciones debe de cumplirse</p>
+	<script>
+		//|| - OR (O)
+		console.log(9 > 18 || 19 < 18 || 4 === 4); //true
+		console.log(9 > 8 || 9 < 18 || 4 === 3); //true
+	</script>
+
+	<h3>Not (Negación)</h3>
+	<p>El operador de negación sólo funciona con booleanos</p>
+	<script>
+		/*! - Not (Negación)*/
+		console.log(!true);
+		console.log(!false);	
+	</script>
+
+</body>
+</html>

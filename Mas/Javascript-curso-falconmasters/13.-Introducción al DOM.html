@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="3">﻿
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 13.-Introducción al DOM</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>Introducción al DOM (Document object model)</h1>
+
+    <p>El objetivo del DOM es poder acceder y manipular los elementos de un sitio web con javascript de una manera fácil, como por ejemplo cuanto se accede a formularios para poder obtener un valor y después trabajar con el.
+    <br>
+    El DOM básicamente es la estructura de una página web pero conformada por elementos llamados nodos, consta de dos elementos primarios que son el head y el body y dentro de cada uno de ellos tenemos más elementos, cada uno de estos elementos son nodos que podemos acceder en el DOM.<br>
+    </p>
+    <h3>¿Cómo podemos acceder a los elementos con el DOM?</h3>
+    <p>Hay varias formas de hacerlo, la primera de ellas es seleccionando todos los elementos de nuestro sitio web por etiquetas o buscándolos mediante un ID.</p>
+
+    <hr>
+
+    <h1 id="titulo">Título de nuestro sitio web</h1>
+
+    <p>1.- Lorem ipsum <b>dolor</b> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+    <p id="segundo">2.-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+    <p>3.-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+    <h2>Creando el script</h2>
+    <p>Mediante la siguiente variable accederemos a los elementos:<p>
+
+    <p>
+    1.-Se crea una variable llamada elementosP, para acceder a todos los elementos p que tenemos en pantalla.<br>
+    2.-Después de la variable escribimos igual a .document por que es la raíz de nuestro DOM.<br>
+    3.-Enseguida escribimos <strong>getElemenstByTagName ("...");</strong> esta sintáxis es conocida como *camelsintax, y dentro de los paréntesis pondríamos la etiqueta que queremos alcanzar, en este caso todos los elementos "p".</p>
+
+    <code style="color:red;">
+        var elementosP = document.getElementsByTagName("p");
+    </code><br><br>
+    
+    <strong><i>Camel sintax en español sintáxis del camello, se llama asi por que la primer letra va a ser minúscula siempre, pero la primera letra de cada palabra siguiente va en mayúscula.</i></strong><br>
+
+    <hr>
+
+    <h2>1.-Trayendo los elementos mediante etiquetas</h2>
+
+    <p>Supongamos que queremos obtener la etiqueta número dos del elemento "p".<br>
+    <strong><i>"En este ejercicio es importante tener la etiqueta script hasta el final del código por que necesita cargar todas las etiquetas para poder trabajar con ellas".</i></strong></p>
+
+    <h3>Accediendo a la variable mediante la consola</h3>
+
+    <p>Vamos a ir a nuestra página web y actualizamos, nos dirigimos a la consola y escribimos elementosP + enter, nos dice que es una colección html y que podemos acceder a ellos como si fueran un arreglo.</p>
+
+    <h3>Accediendo al primer elemento y modificando su contenido</h3>
+    <p>1.-En la consola escribimos elementosP y unos [ ], ya que vamos a ponerle sintáxis de arreglo.<br>
+       <strong>elementosP[...]</strong><br> 
+       2.-Dentro de los brackets escribimos el número 0 por que estamos accediendo desde la posición 1, damos un enter y nos dice que hemos accedido al primer párrafo, incluso en pantalla nos lo está subrayando, y si le damos click nos enviará al modo inspector y nos seleccionará el primer párrafo.<br>
+       <strong>elementosP[0]</strong><br>
+       3.-Seguidamente escribiremos .innerHTML y damos un enter, con el cual vamos a acceder a todo el contenido html que este dentro de estas etiquetas, en este caso es texto y etiquetas.<br>
+       <strong>elementosP[0].innerHTML</strong> <br>
+       4.-Ahora modificaremos el elemento 1, después de .innerHTML escribimos que va a ser igual a "ou yeah"; damos un enter y en pantalla a cambiado nuestro elemento.<br>
+       <strong>elementosP[0].innerHTML = "ou yeah";</strong></p>
+
+
+    <h2>2.- Trayendo los elementos por su ID</h2>
+
+    <p>Otra forma de acceder a los elementos y que es la más habitual, es trayendo los elementos por su ID.<br>
+    Se creará una variable llamada segundoParrafo la cual es igual al documento .document, y va a acceder al el .getElementById("...");, dentro de los paréntesis se escribirá el id del elemento que se quiere buscar, en este caso el segundo parrafo que tiene el id llamado segundo.</p>
+
+    <code style="color:red;">
+        var segundoParrafo = document.getElementById("segundo");
+    </code>
+
+    <p>1.-Guardamos, actualizamos, y accedemos en la consola al segundo párrafafo escribiendo:<br>
+     <strong>segundoParrafo + enter</strong><br>
+     nos dirá que tenemos el elemento p con el id"segundo"<br>
+     2.-Si le agregamos .innerHTML nos aparecerá el contenido:<br>
+     <strong>segundoParrafo.innerHTML</strong></p>
+
+    
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

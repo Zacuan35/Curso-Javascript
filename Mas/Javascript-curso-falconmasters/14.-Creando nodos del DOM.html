@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="3">﻿
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 14.-Creando nodos del DOM</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>Creando nodos del DOM</h1>
+    <p>En este capítulo vamos a estar aprendiendo como crear nodos y como agregarlos a nuestro código HTML</p>
+
+    <p>Estos son los pasos para poder agregar un elemento o nodo al documento:</p>
+
+    <ol>
+        <li>Crear el elemento</li>
+        <li>Crear un nodo de texto</li>
+        <li>Añadir el nodo de texto al elemento</li>
+        <li>Agregar atributos al elemento</li>
+        <li>Agregar el elemento al documento</li>
+    </ol>    
+
+    <p><strong>1.- Creando el elemento</strong><br>
+    Crearemos una variable llamada elemento y será igual a un document seguido del método .createElement el cual nos permite crear un elemento escribiéndolo dentro de los paréntesis.<br><br>
+    <code style="color:red;">
+        var elemento = documet.createElement("h2"); 
+    </code><br><br>
+           
+    <strong>2.- Creando el contenido</strong><br>
+    Escribiremos otra variable llamada contenido, y será igual a document seguido del método .createTextNode, y dentro de los paréntesis pondremos todo el texto de nuestro contenido.<br><br>
+    <code style="color: red;">
+       var contenido = documet.createTextNode("Este es nuestro titular");  
+    </code><br><br>
+       
+    <strong>3.- Añadiendo el contenido al elemento</strong><br>
+    Hay que añadir el contenido al elemento para juntarlos, para ello se llama a la variable elemento seguida del método .appenChild("..."); dentro de los paréntesis recibirá como parámetro el contenido que añadiremos.<br><br> 
+    <code style="color: red;">
+        elemento.appendChild(contenido);
+    </code><br><br>
+
+    <strong>4.- Agregando atributos al elemento (Opcional)</strong><br>
+    Accedemos a elemento seguido del atributo .setAttribute y dentro de los paréntesis recibirá dos valores, el primero es el nombre de la propiedad y el segundo el valor.<br><br>
+    <code style="color: red;">
+       elemento.setAttribute("align", "center"); 
+    </code><br><br>
+       
+    <strong>5.- Agregando el elemento al documento</strong><br>
+    Accederemos a document seguido de .getElementById y dentro de los paréntesis escribimos el id subtitulo, seguidamente escribimos el método .appendChild y dentro de los paréntesis vamos a agregar el elemento que hemos creado, o sea el h2 con su contenido. <br>
+    Lo que hemos hecho fue crear un nodo y agregarlo al sitio.</p>
+    <code style="color: red;">
+       document.getElementById("subtitulo").appendChild(elemento;)
+    </code><br>
+    <p>Para agregar elementos al final del body sería de la siguiente forma:<br><br>
+    <code style="color: red;">
+        document.body.appendChild(elemento;)
+    </code>
+    </p>
+
+    <hr>
+
+    <h1 id="titulo">Título de nuestro sitio web</h1>
+    <div id="subtitulo"></div>
+
+    <p>1.- Lorem ipsum <b>dolor</b> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+    <p id="segundo">2.-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+    <p>3.-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+    
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

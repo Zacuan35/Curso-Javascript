@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="3">﻿
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 16.-Modificando, remplazando y eliminando dodos del DOM</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+
+    <h1>Modificando, remplazando y eliminando nodos del DOM</h1>
+
+    <p>En este capítulo veremos como acceder, modificar, agregar y eliminar el contenido de un elemento, "los nodos del DOM" por ejemplo acceder al texto de un elemento "li".</p>
+
+    <h3>1.- Creando el elemento</h3>
+    <p>Hemos creado el elemento pero todavía no ha sido agregado a ninguna parte del documento.</p>
+
+    <o id="lista">
+        <li id="primero">Lorem ipsum dolor si amet.</li>
+        <li>Lorem ipsum dolor si amet.</li>
+        <li>Lorem ipsum dolor si amet.</li>
+    </o><br>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");<br><br>
+
+        element.appendChild(contenido);
+    </code>
+
+    <h3>2.- Accediendo al primer elemento "li"</h3>
+    <p>Vamos a crear una variable llamada primer elemento para acceder al primer elemento que queramos, lo haremos mediante un id, la variable va a ser igual a document seguido de .getElementById (...); y apuntaremos al id llamado primero.</p>
+
+    <code style="color:red;">
+        var primerElemento = document.getElementById("primero");
+    </code>
+
+    <h3>3.- Accediendo al texto de su interior</h3>
+    <p>Hay dos formas de hacerlo:</p>
+
+    <ul style="list-style: none;">
+        <li>3.1.- Mediante .innerHTML</li>
+        <li>3.2.- Mediante .textContent</li>
+    </ul>
+
+    <h4>3.1.- Mediante .innerHTML</h4>
+
+    <table border="1">
+        <tr>
+            <td>
+            Dentro de .innerHTML podemos agregar:<br>
+                <ul>
+                    <li>a) Etiquetas HTML que serán leídas por el navegador</li>
+                    <li>b) Clases para modificar propiedades</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <p><strong><i>a) Agregando etiquetas HTML.</i></strong><br>
+    Se accede a primerElemento seguido de .innerHTML y se establece el nuevo texto.</p>
+
+    <code style="color:red;">
+        var primerElemento = document.getElementById("primero");<br>
+        primerElemento.innerHTML = "Nuevo texto <i>Este texto esta en itálica</i>";
+    </code><br> 
+
+    
+    <p><strong><i>b) Agregando clases.</i></strong><br>
+    Dentro de las etiquetas de "i" podemos agregar una clase llamada foo, y si inspeccionamos el primer elemento "li" y vemos el texto que reemplazamos, aparecerá la clase que agregamos en el elemento "i".
+    </p>
+
+    <code style="color:red;">
+        var primerElemento = document.getElementById("primero");<br>
+        primerElemento.innerHTML = "Nuevo texto <i class=\  "foo\">Este texto esta en itálica</i>";
+    </code>
+
+    <h4>3.2.- Mediante .textContent</h4>
+
+    <p>.textContent no reconoce etiquetas HTML pero es más seguro a la hora de trabajar con formularios por ejemplo.
+    </p>
+
+    <h3>Reemplazar nodos del DOM</h3>
+    <p>En el siguiente ejercicio se creará un nodo y se eliminará el otro, se pone uno donde estaba el anterior.<br>
+    <strong><i>".getElementsByTagName selecciona todas las etiquetas del body, por lo cual no es el método conveniente a utilizar si se tienen muchas etiquetas similares a la que necesitamos llamar."</i></strong></p>
+
+    <ul>
+        <li>Se crea una variable llamada padre que es igual a document seguido de .getElementsByTagName("...");</li>
+        <li>Dentro de los paréntesis se accede a todos los elementos "li"</li>
+        <li>Dentro de los brackets se establece la posición del elemento a buscar.</li>
+        <li>Con .parentNode se accede al elemento padre.<br><strong><i>En la consola checamos que todo esté correcto accediento a padre y nos debe arrojar como resultado la etiqueta de apertura con el id "lista"</i></strong> </li>
+        <li>Agregamos una variable llamada referencia y será igual al primer elemento "li"</li>
+        <li>Ahora agregamos el elemento padre seguido de .replaceChild("..."); este método recibe dos parámetros:
+            <ol>
+                <li>Elemento a agregar (Variable elemento)</li>
+                <li>Elemento a eliminar (Variable referencia, "primer elemento li de la lista".)</li>
+            </ol>
+        </li>
+    </ul>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");<br><br>
+
+        element.appendChild(contenido);<br><br>
+
+        <hr>
+        //Accediendo a la variable padre<br><br> 
+        var padre = document.getElementsByTagName("li")[0].parentNode,<br>
+            referencia = document.getElementsByTagName("li")[0];<br>
+        padre.replaceChild(elemento, referencia);<br>
+    </code>
+
+
+    <h3>Eliminando nodos del DOM</h3>
+
+    <ul>
+        <li>La variable referencia accede al primer elemento li de la lista.</li>
+        <li>Se accede a la variable padre que es el contenedor de la lista.</li>
+        <li>Seguido de la variable padre se escribe el método .removeChild(...);</li>
+        <li>Dentro de los paréntesis se escribe el elemento a eliminar que es la variable referencia</li>
+    </ul>
+
+    <code style="color:red;">
+        var elemento = document.createElement("li"),<br>
+        contenido = document.createTextNode("Nuevo texto");<br><br>
+
+        element.appendChild(contenido);<br><br>
+
+        var padre = document.getElementsByTagName("li")[0].parentNode,<br>
+
+        <hr>
+        //Eliminando la variable referencia = primer elemento "li" de la lista.<br><br> 
+            referencia = document.getElementsByTagName("li")[0];<br>
+        padre.removeChild(referencia);
+    </code>
+
+    <p>Si nos vamos al inspector de elemntos en la lista solo aparecerá uno</p>
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+
+    </script>
+    
+</body>
+
+</html>

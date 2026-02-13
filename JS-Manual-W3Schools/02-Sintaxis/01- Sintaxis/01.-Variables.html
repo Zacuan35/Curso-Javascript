@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+</head>  
+<body>
+
+<h1>Variables</h1>
+
+<h3>¿Qué son las variables y los identificadores?</h3>
+<ul>
+  <li>Las variables son contenedores para almacenar valores de datos.</li>
+  <li>Un identificador es el nombre que le das a una variable, y deben ser únicos.</li>
+</ul>
+
+<h3>Reglas para nombrar identificadores</h3>
+<ul>
+  <li>Debe comenzar con una letra, _, o $</li>
+  <li>Puede contener dígitos después del primer carácter.</li>
+  <li>No puede ser una palabra clave reservada (let, const, if, etc.)</li>
+  <li>Son sensibles a mayúsculas y minúsculas</li>
+  <li>Los guiones no están permitidos en JavaScript. Están reservados para restas.</li>
+</ul>
+
+<h3>¿Cómo declarar variables?</h3>
+<ul>
+  <li>Primero se define la variable (x).</li>
+  <li>Después, a la varible se le asigna el valor (6).</li>
+</ul>
+
+<p id="demo"></p>
+
+<script>
+  let x; // Se declara la variable x
+  x = 6; // Se asigna un valor a x
+  document.getElementById("demo").innerHTML = "El valor de x es " + x;
+</script>
+
+</body>
+</html>

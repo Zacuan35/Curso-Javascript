@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="3">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 18.-Modificando el estilo de los elementos</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+    <style type="text/css">
+        .thumb{
+            width: 200px;
+            transition: 300ms all ease;
+        }
+        .grande{
+            width:400px;
+        }
+        .titulo{
+            border: 1px solid navy;
+            background: #ccc;
+            padding: 10px;
+        }
+        .titulogrande{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    <h1>Modificando el estilo de los elementos</h1>
+    <p>En este capítulo repasaremos la forma de modificar elementos mediante .className y aprenderemos una nueva forma de modificar estilos dinámicamente con Javascript.<br>
+    Tenemos un encabezado con un id llamado encabezado, una clase que todavía no tiene nada, un contenido y unos estilos agregados al inicio de la página.</p>
+
+    <h1 id="encabezado" class="">Soy un encabezado</h1>
+
+    <hr>
+
+    <h2>Cambiando atributos mendiante .className</h2>
+    <p>Para recapitular lo visto en el capítulo anterior se modificará los elementos del DOM utilizando clases.</p>
+
+    <ul>
+        <li>Agregamos una variable llamada encabezado.</li>
+        <li>La variable será igual a document para acceder al DOM</li>
+        <li>Con .getElementByID(...); accedemos al #encabezado y lo guardarmos en la variable encabezado, para acceder a él más fácilmente.</li>
+        <li>.getElementById("");</li>
+         </li>
+    </ul>
+    
+    <code style="color:red">
+        var encabezado = document.getElementByID("Encabezado");<br>
+    </code>
+
+    <h3>Agregando la clase .titulo</h3>
+    <p>Accedemos al encabezado desde consola o el código, y escribimos el código de debajo, y damos enter o actualizamos.<br>
+    Si vemos su estilo ha cambiado, y si revisamos en el inspector la clase se ha modificado.</p>
+
+    <code style="color:red">
+        encabezado.className = "titulo" 
+    </code>
+
+    <h3>Borrando la clase .titulo</h3>
+
+    <p>Si queremos borrar la clase titulo basta con reemplazarla con titulogrande, y si queremos conservar ambos solo hay que agregar un espacio y poner la segunda clase.</p>
+
+    <code style="color:red">
+        encabezado.className = "titulo tituloGrande" + enter
+    </code>
+
+    <h3>Otra forma de eliminar una clase.</h3>
+
+    <ul>
+       <li>Accedemos al encabezado.</li> 
+       <li>Con className accedemos a la clase.</li>
+       <li>Va a ser igual a encablezado.className o sea si mismo.</li>
+       <li>Vamos a utilizar un método llamado .replace y recibe dos parámetros.</li>
+       <li>El primero es el valor a encontrar y el segundo por cual se reemplazará.</li>
+       <li>Como primer parámetro ponemos "titulogrande"</li>
+       <li>Como segundo parámetro ponemos un espacio en blanco.</li>
+       <li>Actualizamos y vemos el cambio, en la consola revisamos y ya no esta en la clase titulogrande.</p></li>
+    </ul>
+
+    <code style="color:red">
+        encabezado.className = encabezado.className.replace("titulogrande", "");
+    </code>
+
+    <br><hr>
+
+    <h2>Cambiando atributos mendiante .style</h2>
+    <p>Es utilizada para acceder y modificar los valores de un atributo style con el cual se puede cambiar cualquier propiedad css, y se puede usar varias veces para cambiar las propiedades de una etiqueta.
+    <br>
+
+    Después de escribir los códigos de abajo en el script o en la consola guardamos y actualizamos.</p>
+
+    <ul>
+        <li>Escribimos encabezado seguido de .style con lo cual estamos accediento a los estilos del titular.</li>
+        <li>Despues de un punto accedemos a la propiedad que necesitemos modificar.</li>
+        <li>Despues de un igual escribimos el valor que necesitemos modificar.</li>
+    </ul>
+
+    <code style="color:red">
+        encabezado.style.background = "navy";<br>
+        encabezado.style.color = "#fff";<br>
+    </code>
+
+    <h2>Propiedades CSS de dos palabras</h2>
+    <p>Para propiedades CSS conformadas por dos palabras, se tiene que seguir la "came case sintax" guardamos y actualizamos.</p>
+
+    <code style="color:red">
+        encabezado.style.paddingTop = "20px";
+    </code>
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+    </script>
+    
+</body>
+
+</html>

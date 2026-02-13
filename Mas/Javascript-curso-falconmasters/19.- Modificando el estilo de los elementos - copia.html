@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 19.-Modificando el estilo de los elementos (Práctica)</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+    <style type="text/css">
+        .thumb{
+            width: 200px;
+            transition: 300ms all ease;
+        }
+        .grande{
+            width:400px;
+        }
+    </style>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <p>En este capítulo vamos a interactuar con el documento, a trávez de un botón transformaremos las dimensiones de una imagen cambiando con javascript las clases que definen sus dimensiones.<br>
+    Al cargar la página su tamaño será de 200px de ancho y al dar clic al botón cambiará a 400px de ancho.</p>
+
+    <h1>Creando el botón</h1>
+    <p>Crearemos un formulario para agregar un botón.</p>
+
+    <ul>
+        <li>Crearemos un elemento input de tipo boton: el cuál activará el cambio de tamaño.</li>
+        <li>Insertamos el atributo de valor: Para botones define el texto del botón.</li>
+        <li>Utilizaremos el atributo onclick: al presionar el botón se va a ejecutar la función "zoom();"</li>
+        <li>"Utilizar eventos de esta forma no es lo más correcto"</li>
+    </ul>
+
+    <form action="">
+        <input type="button" value="Cambio de tamaño" onclick="zoom();" name="">
+    </form>
+
+    <br><hr>
+
+    <h1>Insertando la imagen</h1>
+
+    <ul>
+        <li>Se inserta una imagen con un ancho de 400px * 400px</li>
+        <li>Aparte le agregaremos un width de 400px</li>
+        <li>Le insertamos una clase llamada thumb que le resetea las dimensiones a 200px.</li>
+        <li>Tambien lleva una propiedad de transición para que el cambio sea suave.</li>
+        <li>Le colocamos un identificador id con el nombre thumb.</li>
+    </ul>
+
+    <p>Cuando el zoom no este activado el tamaño será de 200px, y con javascript agregaremos y quitaremos la clase .grande.</p>
+
+    <img id="thumb" class="thumb" src="http://lorempixel.com/400/400/" width="400" alt="">
+
+    <br><hr>
+
+    <h1>Creando la función</h1>
+
+    <ul>
+        <li>Guardaremos la función dentro de una variable llamada zoom.</li>
+        <li>Dentro de la declaración creamos una variable llamada thumb, con lo cuál accederemos a la etiqueta de imagen.</li>
+        <li>Ahora se llama a la variable "thumb" (Etiqueta imagen) y se reemplaza la clase thumb por la de thumb grande.<br>
+        "Se puede hacer con .className y sería el siguiente código: <br>
+        thumb.className = "thumb grande";"</li>
+    </ul>
+
+    <p>Actualizamos la página, esperamos a que cargue, presionamos el botón y la imagen se ha hecho más grande al presionar, </p>
+
+    <code style="color: red;">
+        var zoom = function(){<br>
+        &nbsp; var thumb = document.getElementById("thumb");<br>
+        &nbsp; thumb.setAttribute("class" , "thumb grande");<br>
+        }
+    </code>
+
+    <h3>Comprobando si funciona</h3>
+
+    <p>Para comprobar de momento si funciona podemos poner un alert con cualquier mensaje, actualizamos, presionamos el botón, y si aparece el mensaje significa que todo esta correcto de momento.</p>
+
+    <code style="color: red;">
+        var zoom = function(){<br>
+        &nbsp; var thumb = document.getElementById("thumb");<br>
+        &nbsp; alert("s");<br>
+        }
+    </code>
+
+    <h3>Insertando condicionales</h3>
+
+    <p>Sin embargo queremos que al presionar de nuevo se vuelva a hacer más pequeña, y para ello debemos quitar la clase grande.<br>
+    Para esto tenemos que usar condicionales.</p>
+
+    <ul>
+        <li><strong>if</strong><br>
+        Si la clase que esté dentro del Id thumb es igual a la clase thumb se ejecutará la siguiente declaración:<br>
+        La clase dentro del id thumb cambiará a thumb grandre.</li>
+        <li><strong>else</strong><br>
+        Pero si la clase que esta dentro de Id thumb no es igual a la clase thumb se ejecutará la siguiente declaración:<br>
+        La clase dentro del id thumb cambiará a thumb.</p></li>
+    </ul>
+
+<table border="1">
+        <tr>
+            <td>
+    En el inspector checamos que tiene la clase thumb y no la de thumb grande.<br>
+    Presionamos el botón y se hace más grande, y la clase cambia.<br>
+    <strong><i>Es importante fijarse en el inspector como al presionar el botón las clases se agregan y se quitan dinámicamente.</i></strong>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <code style="color: red;">
+        var zoom = function(){<br>
+        &nbsp; var thumb = document.getElementById("thumb");<br>
+        &nbsp; if (thumb.class == "thumb"){<br>
+        &nbsp; &nbsp; thumb.className = "thumb grande"<br>
+        &nbsp; }else{<br>
+        &nbsp; &nbsp; thumb.className = "thumb"<br>
+        }<br>
+        }
+    </code>
+
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script>
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones declaradas y expresadas</title>
+</head>
+<body>
+	<h1>Funciones declaradas y expresadas</h1>
+	<h3>FUNCIONES DECLARADAS</h3>
+	<p>Es aquella función que se define como tal.
+	JS le da prioridad a las funciones declaradas elevándolas para leerlas primero,
+	incluso pueden se llamadas antes de ser declaradas.</p>
+
+	<script>
+		soyDeclarada();
+		function soyDeclarada(){
+			console.log("Soy una función declarada");
+		}
+		soyDeclarada();
+	</script>
+
+	<h3>FUNCIONES EXPRESADAS</h3>
+	<p>Es aquella función que se almacena en una variable.<br>
+	Por el contrario las declaradas son leídas hasta que el motor encuentra su línea de código.</p>
+
+	<h3>Let (Evitar var para funciones)</h3>
+	<script>
+		let soyExpresada = function () {
+			console.log("Soy una función declarada en una variable");
+		};
+		soyExpresada();		
+	</script>
+
+	<h3>Const</h3>
+	<script>		
+		const soyExpresada2 = function () {
+			console.log("Soy una función declarada en una constante");
+		};
+		soyExpresada2();
+
+		const restar = function(a, b) {
+			return a - b;
+		};
+		restar(5,3);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objetos</title>
+</head>
+<body>
+	<h1>Objetos</h1>
+	<ul>
+		<li>Los objetos son una colección de propiedades (variables) y valores almacenados en una variable.</li>
+		<li>Las propiedades son datos almacenados en variables, y pueden ser variables simples, arreglos, otros objetos, funciones etc</li>
+		<li>Los valores a su vez pueden ser de diferentes tipos de datos</li>
+		<li>Las propiedades se acceden con la notación del punto .</li>
+	</ul>
+
+	<script>
+		/*
+		Sintaxis
+		{
+			propiedad: valor,
+		}		
+		*/
+	</script>
+
+	<h3>OBJETO</h3>
+	<script>
+		let persona = {
+			//Datos cadena de texto y números
+			nombre:"Jonathan",
+			apellido:"MirCha",
+			edad:36,
+			//Datos boleanos
+			soyProgramador:true,
+			//Arreglo
+			pasatiempos:["Programar", "Correr", "Enseñar"],
+			//Objeto dentro de objeto
+			contacto:{
+				email:"jonmircha@gmail.com",
+				movil:5215518388261,
+				youtube:"jonmircha"
+			},
+			//Declaración de método dentro de objeto
+			saludar: function (){
+				console.log("Saludos, espero aprendas los fundamentos de JS");
+			}
+		}
+		console.log(persona);
+		console.log(persona.nombre);
+		console.log(persona.pasatiempos[1]);
+		console.log(persona.contacto);
+		console.log(persona.contacto.movil);
+		//Ejecución de método del objeto
+		persona.saludar();			
+	</script>
+    
+</body>
+</html>

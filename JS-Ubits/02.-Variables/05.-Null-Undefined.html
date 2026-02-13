@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Null-Undefined</title>
+</head>
+<body>
+	<h1>Null-Undefined</h1>
+	<p>La variable carece de valor o el valor esta ausente</p>
+
+	<h3>Undefined</h3>
+	<p>Se genera cuando a una variable no se le define o asigna un valor, o sencillamente no existe.<br>
+	Aparecen como errores que generalmente no esperamos y que son despistes del programador.</p>
+
+	<p>En el siguiente ejercicio se declara una variable pero no se le asigna un valor
+	Undefined indica que no se ha inicializado una variable y que el valor esta ausente</p>
+
+	<script>
+		let nombreVariable;
+		console.log(nombreVariable);
+		console.log(Boolean(nombreVariable)); //Variable indefinida - no se ha definido un valor a la variable.
+	</script>
+
+	<h3>Null</h3>
+	<p>Es un valor especial que indica la ausencia de un valor<br>
+	Se le asigna un valor vacío con la palabra reservada Null de forma intencional a la variable.<br>
+	Habrá ocasiones en las que será necesiario que nuestras variables comiencen con un valor ausente
+	o vacío en nuestro flujo de programación</p>
+
+	<script>
+		let nula = null;
+		console.log(nula);
+		console.log(Boolean(nula));
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parámetros</title>
+</head>
+<body>
+	<h1>Parámetros</h1>
+	<p>Opcionalmente una función puede aceptar parámetros, los
+	cuales son variables que internamente reciben las funciones</p>
+
+	<h3>01.- Función con parámetros</h3>
+	<script>
+		function saludarA(nombre) {
+			console.log("Hola", nombre);
+		}
+		saludarA("Irma");
+		saludarA("Pedro");
+
+		/*Otras formas de conectar el mensaje
+		function saludarA(nombre) {
+			console.log("Hola " + nombre);
+		}
+
+		function saludarA(nombre) {
+			console.log(`Hola ${nombre}`);
+		}
+	</script>
+
+	<p>02.-Configurar valores por defecto a los parámetros por si no nos lo pasan.</p>
+	<script>
+		function saludarAmigo(nombre = "amigo") {
+			console.log("Hola " + nombre);
+		}
+		saludarAmigo();
+	</script>
+
+	<p>Una función puede tener tantos parámetros como lo necesite</p>
+	
+	<script>
+		function saludarConMensaje(nombre = "Desconocid@", saludo = "¿Cómo estas?"){
+			console.log("Hola", nombre, saludo);
+		}
+		saludarConMensaje("Miguel", "Buenas tardes");
+		saludarConMensaje("Sara", "Buenos días");
+		saludarConMensaje("Jon");
+		saludarConMensaje("", "Buenas noches");
+		saludarConMensaje();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 8.-Operadores</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1 style="font-size:50px;">Operadores de JavaScript</h1>
+
+    <table border="1">
+        <tr>
+            <td>
+                Asigne valores a las variables y agréguelas juntas:<br><br>
+                var x = 5;&nbsp; &nbsp; // asignar el valor 5 a x<br>
+                var y = 2;&nbsp; &nbsp; // asignar el valor 2 a y<br>
+                var z = x + y;&nbsp; &nbsp; // asignar el valor de 7 a z (x + y)
+            </td>
+            <td>
+                <p>x = 5, y = 2, calcular z = x + y, y mostrar z:</p>
+
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x = 5;<br>
+                &nbsp; &nbsp; var y = 2;<br>
+                &nbsp; &nbsp; var z = x + y;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = z;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>El operador de asignación (=) asigna un valor a una variable.</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                Asignación<br><br>
+
+                var x = 10;
+            </td>
+            <td>
+                <h3>El operador =</h3>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x = 10;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>El operador de suma (+) agrega números:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                Añadiendo<br><br>
+
+                var x = 5;<br>
+                var y = 2;<br>
+                var z = x + y;
+            </td>
+            <td>
+                <h3>El operador +</h3>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x = 5;<br>
+                &nbsp; &nbsp; var y = 2;<br>
+                &nbsp; &nbsp; var z = x + y;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = z;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>El operador de multiplicación (*) multiplica los números.</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                Multiplicando<br><br>
+
+                var x = 5;<br>
+                var y = 2;<br>
+                var z = x * y;
+            </td>
+            <td>
+            <h3>El operador *</h3>
+
+            &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+            &#60;script&#62;<br>
+            &nbsp; &nbsp; var x = 5;<br>
+            &nbsp; &nbsp; var y = 2;<br>
+            &nbsp; &nbsp; var z = x * y;<br>
+            &nbsp; &nbsp; document.getElementById("demo").innerHTML = z;<br>
+            &#60;/script&#62;
+
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Operadores aritméticos de JavaScript</h2>
+    <p>Los operadores aritméticos se utilizan para realizar operaciones aritméticas en números:</p>
+
+    <table border="1">
+        <tr style="background-color:black; color: white;">
+            <td>Operador</td>
+            <td>Descripción</td>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>Adición</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>-</td>
+            <td>Sustracción</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Multiplicación</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>/</td>
+            <td>División</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Módulo (Resto)</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>++</td>
+            <td>Incremento</td>
+        </tr>
+        <tr>
+            <td>--</td>
+            <td>Decremento</td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Los operadores aritméticos se describen completamente en el capítulo Aritmética de JS.
+    </p>
+
+    <hr>
+
+    <h2>Operadores de Asignación de JavaScript</h2>
+    <p>Los operadores de asignación, asignan valores a las variables de JavaScript.</p>
+
+    <table border="1">
+        <tr style="background-color:black; color: white;">
+            <td>Operador</td>
+            <td>Ejemplo</td>
+            <td>Igual que</td>
+        </tr>
+        <tr>
+            <td>=</td>
+            <td>x = y</td>
+            <td>x = y</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>+ =</td>
+            <td>x += y</td>
+            <td>x = x + y</td>
+        </tr>
+        <tr>
+            <td>-=</td>
+            <td>x -= y</td>
+            <td>x = x - y</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>* =</td>
+            <td>x *= y</td>
+            <td>x = x * y</td>
+        </tr>
+        <tr>
+            <td>/=</td>
+            <td>x /= y</td>
+            <td>x = x / y</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>% =</td>
+            <td>x %= y</td>
+            <td>x = x % y</td>
+        </tr>
+    </table>
+
+    <p>El operador de asignación de suma (+ =) agrega un valor a una variable.</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                Asignación<br><br>
+
+                var x = 10;<br>
+                x + = 5;
+            </td>
+            <td>
+                <h3>El operador + =</h3>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x = 10;<br>
+                &nbsp; &nbsp; x + = 5;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = x;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Los operadores de asignación se describen completamente en el capítulo Asignación de JS.
+    </p>
+
+    <hr>
+
+    <h2>Operadores de cadenas de JavaScript</h2>
+    <p>El operador + también se puede usar para agregar (concatenar) cadenas.</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                txt1 = "John";<br>
+                txt2 = "Doe";<br>
+                txt3 = txt1 + " " + txt2;<br><br>
+
+                El resultado de txt3 será:<br>
+                John Doe
+            </td>
+            <td>
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var txt1 = "John";<br>
+                &nbsp; &nbsp; var txt2 = "Doe";<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = txt1 + " " + txt2;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p>El operador de asignación += también se puede usar para agregar (concatenar) cadenas:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                txt1 = "Que día ";<br>
+                txt1 += "tan bueno";<br><br>
+
+                El resultado de txt1 será:<br>
+                Que día tan bueno
+            </td>
+            <td>
+
+                &#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; txt1 = "Que día";<br>
+                &nbsp; &nbsp; txt1 += "tan bueno";<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML = txt1;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Cuando se usa en cadenas, el operador + se llama el operador de concatenación.
+    </p>
+
+    <h3>Agregar cadenas y números</h3>
+    <p>Al agregar dos números, se devolverá la suma, pero agregar un número y una cadena devolverá una cadena:</p>
+
+    <table border="1">
+        <tr>
+            <td>
+                x = 5 + 5;<br>
+                y = "5" + 5;<br>
+                z = "Hola" + 5;<br><br>
+
+                El resultado de x, y, y z será:<br><br>
+
+                10<br>
+                55<br>
+                Hello5
+            </td>
+            <td>&#60;p id="demo"&#62;&#60;/p&#62;<br><br>
+
+                &#60;script&#62;<br>
+                &nbsp; &nbsp; var x = 5 + 5;<br>
+                &nbsp; &nbsp; var y = "5" + 5;<br>
+                &nbsp; &nbsp; var z = "Hello" + 5;<br>
+                &nbsp; &nbsp; document.getElementById("demo").innerHTML =<br>
+                &nbsp; &nbsp; x + "&#60;br&#62;" + y + "&#60;br&#62;" + z;<br>
+                &#60;/script&#62;
+            </td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Si agrega un número y una cadena, ¡el resultado será una cadena!
+    </p>
+
+    <hr>
+
+    <h2>Operadores de comparación de JavaScript</h2>
+
+    <table border="1">
+        <tr style="background-color:black; color: white;">
+            <td>Operador</td>
+            <td>Descripción</td>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>igual a</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>===</td>
+            <td>valor igual e igual tipo</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>no es igual</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>!==</td>
+            <td>no igual valor o no igual tipo</td>
+        </tr>
+        <tr>
+            <td>&#62;</td>
+            <td>mas grande que</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>&#60;</td>
+            <td>menos que</td>
+        </tr>
+        <tr>
+            <td>&#62;=</td>
+            <td>Mayor qué o igual a</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>&#60;=</td>
+            <td>Menos que o igual a</td>
+        </tr>
+        <tr>
+            <td>?</td>
+            <td>operador ternario</td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Los operadores de comparación se describen completamente en el capítulo Comparaciones de JS.
+    </p>
+
+    <h2>Operadores lógicos de JavaScript</h2>
+
+    <table border="1">
+        <tr style="background-color:black; color: white;">
+            <td>Operador</td>
+            <td>Descripción</td>
+        </tr>
+        <tr>
+            <td>&&</td>
+            <td>lógico y</td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Los operadores lógicos se describen completamente en el capítulo de JS Comparisons.
+    </p>
+
+    <h2>Operadores de tipo JavaScript</h2>
+
+    <table border="1">
+        <tr style="background-color:black; color: white;">
+            <td>Operador</td>
+            <td>Descripción</td>
+        </tr>
+        <tr>
+            <td>typeof</td>
+            <td>Devuelve el tipo de una variable</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>instanceof</td>
+            <td>Devuelve verdadero si un objeto es una instancia de un tipo de objeto</td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+        Los operadores de tipo se describen completamente en el capítulo Conversión de tipo JS.
+    </p>
+
+    <h2>Operadores Bitwise de JavaScript</h2>
+    <p>Los operadores de bits trabajan en números de 32 bits.<br>
+    Cualquier operando numérico en la operación se convierte en un número de 32 bits. El resultado se convierte de nuevo a un número de JavaScript.</p>
+
+    <table border="1">
+        <tr style="background-color:black; color: white;">
+            <td>Operador</td>
+            <td>Descripción</td>
+            <td>Ejemplo</td>
+            <td>Igual que</td>
+            <td>Resultado</td>
+            <td>Decimal</td>
+        </tr>
+        <tr>
+            <td>&</td>
+            <td>AND</td>
+            <td>5 & 1</td>
+            <td>0101 & 0001</td>
+            <td>0001</td>
+            <td>1</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>|</td>
+            <td>OR</td>
+            <td>5 | 1</td>
+            <td>0101 | 0001</td>
+            <td>0101</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>~</td>
+            <td>NOT</td>
+            <td>~ 5</td>
+            <td>~0101</td>
+            <td>1010</td>
+            <td>10</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>^</td>
+            <td>XOR</td>
+            <td>5 ^ 1</td>
+            <td>0101 ^ 0001</td>
+            <td>0100</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>&#60;&#60;</td>
+            <td>Zero fill left shift</td>
+            <td>5 &#60;&#60; 1</td>
+            <td>0101 &#60;&#60; 1</td>
+            <td>1010</td>
+            <td>10</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+            <td>&#62;&#62;</td>
+            <td>Signed right shift</td>
+            <td>5 &#62;&#62; 1</td>
+            <td>0101 &#62;&#62; 1</td>
+            <td>0010</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>&#62;&#62;&#62;</td>
+            <td>Zero fill right shift</td>
+            <td>5 &#62;&#62;&#62; 1</td>
+            <td>0101 &#62;&#62;&#62; 1</td>
+            <td>0010</td>
+            <td>2</td>
+        </tr>
+    </table>
+
+    <p style="background-color:yellow; padding: 10px 5px; display: inline-block;">
+    Los ejemplos anteriores usan ejemplos de 4 bits sin firmar. Pero JavaScript usa números de 32 bits firmados. Debido a esto, en JavaScript, ~ 5 no devolverá 10. Devolverá -6.
+    ~00000000000000000000000000000101 will return 11111111111111111111111111111010<br><br>
+
+    Bitwise operators se describen completamente en el capítulo JS Bitwise.
+    </p>
+
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script></script>
+
+</body>
+
+</html>

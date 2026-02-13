@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 7.-Ciclo for</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+    <h1>BUCLE WHILE</h1>
+    
+    <p>While se usa cuenado se desconoce el límite de veces que se ejecutará una acción, por ejemplo decir: camina hasta encontrarse con un letrero amarillo, o corre hasta llegar a la meta.</p>
+    <h2>Sintaxis</h2>
+    <p>Se escribe la variable con su valor correspondiente, después la palabra while, seguida de la  condición entre paréntesis, y entre llaves la expresión que se repetirá mientras que la condición sea verdadera, seguida de la expresión de incremento i++;. <br>
+    El ciclo while también lleva tres indicadores, pero como puedes observar no van juntas dentro de los paréntesis sino uno antes de la declaración while, otro en los paréntesis, y el último al final de la expresión.
+    </p>
+    <p>
+        <code style="color:red">
+            var i&#61;0;<br>
+            while (condition){<br>
+            &nbsp; expression i++<br>
+            }
+        </code>
+    </p>
+    
+    
+    <p>La variable i puede ser diferente, depende de la lógica del programa.<br>
+    La expresión de incremento esta detro de las llaves, y el valor de la variable "i" cambiará si la condición resulta verdadera.<br>
+    A diferencia del ciclo for, no se puede poner true en los paréntesis para que se ejecute la acción, por que sería infinito, a menos de que se agregue una variable que sea igual a true y ya se podría cambiar a false. y si ponemos false no se ejecutaría nunca.</p>
+    
+    
+    <h2>Condición infinita</h2>
+    <p>Hay que tener en cuenta que no estemos escribiendo una condición infinita, en el ejemplo siguiente si no llevara la expresión de incremento, las instrucciones se ejecutarian infinitamente, por que el valor de i = 0 siempre sería el mismo y nunca llegaría al rango final de la condicional.
+    La condición se debe plantear "mientras que" el valor resultante de esto sea verdadero<br>
+    </p>
+
+    <p>
+        <code style="color:red">
+            var i&#61;0;<br>
+            while (i &#60;&#61; 10) {<br>
+            &nbsp; document.write(i + "&#60;br&#62;");<br>
+            }
+        </code>
+    </p>
+   
+    <h2>Ejemplo</h2>
+    
+    <p>Volvemos a escribir el arreglo de los días, después se va agregar la variable numeroDias que será igual a dias.lenght, es decir, a la longuitud del arreglo - 1, y la variable "i" se repetirá mientras sea menor o igual a númeroDias. <br>
+    Entonces, si el valor "i" es igual a numeroDias (6), se ejecutarán las instrucciones y se escribirá en pantalla la unidad de la variable días "i", lo que significa que se extraerá el número 0 de días.</p>
+    
+    <p>
+        <code style="color:red"><br>
+            var dias = [ "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];<br><br>
+            
+            var numeroDias &#61; dias.length - 1;<br><br>
+            
+            var i = 0<br>
+            
+            while (i &#60;&#61; numeroDias) {<br>
+            &nbsp; document.write(dias[i] + "&#60;br&#62;");
+            i++;<br>
+            }
+        </code>
+    </p>
+
+    <h2>Do while</h2>
+    <p>El ciclo do while primero va a ejecutar unas instrucciones siempre, aunque no se cumpla la condición, la condición la va a preguntar hasta el último, y si es verdadera va a seguir ejecutando el resto del código.</p>
+    
+
+    <!--//////////
+    JAVASCRIPTS
+    ///////////-->
+    <script>
+
+    </script>
+</body>
+
+</html>

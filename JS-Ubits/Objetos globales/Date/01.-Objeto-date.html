@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto Date</title>
+</head>
+<body>
+
+	<h1>Objeto Date</h1>
+	<ul>
+		<li>El objeto Date de JavaScript sirve para trabajar con fechas y horas.</li>
+		<li>Obtener la fecha actual, crear fechas específicas, compararlas, formatearlas, etc.</li>
+		<li>Formato recomendado: YYYY-MM-DD (ISO 8601).</li>
+		<li>Date usa la fecha y hora (zona horaria) del sistema </li>
+	</ul>
+
+	<p>- Los meses empiezan en 0<br>
+	0 = enero<br>
+	11 = diciembre</p>
+
+	<h3>Crear un objeto date</h3>
+  <script>
+		/*Crear un objeto Date*/
+		const fecha = new Date();
+
+		/*Crear una fecha específica;
+		YYYY-MM-DD - Ejemp:15 de enero de 2024*/
+		const fechaSpecific = new Date(2024, 0, 15);
+
+		/*Usando string (muy común)*/
+		const fechaString = new Date("2024-0-15");
+
+		/*Timestamp (milisegundos)
+		Un timestamp es la cantidad de milisegundos desde el 1 de enero de 1970 (Unix Epoch).*/
+		const fechaTimestamp = new Date(1700000000000);
+  </script>
+
+</body>
+</html>

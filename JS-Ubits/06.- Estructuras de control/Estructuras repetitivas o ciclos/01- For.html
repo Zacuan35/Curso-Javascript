@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>For</title>
+</head>
+<body>
+	<h1>For</h1>
+	<p>Es un ciclo que permite repetir un determinado código en base a que una condición
+	se cumpla a verdadero, en el momento en el que la condición valide a falso, es decir;
+	ya no se cumple el ciclo, esta termina.<br>
+	Cada vuelta del ciclo se llama iteración</p>
+
+	<p>For tiene 3 partes:</p>
+	<ol>
+		<li>Inicialización de la variable que va a controlar el ciclo.</li>
+		<li>Condición a evaluar (como los if)</li>
+		<li>Incremento o decremento de la variable que controla el ciclo,
+		la variable inicial se aumenta o decrementa para que en algún momento se salga del ciclo.</li>
+	</ol>
+
+	<!--
+		for (inicialización; condición; incremento o decremeno) {
+			cuerpo del for
+		} 	
+	-->
+
+	<h3>Ejemplo</h3>
+	<p>Imprimir en la consola los números del 1 al 100 de forma ascendente y descendente</p>
+
+	<ol>
+		<li>Inicialización de la variable que cuente la programación interna, empezara en 0</li>
+		<li>Condición: Mientras contador sea menor o igual a 100 va a imprimir el valor de la variable del contador</li>
+		<li>Al salir de la ejecución del for la variable tendrá un aumento de 1</li>
+	</ol>
+
+	<script>
+		console.log("Antes del for");
+		for (let contador = 0 ; contador <= 100; contador ++ ){
+				console.log(contador);
+		}
+		console.log("Después del for");		
+	</script>
+	
+</body>
+</html>

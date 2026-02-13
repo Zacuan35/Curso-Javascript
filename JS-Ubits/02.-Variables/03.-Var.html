@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Var</title>
+</head>
+<body>
+	
+	<h1>Ámbito de la variable</h1>
+	<p>Las variables tienen un ámbito o alcance, lo correcto es que las variables
+	existan localmente, sólo en el bloque en el que fueron definidas.<br>
+	Sin embargo, las variables que se declaran con var son GLOBALES, las cuales
+	existen en toda la ejeción del programa.</p>
+
+	<script>
+		var contador = 0;
+		var mensaje = "Hola mundo desde la variable";
+		console.log(mensaje);
+	</script>
+
+	<h3>VAR - Genera variables globales.</h3>
+	<p>En el siguiente ejemplo la variable message esta declarada dentro del bloque de contenido.<br>
+	En teoria sólo debería existir dentro de ese bloque de contenido, pero si la mandamos llamar afuera
+	de este, sigue existiendo, existe a lo largo de todo el documento javascript.<br>
+	Una variable no debería existir ni ser invocada fuera del bloque donde fué definida.</p>
+
+	<h3>Bloque de código</h3>
+	<p>Un bloque define el alcance o el ámbito de una variable, cada vez que escribimos
+	un {} estamos definiendo un bloque. una función es un bloque por ejemplo.</p>
+
+	<h3>Elevación de variables (Hoisting)</h3>
+	<p>Al declarar una variable con var, independientemente
+	de donde la declaremos JS eleva al inicio del documento.</p>
+
+	<script>
+		{
+			var message = "Hola mundo"
+			console.log(message);
+		}
+		console.log(message); //Aqui no debería de existir
+	</script>
+
+	<p>Tener una variable global es como si en el ejemplo anterior
+	tuviéramos declarada la variable fuera del bloque de contenido.</p>
+
+	<script>
+		var message = "Hola mundo"
+		{
+			console.log(message);
+		}
+		console.log(message);
+		//var (ya casi no se usa)		
+	</script>
+
+</body>
+</html>

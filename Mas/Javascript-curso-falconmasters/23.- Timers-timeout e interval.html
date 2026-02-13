@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--====================================================================================
+                                /// START DOC.HTML ///
+=====================================================================================-->
+<html lang="en">
+<!--====================================================================================
+                                /// START HEAD ///
+=====================================================================================-->
+<head>
+    <!--//////////
+    Metadata
+    ///////////-->   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <!--//////////
+    Document title
+    ///////////-->
+    <title>Javascript - 23.-Timers - timeout e interval</title>
+    <!--//////////
+    Favicon
+    ///////////--> 
+    <link rel="shorcut icon" href="assets/img/favicon.ico"/>
+</head>
+<!--=======
+END HEAD
+========-->
+<!--====================================================================================
+                                /// START BODY ///
+=====================================================================================-->
+<body>
+    
+<h1>Timers - timeout e interval</h1>
+
+<p>En este capítulo veremos los timers, el timeout y el interval, funciones que permiten ejecutar código cada cierto tiempo.</p>
+
+<h2>Método setTimeout</h2>
+<p>Permite ejecutar una función con un tiempo de demora.</p>
+
+<ul>
+    <li><strong>Creando la función</strong></li>
+    <li>Tenemos una función guardada dentro de la variable saludo.</li>
+    <li>En las instrucciones ponemos un console.log para que se muestre un mensaje en la consola.</li>
+    <li><strong>Poniendo el setTimeout</strong></li>
+    <li>Queremos mostrar el texto del console.log cuando pasen cinco segundos, para ello vamos a agregar el timeout setTimeout(func, delay); esta función recibe dos parámetros:
+        <ul>
+            <li>1.-Función a ejecutar: función saludo.</li>
+            <li>2.-Tiempo de demora para que se ejecute la función: un segundo escrito en milisegundos.</li>
+        </ul>
+    </li>
+    <li>Actualizamos y en la consola tarda un segundo en ejecutarse la función.</li>
+</ul>
+
+<code style="color: red;">
+(function(){<br><br>
+
+&nbsp; var saludo = function(){<br>
+&nbsp; &nbsp; console.log('Saludo!');<br>
+&nbsp; };<br><br>
+
+&nbsp; setTimeout(saludo, 1000);<br>
+}())
+</code>
+
+<hr>
+
+<h2>Método setInterval</h2>
+<p>A diferencia del timeout que sólo ejecuta una sóla vez el código, el interval permite ejecutar código cada determinado tiempo, cuantas veces queramos o incluso infinitas veces.<br> 
+En el siguiente ejemplo cada tres segundos se ejecutará la función.</p>
+
+<ul>
+    <li>Después de la función escribimos setInterval(func, delay); y recibe dos parámetros:
+        <ul>
+            <li>1.-1.-Función a ejecutar: Saludo.</li>
+            <li>2.-2.-Tiempo de demora para que se ejecute la función: 3000 (tres segundos).</li>
+        </ul>
+    </li>
+    <li>Guardamos, actualizamos y en la consola nos fijamos en el indicador de ejecuciones y como su número se va elevando, debido a las ejecuciones consecutivas que van teniendo lugar.</li>
+</ul>
+
+<code style="color: red;">
+(function(){<br><br>
+
+&nbsp; var saludo = function(){<br>
+&nbsp; &nbsp; console.log('Saludo!');<br>
+&nbsp; };<br><br>
+
+&nbsp; setInterval(saludo, 3000);<br>
+}())
+</code>
+
+<h3>Agregando contador</h3>
+<ul>
+    <li>Nos vamos al inicio del documento y agregamos una variable llamada contador.</li>
+    <li>La variable contador es igual a cero.</li>
+    <li>Dentro de la variable saludo y arriba de console.log escribimos la función contador seguido de ++;<br>
+    Con estos signos va a ir incrementando su valor en cada ejecución y lo mostrará en la consola.</li>
+    <li>Guardamos, actualizamos, pasan tres segundos y se muestra el número 1, pasan otros tres segundos y el valor ahora es dos y asi sucesivamente a menos de que pongamos alguna condicional.</li>
+</ul>
+
+<code style="color: red;">
+(function(){<br>
+&nbsp; var contador = 0;<br><br>
+
+&nbsp; var saludo = function(){<br>
+&nbsp; &nbsp; contador ++;<br>
+&nbsp; &nbsp; console.log(contador);<br>
+&nbsp; };<br><br>
+
+&nbsp; setInterval(saludo, 3000);<br>
+}())
+</code>
+
+<h3>Agregando una condicional</h3>
+<p>En la función ponemos un condicional que detenga el interval al llegar a la quinta ejecución,
+    esto se hace con el método llamado clearInterval(intervalID);</p>
+
+<ul>
+    <li><strong>Agregando una condicional</strong></li>
+    <li>Debajo de console.log ponemos una condicional if, dentro de los paréntesis escribimos que si la variable contador es igual a cinco sucederá la sentencia dentro de las llaves.</li>
+    <li><strong>Método clearInterval</strong></li>
+    <li>Dentro de las llaves ponemos clearInterval la cuál recibe como parámetro un ID del intérvalo.</li>
+    <li><strong>Creando el ID del intérvalo</strong></li>
+    <li>Lo recomentable es agregar el interval a una variable, y esa variable sería el ID del intérvalo.</li>
+    <li>Por último la variable intervalo ejecutará la función saludo cada segundo.</li>
+    <li>En la consola observamos como al llegar al quinto elemento se detiene.</li>
+</ul>
+
+
+<code style="color: red;">
+(function(){<br>
+&nbsp; var contador = 0;<br><br>
+&nbsp; var saludo = function(){<br>
+&nbsp; &nbsp; contador ++;<br>
+&nbsp; &nbsp; console.log(contador);<br>
+&nbsp; &nbsp; if(contador === 5){<br>
+&nbsp; &nbsp; &nbsp; clearInterval(intervalo);<br>
+&nbsp; &nbsp; }<br>
+&nbsp; };<br><br>
+&nbsp; var intervalo = setInterval(saludo, 1000);<br>
+}())
+</code>
+
+<hr>
+
+<h2>Intérvalo de ejecuciones con setTime</h2>
+<p>setTime ejecuta una sóla vez una función pero podemos hacer que lo haga varias veces a manera de setInterval de la siguiente forma:</p>
+
+<ul>
+    <li><strong>Llamando diréctamente a la función saludo.</strong></li>
+    <li>En la parte final mandamos llamar directamente a la función saludo.</li>
+    <li>La variable saludo llama a el valor del contador e incrementa su valor en cada ejecución mostrándolo en la consola.<br>
+    "Hasta aqui sólo se ejecutaría una sola vez"</li>
+    <li><strong>Poniendo setTimeout</strong></li>
+    <li>Dentro de la variable saludo ponemos setTimeout en el que volvemos a llamar a la variable saludo con un segundo de demora.</li>
+    <li>Como setTimeout se encuentra dentro de la función que llama se vuelven a ejecutar otra vez sus parámetros creando un bucle infinito.</li>
+    <li>En si, la función saludo es la que está mandándose llamar a si misma infinitas veces a menos que le pongamos una condicional que la detenga.</li>
+</ul>
+
+<code style="color: red;">
+(function(){<br>
+&nbsp; var contador = 0;<br><br>
+
+&nbsp; var saludo = function(){<br>
+&nbsp; &nbsp; contador ++;<br>
+&nbsp; &nbsp; console.log(contador);<br>
+&nbsp; &nbsp; setTimeout(saludo, 1000);<br>
+&nbsp; };<br><br>
+
+&nbsp; saludo();<br>
+}())
+</code>
+
+    <!--//////////
+    JAVASCRIPTS1
+    ///////////-->
+    <script></script>
+    
+</body>
+
+</html>

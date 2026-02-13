@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evitar la ejecución</title>
+</head>  
+<body>
+
+<h1>Uso de comentarios para evitar la ejecución</h1>
+<p>El uso de comentarios para evitar la ejecución de código es adecuado para probar código.</p>
+
+<h3>Ejemplo</h3>
+<p>Este ejemplo utiliza // para evitar la ejecución de una de las líneas de código:</p>
+
+<h3 id="myH_01"></h3>
+<p id="myP_01"></p>
+
+<script>
+  //document.getElementById("myH_01").innerHTML = "Mi primera página";
+  document.getElementById("myP_01").innerHTML = "Mi primer párrafo.";
+</script>
+
+<h3>Ejemplo</h3>
+<p>Este ejemplo utiliza un bloque de comentarios para evitar la ejecución de varias líneas:</p>
+
+<h3 id="myH_02"></h3>
+<p id="myP_02"></p>
+
+<script>
+  /*
+  document.getElementById("myH_02").innerHTML = "Welcome to my Homepage";
+  document.getElementById("myP_02").innerHTML = "This is my first paragraph.";
+  */
+  document.getElementById("myP_02").innerHTML = "The comment-block is not executed.";
+</script>
+
+</body>
+</html>

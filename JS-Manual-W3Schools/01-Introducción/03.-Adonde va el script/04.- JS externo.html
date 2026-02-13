@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como archivo externo</title>
+</head>    
+<body>
+
+  <h1>Javascript externo</h1>
+  <p>Los scripts también se pueden colocar en archivos externos</p>
+
+  <h3>A considerar:</h3>
+  <ul>
+    <li>Los archivos JavaScript tienen la extensión de archivo .js .</li>
+    <li>Para utilizar un script externo, coloque el nombre del archivo de script en el atributo src (fuente) de una etiqueta <code>&lt;script&gt;</code> </li>
+    <li>Puedes colocar una referencia de script externa en <head>o <body>como desees.</li>
+    <li>El script se comportará como si estuviera ubicado exactamente donde se encuentra la etiqueta <code>&lt;script&gt;</code>.</li>
+    <li>Los scripts externos no pueden contener etiquetas <code>&lt;script&gt;</code>.</li>
+    <li>Para agregar varios archivos de script a una página, utilice varias etiquetas de script</li>
+  </ul>
+
+  <h3>Ventajas de JavaScript externo</h3>
+  <p>Colocar scripts en archivos externos tiene algunas ventajas:</p>
+
+  <ul>
+    <li>Los scripts externos son prácticos cuando se utiliza el mismo código en muchas páginas web diferentes.</li>
+    <li>Separa HTML y código</li>
+    <li>Hace que HTML y JavaScript sean más fáciles de leer y mantener.</li>
+    <li>Los archivos JavaScript almacenados en caché pueden acelerar la carga de las páginas</li>
+  </ul>  
+
+  <h3>¿Cómo hacer referencias externas?</h3>
+  <p>Se puede hacer referencia a un script externo de tres maneras diferentes:</p>
+  <ul>
+    <li>Con una URL completa (una dirección web completa)<br>
+    src="https://www.w3schools.com/js/myScript.js"</li>
+    <li>Con una ruta de archivo (como /js/)<br>
+    src="/js/myScript.js"</li>
+    <li>Sin ninguna ruta<br>
+    "myScript.js"</li>
+  </ul>
+
+  <h3>Ejemplo</h3>
+  <p id="demo">Perro</p>
+  <button type="button" onclick="myFunction()">Haz clic</button>
+
+  <script src="myScript.js"></script>
+  <!-- 
+  Para agregar varios archivos de script a una página, utilice varias etiquetas de script
+  <script src="myScript1.js"></script>
+  <script src="myScript2.js"></script>
+  -->
+
+</body>
+</html> 

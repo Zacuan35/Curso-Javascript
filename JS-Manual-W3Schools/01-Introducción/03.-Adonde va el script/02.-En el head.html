@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En el head</title>  
+  <script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "Gato";
+  }
+  </script>
+</head>
+<body>
+
+<h1>JavaScript en <code>&lt;head&gt;</code></h1>
+<p>En este ejemplo el script se coloca en la sección <code>&lt;head&gt;</code> de una página HTML</p>
+
+<table border="1">
+  <tr>
+    <td>
+      <h3>Funciones y eventos de JavaScript</h3>
+      <p>Un función es un bloque de código JavaScript que se puede ejecutar cuando se "llama".<br>
+      Por ejemplo, se puede llamar a una función cuando ocurre un evento , como cuando el usuario hace clic en un botón.</p>      
+    </td>
+  </tr>
+</table>
+
+<h3>Ejemplo</h3>
+<p>La función se invoca (llama) cuando se hace clic en un botón:</p>  
+<p id="demo">Perro.</p>
+<button type="button" onclick="myFunction()">Haz clic</button>
+
+
+
+</body>
+</html> 

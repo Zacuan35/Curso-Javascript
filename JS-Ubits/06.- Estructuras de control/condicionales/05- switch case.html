@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>switch case</title>
+</head>
+<body>
+	<h1>switch case</h1>
+	<p>Estructura de control múltiple, sirve para evaluar que una variable y todos los posibles
+	valores que tome los case de un switch, sólo aceptan cadenas y números</p>
+
+	<script>
+		/*
+		0 - Domingo
+		1 - Lúnes
+		2 - Martes
+		3 - Miércoles
+		4 - Jueves
+		5 - Viernes
+		6 - Sábado
+		*/
+
+		let diaSemana = 0;
+
+		switch(diaSemana) {
+			case 0:
+				console.log("Domingo");
+				console.log("Día de descanso");
+				break;
+			case 1:
+				console.log("Lúnes");
+				console.log("Primer día laboral");
+				break;        
+			case 2:
+				console.log("Martes");
+				console.log("Segundo día laboral");
+				break;
+			case 3:
+				console.log("Miércoles");
+				console.log("Ombligo de la semana");
+				break;        
+			case 4:
+				console.log("Jueves");
+				console.log("Ya casi es fin de semana");
+				break;                
+			case 5:
+				console.log("Viernes");
+				console.log("Termina la semana");
+				break;                 
+			case 6:
+				console.log("Sábado");
+				console.log("Fin la semana");
+				break;                       
+			default:             
+		}		
+	</script>
+</body>
+</html>
