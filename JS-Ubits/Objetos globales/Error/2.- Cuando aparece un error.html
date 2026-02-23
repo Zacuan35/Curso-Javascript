@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto error - Cuando aparece</title>
+</head>
+<body>
+
+	<h1>Objeto error</h1>
+	<h2>¿Cuándo aparece un Error?</h2>
+
+	<p>Hay dos formas principales:</p>
+	<ul>
+		<li>1.- Errores automáticos</li>
+		<li>2.- Errores manuales</li>
+	</ul>
+
+	<h3>1.- Errores automáticos de JS</h3>
+	<p>Surge por algun error de codificación del programador</p>
+	<script>
+		console.log(variableInexistente); //ReferenceError: variableInexistente is not defined
+	</script>
+
+	<h3>2.- Errores manuales (creados por ti)</h3>
+	<p>Tú decides cuándo lanzar el error.</p>
+	<script>
+		throw new Error("Edad inválida");
+	</script>
+
+</body>
+</html>

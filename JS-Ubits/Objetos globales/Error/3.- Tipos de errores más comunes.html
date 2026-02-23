@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto error - tipos de errores</title>
+</head>
+<body>
+
+	<h1>Objeto error</h1>
+	<h2>Tipos de errores más comunes</h2>
+	<ul>
+		<li>Error: Error genérico</li>
+		<li>TypeError: Operación sobre un tipo incorrecto</li>
+		<li>ReferenceError: Variable o referencia inexistente</li>
+		<li>SyntaxError: Error en la sintaxis del código</li>
+		<li>RangeError: Valor fuera del rango permitido</li>
+	</ul>
+
+	<h4>Error</h4>
+	<p>Error genérico.</p>
+
+	<h4>TypeError</h4>
+	<p>Tipo incorrecto</p>
+	<script>
+		null.toString(); // TypeError
+	</script>
+
+	<h4>ReferenceError</h4>
+	<p>Variable inexistente</p>
+	<script>
+		x + 1; // ReferenceError
+	</script>
+
+	<h4>SyntaxError</h4>
+	<p>Error de sintaxis</p>
+	<script>
+		if (true { } // SyntaxError
+	</script>
+
+	<h4>RangeError</h4>
+	<p>Valor fuera de rango</p>
+	<script>
+		let arr = new Array(-1); // RangeError
+	</script>
+
+</body>
+</html>

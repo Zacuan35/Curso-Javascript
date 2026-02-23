@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto error</title>
+</head>
+<body>
+
+	<h1>Objeto error</h1>
+
+	<h2>¿Que és?</h2>
+	<ul>
+		<li>Error es un objeto nativo</li>
+		<li>Representa fallos en el código / programa</li>
+		<li>Tiene propiedades útiles</li>
+		<li>Se maneja con try...catch</li>
+		<li>Se puede lanzar manualmente</li>
+	</ul>	
+
+	<p>Sirve para:</p>
+	<ul>
+		<li>Describir qué salió mal</li>
+		<li>Mostrar mensajes de error</li>
+		<li>Manejar fallos sin que el programa se rompa</li>
+	</ul>
+
+	<h2>Ejemplo simple de un Error</h2>
+	<p>Ese objeto contiene información del error.</p>
+	<script>
+		let error = new Error("Algo salió mal");
+		console.log(error);
+	</script>
+
+	<h2>¿Error es exclusivo?</h2>
+	<ul>
+		<li>❌ No es exclusivo</li>
+		<li>✔️ Hereda de Object</li>
+	</ul>
+	<script>
+		let e = new Error("hola");
+		e instanceof Error;   // true
+		e instanceof Object;  // true	
+	</script>
+
+</body>
+</html>

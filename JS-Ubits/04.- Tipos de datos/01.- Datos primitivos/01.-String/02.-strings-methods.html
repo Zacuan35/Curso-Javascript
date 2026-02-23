@@ -9,40 +9,88 @@
 	<h1>Métodos de las cadenas</h1>
 
 	<script>
-		let texto = " Hola Mundo ";
-		console.log(texto);
-
-		//Básicos
-		console.log(texto.toUpperCase()); // Convierte el texto a mayúsculas.
-		console.log(texto.toLowerCase()); // Convierte el texto a minúsculas.
-		//Búsqueda
-		console.log(texto.includes("Hola")); // Verifica si un texto existe dentro del string (Devuelve true o false).
-		console.log(texto.indexOf("mundo")); // Devuelve la posición de la primera coincidencia (-1 si no existe). 5
-		console.log(texto.startsWith("Hola")); // Verifica si el string inicia con cierto texto (Devuelve true o false).
-		console.log(texto.endsWith("Mundo")); // Verifica si termina con cierto texto (Devuelve true o false).
-		//Corte
-		console.log(texto.slice(0,4)); // Extrae una parte del string.
-		console.log(texto.substring(4, 10)); // Similar a slice, pero sin índices negativos.
-		//Limpieza
-		console.log(texto.trim()); //Elimina espacios al inicio y al final.
-		console.log(texto.trimStart());//Elimina espacios solo al inicio.
-		console.log(texto.trimEnd());//Elimina espacios solo al final.		
-		console.log(texto.replace("mundo", "Luis")); //Reemplaza la primera coincidencia.
-		console.log(texto.replaceAll("o", "e")); //Reemplaza todas las coincidencias.		
-		//Caracteres
-		console.log(texto.charAt(1));//Devuelve el carácter en una posición.
-		console.log(texto.at(-1));//Versión moderna (permite índices negativos).
-		//Manipulación
-		console.log(texto.repeat(5));//Repite un string.
-
-		//Conversión
+		let texto = "Hola Mundo";
+		let textoConEspacios = " Hola Mundo ";
 		let meses = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
-		let mesesSeparados = meses.split(","); //Convierte un string en un arreglo.
-		console.log(mesesSeparados);
+
+		/* ====================
+			BÁSICOS
+		==================== */
+		toUpperCase() // Convierte el string a mayúsculas
+		texto.toUpperCase(); // "HOLA MUNDO"
+
+		toLowerCase() //Convierte el string a minúsculas
+		texto.toLowerCase(); // "hola mundo"
+
+		/* ====================
+			BÚSQUEDA
+		==================== */
+		includes() // Verifica si un texto existe dentro del string (true o false)
+		texto.includes("Hola"); // true
+
+		indexOf() // Devuelve la posición de la primera coincidencia (-1 si no existe)
+		texto.indexOf("Mundo"); // 5
+
+		startsWith() // Verifica si el string inicia con cierto texto (true o false)
+		texto.startsWith("Hola"); // true
+
+		endsWith() // Verifica si el string termina con cierto texto (true o false)
+		texto.endsWith("Mundo"); // true
+
+		/* ====================
+			CORTE
+		==================== */
+		slice() // Extrae una parte del string (acepta índices negativos)
+		texto.slice(0, 4); // "Hola"
+
+		substring() // Similar a slice, pero NO acepta índices negativos
+		texto.substring(5, 10); // "Mundo"
+
+		/* ====================
+			LIMPIEZA
+		==================== */
+		trim() // Elimina espacios al inicio y al final
+		textoConEspacios.trim(); // "Hola Mundo"
+
+		trimStart() // Elimina espacios solo al inicio
+		textoConEspacios.trimStart(); // "Hola Mundo "
+
+		trimEnd() // Elimina espacios solo al final
+		textoConEspacios.trimEnd(); // " Hola Mundo"
+
+		/* ====================
+			REEMPLAZO
+		==================== */		
+		replace() // Reemplaza la primera coincidencia
+		texto.replace("Mundo", "Luis"); // "Hola Luis"
+
+		replaceAll() // Reemplaza todas las coincidencias
+		texto.replaceAll("o", "e"); // "Hela Munde"
+
+		/* ====================
+			CARACTERES
+		==================== */
+		charAt() // Devuelve el carácter en la posición indicada
+		texto.charAt(1); // "o"
+
+		at() // Versión moderna (permite índices negativos)
+		texto.at(-1); // "o"
+
+		/* ====================
+			MANIPULACIÓN
+		==================== */
+		repeat() // Repite el string la cantidad de veces indicada
+		texto.repeat(3); // "Hola MundoHola MundoHola Mundo"
+
+		/* ====================
+			MANIPULACIÓN
+		==================== */
+		split() // Convierte un string en un arreglo usando un separador
+		meses.split(","); // ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
 		/*Para convertir una cadena, es necesario especificar un elemento de la misma
 		para que a partir de él, este este elemento se separe, en este caso es una coma (,)
-		pero tambien podemos especificar un espacio vacio " " (o llenar aqui después)*/
-		
+		pero tambien podemos especificar un espacio vacio " " (o llenar aqui después)*/		
 	</script>
 	
 </body>

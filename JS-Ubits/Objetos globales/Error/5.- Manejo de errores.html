@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto error - try...catch</title>
+</head>
+<body>
+
+	<h1>Objeto error</h1>
+
+	<h2>Manejo de errores try...catch</h2>
+	<p>Sirve para evitar que tu programa se rompa.</p>
+	<ul>
+		<li>✔️ El programa sigue funcionando</li>
+		<li>❌ El error no rompe todo</li>
+	</ul>
+	
+	<script>
+		try {
+			let x = y + 1;
+		} catch (error) {
+			console.log("Ocurrió un error:", error.message);
+		}		
+	</script>
+
+	<h2>finally</h2>
+	<p>Se ejecuta siempre, haya error o no.</p>
+	<script>
+		try {
+			console.log("Intentando...");
+		} catch (e) {
+			console.log("Error");
+		} finally {
+			console.log("Esto siempre corre");
+		}		
+	</script>
+
+</body>
+</html>

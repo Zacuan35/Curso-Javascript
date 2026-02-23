@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto Array - Métodos</title>
+</head>
+<body>
+
+	<h1>Objeto array</h1>
+	<h2>Métodos - Transformar arrays</h2>
+
+	<script>
+		let numeros = [10, 20, 30];
+		map() // transforma y devuelve un nuevo array
+		let dobles = numeros.map(n => n * 2); // [20, 40, 60]
+
+		filter() // filtra elementos
+		let mayores = numeros.filter(n => n > 15); // [20, 30]
+
+		reduce() // reduce todo a un solo valo
+		let suma = numeros.reduce((total, n) => total + n, 0); // 60
+	</script>
+
+</body>
+</html> 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto array</title>
+</head>
+<body>
+	<h1>Objeto array</h1>
+
+	<h2>¿Qué es un Array?</h2>
+	<ul>
+		<li>Es un objeto especial que permite almacenar varios valores dentro de una sola variable</li>
+		<li>Organza los valores en una lista ordenada de elementos</li>
+		<li>Cada elemento ocupa una posición numérica llamada índice, la cual comienza desde 0.</li>
+		<li>Tiene métodos propios</li>
+		<li>Hereda de Object</li>
+		<li>Técnicamente Array es un objeto y no un tipo de dato primitivo.</li>
+	</ul>	
+	<script>
+		let frutas = ["manzana", "pera", "uva"];
+		//índice 0 → "manzana"
+		//índice 1 → "pera"
+		//índice 2 → "uva"
+	</script>
+
+	<h2>¿Por qué se dice que es un objeto?</h2>
+	<p>Array es un objeto especializado para trabajar con listas porque:</p>
+	<ul>
+		<li>Tiene propiedades (length)</li>
+		<li>Tiene métodos</li> 
+		<li>Hereda de Object.prototype</li>
+	</ul>
+	<script>
+		let animales = ["gato", "perro", "loro"] ;
+		console.log(animales.length); // 3
+		console.log(typeof animales); // "object"
+	</script>
+
+	<h2>¿Que puede guardar?</h2>
+	<p>Puede guardar cualquier tipo de dato</p>
+	<script>
+		let mezcla = [1, "hola", true, { nombre: "Luis" }, [1, 2]];
+	</script>
+
+	<h2>Acceder y modificar los valores</h2>
+	<script>		
+	  let colors = ["azul","rosa","verde"];
+		colors[0]; // "azul"
+		colors[1] = "naranja";
+	</script>
+
+</body>
+</html>

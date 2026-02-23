@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto Array - Métodos</title>
+</head>
+<body>
+
+	<h1>Objeto array</h1>
+	<h2>Métodos - Recorrer arrays</h2>
+
+	<ul>
+		<li>forEach / for...of: sólo recorrer</li>
+		<li>map(): transformar</li>
+		<li>filter(): filtrar</li>
+		<li>reduce(): sumar / combinar</li>
+		<li>find / includes: buscar</li>
+	</ul>
+
+	<h2>Forma vieja (todavía válida)</h2>
+	<ul>
+		<li>Funciona</li>
+		<li>Más código</li>
+		<li>Más propenso a errores</li>
+	</ul>
+	<script>		
+		for (let i = 0; i < numeros.length; i++) {
+			console.log(numeros[i]);
+		}
+	</script>
+
+	<h2>Forma moderna y recomendada</h2>
+	<script>				
+		forEach() // recorrer sin devolver nada
+		numeros.forEach(n => {
+			console.log(n);
+		});
+
+		map() // recorrer y transformar
+		numeros.map(n => n * 2);
+
+		//for...of : simple y claro
+		for (let n of numeros) {
+			console.log(n);
+		}
+	</script>
+
+</body>
+</html>

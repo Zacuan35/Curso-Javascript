@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Métodos de los números</title>
+</head>
+<body>
+	<h1>Métodos de los números</h1>
+	
+	<script>
+		let numeroEntero = 100;
+		let numeroDecimal = 10.834;
+		let texto = "123.4";
+
+		/* ====================
+			VALIDAR
+		==================== */
+		isNaN() //Verifica si NO es un número válido (convierte antes de validar)
+		isNaN(10);        // false
+		isNaN("Hola");    // true
+		isNaN("123");     // false (se convierte a número)
+
+		// OJO: isNaN() puede dar resultados confusos por la conversión implícita
+
+		/* ====================
+			Number (objeto y función)
+		==================== */
+		Number.isNaN() //Verifica si el valor es NaN (NO convierte)
+		Number.isNaN(numeroEntero); // false
+		Number.isNaN(NaN);          // true
+		Number.isNaN("Hola");       // false
+
+		Number.isInteger() //Verifica si es un número entero
+		Number.isInteger(numeroEntero); // true
+		Number.isInteger(numeroDecimal); // false
+
+		Number.isFinite() //Verifica si es un número finito
+		Number.isFinite(numeroEntero); // true
+		Number.isFinite(Infinity);     // false
+
+		/* ====================
+			CONVERSIÓN DE DATOS
+		==================== */
+		Number() //Convierte a número (o NaN si no es posible)
+		Number(texto); // 123.4
+
+		parseInt() //Convierte a entero (ignora decimales)
+		parseInt(texto); // 123
+
+		parseFloat() //Convierte a número decimal
+		parseFloat(texto); // 123.4
+
+		toString() //Convierte número a string
+		numeroEntero.toString();    // "100"
+		numeroEntero.toString(16);  // "64" (hexadecimal)
+
+		/* ====================
+			FORMATEO DE NÚMEROS
+		==================== */
+		toFixed() //Limita el número de decimales (devuelve string)
+		numeroDecimal.toFixed(2); // "10.83"
+
+		toPrecision() //Define la cantidad TOTAL de cifras
+		numeroDecimal.toPrecision(3); // "10.8"
+
+		/* ====================
+			MÉTODOS MATEMÁTICOS (Math)
+		==================== */
+		// TIP PROFESIONAL
+		// Errores comunes con decimales (precisión IEEE 754)
+		0.1 + 0.2; // 0.30000000000000004
+
+		// Solución común (redondeo controlado)
+		+(0.1 + 0.2).toFixed(2); // 0.3
+	</script>	
+
+</body>
+</html>

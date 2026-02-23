@@ -8,49 +8,49 @@
 <body>
 	<h1>Operadores relacionales</h1>
 
-	<h3>Menor que, Mayor que</h3>
 	<script>
-		//Menor que, Mayor que >, <
-		console.log(11 > 9);
-		console.log(1 < 11);
-	</script>
+		/* =============================================
+			Menor que, Mayor que (<, >)
+		============================================= */
+		11 > 9;   // true
+		1 < 11;   // true
 
-	<h3>Menor o igual, Mayor o igual</h3>
-	<script>
-		//Menor o igual, Mayor o igual >=, <=
-		console.log(11 >= 11);
-		console.log(6 <= 12);		
-	</script>
+		/* =============================================
+			Menor o igual, Mayor o igual (<=, >=)
+		============================================= */
+		11 >= 11; // true
+		6 <= 12;  // true
 
-	<h3>Igual (Sólo valida el valor)</h3>
-	<script>
-		//Igual == (Sólo valida el valor).
-		console.log(1 == 1);//true
-		console.log(1 == "1");//true
-		console.log(1 == true);//true
-	</script>
+		/* =============================================
+			Igual (==) 
+			Solo valida el valor, hace conversión de tipos
+		============================================= */
+		1 == 1;      // true
+		1 == "1";    // true
+		1 == true;   // true (true se convierte a 1)
 
-	<h3>Igual (Valida el valor y el tipo de dato)</h3>
-	<script>
-		//Igual === (Valida el valor y el tipo de dato).
-		console.log(1 === 1);//true
-		console.log(1 === "1");//false
-		console.log(1 === true);//true		
-	</script>
+		/* =============================================
+			Igual estricto (===) 
+			Valida valor y tipo, NO hace conversión de tipos
+		============================================= */
+		1 === 1;      // true
+		1 === "1";    // false
+		1 === true;   // false
 
-	<h3>Diferente (valida el valor)</h3>
-	<script>
-		//Diferente != (Diferente pero sólo valida el valor).
-		console.log(1 != false);
-		console.log(0 != false);
-		console.log(0 != "");
-	</script>
+		/* =============================================
+			Diferente (!=) 
+			Solo valida el valor, hace conversión de tipos
+		============================================= */
+		1 != false;  // true
+		0 != false;  // false
+		0 != "";     // false
 
-	<h3>Diferente (valida el valor y el tipo de dato)</h3>
-	<script>
-		//!== (Diferente valida el valor y el tipo de dato).
-		console.log(1 !== false);
-		console.log(0 !== "");		
+		/* =============================================
+			Diferente estricto (!==) 
+			Valor y tipo, NO hace conversión de tipos
+		============================================= */
+		1 !== false; // true
+		0 !== "";    // true		
 	</script>
 
 </body>

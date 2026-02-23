@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objeto error - Lanzar errores</title>
+</head>
+<body>
+
+	<h1>Objeto error</h1>
+	<h2>Lanzar errores con throw</h2>
+	<script>
+		function dividir(a, b) {
+			if (b === 0) {
+				throw new Error("No se puede dividir entre 0");
+			}
+			return a / b;
+		}		
+		dividir(10, 0);
+	</script>
+
+</body>
+</html>

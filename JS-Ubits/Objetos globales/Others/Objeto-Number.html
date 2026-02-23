@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Métodos de los números</title>
+</head>
+<body>
+	<h1>Métodos de los números</h1>
+	
+	<script>
+		let numeroEntero = 100;
+		let numeroDecimal = 10.834;
+		let texto = "123.4";
+
+		//Number (Objeto y función) 
+		Number.isNaN() //Verifica si NO es un número válido, es la versión mas usada (devuelve true o false).
+		console.log(Number.isNaN(numeroEntero));		
+
+		Number.isInteger()//Verifica si es un entero (Devuelve true o false).
+		console.log(Number.isInteger(numeroEntero));		
+
+		Number.isFinite() //Verifica si es un número finito (devuelve true o false).
+		console.log(Number.isFinite(numeroEntero));		
+
+		//CONVERSIÓN DE DATOS
+		Number() //Convierte a número.
+		console.log(Number(texto));		   
+	</script>	
+
+	<script>
+
+	</script>
+
+</body>
+</html>
